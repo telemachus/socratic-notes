@@ -1,8 +1,10 @@
 % {{{ LaTeX prelude
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common,TeX}]{Baskerville}
 \newfontfamily\g[Ligatures={Common,TeX}]{Times New Roman}
+\usepackage{enumitem}
+\setlist{noitemsep}
 \usepackage{url}
 \usepackage{parskip}
 \usepackage{natbib}
@@ -30,41 +32,103 @@
 % {{{ Characters
 \subsection{Characters}
 
-Hippias was a famous sophist who probably lived circa 470--395 BCE. \footnote{\citet{waterfield1987a} 213.}  His dates aren't certain, but he was younger than Socrates and Gorgias and he outlived Socrates.  He was very much a polymath: David Sider describes him as ``lecturer, historian, poet, teacher, ambassador, potter, engraver, metalworker, weaver, and cobbler".\footnote{\citet{sider1986} iv.}  In addition to the two eponymous dialogues, Hippias appears in \book{Protagoras}.  He appears at 315c, sitting among a group of people asking him questions about astronomy.\footnote{Later in the dialogue, Protagoras makes fun of Hippias, among other sophists, for dragging his students through too many subjects that they don't need or want (318d5--e4).}  He seems to be putting on an ``ask me whatever you want" type of showcase.  In addition to that sort of thing and regular teaching for money, he also gave epideictic displays.  For example, at the start of \book{Hippias Major}, he tells Socrates about a piece he wrote imagining Nestor giving moral advice to Neoptolemus (286a3--c2).
+Hippias was a famous sophist who probably lived circa 470--395 BCE.
+\footnote{\citet{waterfield1987a} 213.}  His dates aren't certain, but he was
+younger than Socrates and Gorgias and he outlived Socrates.  He was very much
+a polymath: David Sider describes him as ``lecturer, historian, poet, teacher,
+ambassador, potter, engraver, metalworker, weaver, and
+cobbler".\footnote{\citet{sider1986} iv.}  In addition to the two eponymous
+dialogues, Hippias appears in \book{Protagoras}.  He appears at 315c, sitting
+among a group of people asking him questions about astronomy.\footnote{Later in
+the dialogue, Protagoras makes fun of Hippias, among other sophists, for
+dragging his students through too many subjects that they don't need or want
+(318d5--e4).}  He seems to be putting on an ``ask me whatever you want" type of
+showcase.  In addition to that sort of thing and regular teaching for money, he
+also gave epideictic displays.  For example, at the start of \book{Hippias
+Major}, he tells Socrates about a piece he wrote imagining Nestor giving moral
+advice to Neoptolemus (286a3--c2).
 
-Hippias was from Elis in the northwestern Peloponnese.  The people of Elis apparently held him in high regard: They sent him on diplomatic missions all over the Greek world.  But I'm not aware of any more significant political service by Hippias.
+Hippias was from Elis in the northwestern Peloponnese.  The people of Elis
+apparently held him in high regard: They sent him on diplomatic missions all
+over the Greek world.  But I'm not aware of any more significant political
+service by Hippias.
 
 % }}} Characters
 
 % {{{ Setting
 \subsection{Setting}
 
-There's nothing to place the dialogue physically, but we can say something about the date.  Gorgias has already visited, so that puts the date after 427.  It is also after the death of Pheidias a sculptor (died circa 420).  It also appears to be peacetime.  David Sider guesses sometime during the Peace of Nicias (421-416), and Robin Waterfield guesses 420.\footnote{\citet{sider1986} iv; \citet{waterfield1987a} 213.}
+There's nothing to place the dialogue physically, but we can say something
+about the date.  Gorgias has already visited, so that puts the date after 427.
+It is also after the death of Pheidias a sculptor (died circa 420).  It also
+appears to be peacetime.  David Sider guesses sometime during the Peace of
+Nicias (421-416), and Robin Waterfield guesses 420.\footnote{\citet{sider1986}
+iv; \citet{waterfield1987a} 213.}
 
 % }}} Setting
 
 % {{{ Introduction (281a--286c2)
 \section{Introduction (281a--286c2)}
 
-The dialogue begins with Socrates saying that it's been a long time since he's seen Hippias and Hippias telling Socrates what he's been up to.  He has been very busy acting as an ambassador for Elis, his native city---in particular, he's been busy at Sparta.  Socrates takes this opportunity to flatter Hippias: he is so capable, both as a private teacher for pay and as a citizen working for his city-state in politics.  But, Socrates wonders, why did the previous generations of wise men hold off from politics?  Hippias says that they were simply less capable than the current generation, and Socrates (ironically, one assumes) agrees that like all other craftspeople, sophists become better each generation.
+The dialogue begins with Socrates saying that it's been a long time since he's
+seen Hippias and Hippias telling Socrates what he's been up to.  He has been
+very busy acting as an ambassador for Elis, his native city---in particular,
+he's been busy at Sparta.  Socrates takes this opportunity to flatter Hippias:
+he is so capable, both as a private teacher for pay and as a citizen working
+for his city-state in politics.  But, Socrates wonders, why did the previous
+generations of wise men hold off from politics?  Hippias says that they were
+simply less capable than the current generation, and Socrates (ironically, one
+assumes) agrees that like all other craftspeople, sophists become better each
+generation.
 
-They then banter a bit about money. Hippias brags about how much he earns compared with other sophists, and Socrates again draws an ironic (?) contrast between the current generation of wise men and previous ones.  The previous wise men didn't care at all about money, while the current generation look out for themselves first and they make sure to get paid.
+They then banter a bit about money. Hippias brags about how much he earns
+compared with other sophists, and Socrates again draws an ironic (?) contrast
+between the current generation of wise men and previous ones.  The previous
+wise men didn't care at all about money, while the current generation look out
+for themselves first and they make sure to get paid.
 
-The introduction concludes with an ironic and paradoxical argument that the Spartans, although most lawful, are lawbreakers.  It all begins when Socrates learns from Hippias that Hippias didn't earn any money in Sparta by teaching young men.  However, Hippias concedes to Socrates the following:
+The introduction concludes with an ironic and paradoxical argument that the
+Spartans, although most lawful, are lawbreakers.  It all begins when Socrates
+learns from Hippias that Hippias didn't earn any money in Sparta by teaching
+young men.  However, Hippias concedes to Socrates the following:
 
 \begin{enumerate}
-    \item Hippias improves the people who associate with him through his wisdom.  He can improves the sons of the Spartans in this same way (283c1--d2).
+
+    \item Hippias improves the people who associate with him through his
+        wisdom.  He can improves the sons of the Spartans in this same way
+        (283c1--d2).
+
     \item The Spartans can afford to pay Hippias (283d2--3).
-    \item The Spartans cannot educate their own sons better than Hippias (283d4--e1).
-    \item The Spartans don't begrudge their children a good education.  That is, the Spartan fathers don't keep their children from Hippias as a result of resentment (283e2--8).
-    \item Sparta is a city of excellent laws and customs and Hippias knows how to pass along this kind of virtue to children very well.  Normally, if a city is renowned for X and a master of X comes to visit, the people of that city will line up to hire him for their sons.  Socrates gives an example of equestrian knowledge in Thessaly (283e9--284b5)
+
+    \item The Spartans cannot educate their own sons better than Hippias
+        (283d4--e1).
+
+    \item The Spartans don't begrudge their children a good education.  That
+        is, the Spartan fathers don't keep their children from Hippias as
+        a result of resentment (283e2--8).
+
+    \item Sparta is a city of excellent laws and customs and Hippias knows how
+        to pass along this kind of virtue to children very well.  Normally, if
+        a city is renowned for X and a master of X comes to visit, the people
+        of that city will line up to hire him for their sons.  Socrates gives
+        an example of equestrian knowledge in Thessaly (283e9--284b5)
+
 \end{enumerate}
 
-If you put this all together, it seems incredible that the Spartans don't hire Hippias for their children, but Hippias explains that it is not traditional ({\g πάτριον} 284b6) to change their laws nor to educate their sons in uncustomary ways. And it is not customary ({\g νόμιμον} 284c5) for children to receive education from non-Spartans.
+If you put this all together, it seems incredible that the Spartans don't hire
+Hippias for their children, but Hippias explains that it is not traditional
+({\g πάτριον} 284b6) to change their laws nor to educate their sons in
+uncustomary ways. And it is not customary ({\g νόμιμον} 284c5) for children to
+receive education from non-Spartans.
 
-Socrates, however, draws the conclusion that the well-lawed (?) Spartans are lawbreakers.  His argument is that law aims at good and benefit.  But the rule not to let foreigners and thus Hippias educate their children does harm, not benefit.  So the Spartans act contrary to law as a result of their own customs (284d1--285b7).
+Socrates, however, draws the conclusion that the well-lawed (?) Spartans are
+lawbreakers.  His argument is that law aims at good and benefit.  But the rule
+not to let foreigners and thus Hippias educate their children does harm, not
+benefit.  So the Spartans act contrary to law as a result of their own customs
+(284d1--285b7).
 
-After this, they briefly discuss Hippias' epideictic piece in which Nestor gives advice to Neoptolemus, and then they transition to the fine.
+After this, they briefly discuss Hippias' epideictic piece in which Nestor
+gives advice to Neoptolemus, and then they transition to the fine.
 
 % }}} Introduction (281a--286c2)
 
@@ -76,39 +140,103 @@ After this, they briefly discuss Hippias' epideictic piece in which Nestor gives
 % {{{ Socrates' alter-ego (286c3--287b3)
 \subsection{Socrates' alter-ego (286c3--287b3)}
 
-Socrates tells Hippias that the question he asks ('What is the fine?') is not his own but a question someone else asked him.  Socrates says that this other man recently cast him into helplessness ({\g ἀπορία} 286c5) during a discussion.  Socrates was casually calling things \word{fine} or \word{shameful}, and the man challenged him to say what the fine is.  Socrates failed the challenge, and he now asks Hippias to help him so that he can redeem himself.  In order to help things along, Socrates frequently pretends to be the other man as he and Hippias talk.  Over the dialogue, this someone else takes on a large role.  Hippias finds this questioner infuriating since (1) he is never satisfied and (2) he is frequently rude in tone and unsophisticated in topics.
+Socrates tells Hippias that the question he asks (`What is the fine?') is not
+his own but a question someone else asked him.  Socrates says that this other
+man recently cast him into helplessness ({\g ἀπορία} 286c5) during
+a discussion.  Socrates was casually calling things \word{fine} or
+\word{shameful}, and the man challenged him to say what the fine is.  Socrates
+failed the challenge, and he now asks Hippias to help him so that he can redeem
+himself.  In order to help things along, Socrates frequently pretends to be the
+other man as he and Hippias talk.  Over the dialogue, this someone else takes
+on a large role.  Hippias finds this questioner infuriating since (1) he is
+never satisfied and (2) he is frequently rude in tone and unsophisticated in
+topics.
 
-It is obvious to readers that there never was any other man: the other man is Socrates all along.  The trick allows Socrates to question Hippias insistently without directly infuriating him.  In addition, it adds another layer of irony and humor to the dialogue---which is already thick with both.  In this way, the deception is both kind and cruel.  Socrates doesn't directly, explicitly insult Hippias, but indirectly and implicitly, he is far more aggressive than in most dialogues.
+It is obvious to readers that there never was any other man: the other man is
+Socrates all along.  The trick allows Socrates to question Hippias insistently
+without directly infuriating him.  In addition, it adds another layer of irony
+and humor to the dialogue---which is already thick with both.  In this way, the
+deception is both kind and cruel.  Socrates doesn't directly, explicitly insult
+Hippias, but indirectly and implicitly, he is far more aggressive than in most
+dialogues.
 
-Socrates also asks Hippias if it will be ok for him to imitate the other man sometimes.  Hippias agrees.  You might think that this was in order for Plato to have Socrates speak without having to say constantly ``as the other man would say", but in fact, Socrates constantly draws attention to the mask.  So I'm not quite sure what the point of this request is.  It certainly doesn't end up making the dramatic situation any more straightforward.
+Socrates also asks Hippias if it will be ok for him to imitate the other man
+sometimes.  Hippias agrees.  You might think that this was in order for Plato
+to have Socrates speak without having to say constantly ``as the other man
+would say", but in fact, Socrates constantly draws attention to the mask.  So
+I'm not quite sure what the point of this request is.  It certainly doesn't end
+up making the dramatic situation any more straightforward.
 
 % }}} Socrates' alter-ego (286c3--287b3)
 
 % {{{ Socratic metaphysics (287b4--287e1)
 \subsection{Socratic metaphysics (287b4--287e1)}
 
-Socrates assumes the voice of the other figure and runs through some preliminary metaphysics with Hippias.  Hippias has no idea what Socrates is saying, but he agrees with it all regardless.
+Socrates assumes the voice of the other figure and runs through some
+preliminary metaphysics with Hippias.  Hippias has no idea what Socrates is
+saying, but he agrees with it all regardless.
 
 \begin{enumerate}
-    \item Just people are just by justice\footnote{The word \word{by} here indicates the common Platonic use of an instrumental/causal dative to indicate that through which someone or something possesses a quality. \citet{woodruff1982} cites \book{Euthyphro} 6b11 and \book{Phaedo} 100d7 (45).  He also argues, correctly I think, that the dative is more a matter of logical cause than true instrument or means.} (287c1--2).
+
+    \item Just people are just by justice\footnote{The word \word{by} here
+        indicates the common Platonic use of an instrumental/causal dative to
+        indicate that through which someone or something possesses a quality.
+        \citet{woodruff1982} cites \book{Euthyphro} 6b11 and \book{Phaedo}
+        100d7 (45).  He also argues, correctly I think, that the dative is
+        more a matter of logical cause than true instrument or means.}
+        (287c1--2).
+
     \item Justice exists, or there is such a thing as justice (287c4).
-    \item In the same way the wise are wise by of wisdom and all good things are good by goodness (287c5--6).  And wisdom and goodness exist too (287c6--8).
-    \item All fine things are fine by of the fine, and the fine exists (287c8-d2).
+
+    \item In the same way the wise are wise by of wisdom and all good things
+        are good by goodness (287c5--6).  And wisdom and goodness exist too
+        (287c6--8).
+
+    \item All fine things are fine by of the fine, and the fine exists
+        (287c8-d2).
+
 \end{enumerate}
 
-Hippias agrees all the way through, though perhaps with very little understanding.  This becomes clear when Socrates asks Hippias the dialogue's key question:
+Hippias agrees all the way through, though perhaps with very little
+understanding.  This becomes clear when Socrates asks Hippias the dialogue's
+key question:
 
 \begin{quote}
+
     {\g Εἰπὲ δή, ὦ ξένε, φήσει, τί ἐστι τοῦτο τὸ κάλον;} (287d3)
 
-    Say indeed, stranger, he will say, what is this \phrase{the fine}?
+    Say indeed, friend, he will say, what is this \phrase{the fine}?
+
 \end{quote}
 
-Hippias is so completely confused that he responds, ``Do you mean what is beautiful?" (287d4--5).  Socrates says ``No, \emph{the} fine" (287d6), but Hippias is unable to see any difference between the two questions.  This is very important: Hippias says ``What is the difference?" (287d7).  In response to that, Socrates says only ``It doesn't seem different at all to you?" (287d9).\footnote{I'm unsure about Socrates' tone here.  Disbelief?  Confusion?}
+Hippias is so completely confused that he responds, ``Do you mean what is
+beautiful?" (287d4--5).  Socrates says ``No, \emph{the} fine" (287d6), but
+Hippias is unable to see any difference between the two questions.  This is
+very important: Hippias says ``What is the difference?" (287d7).  In response
+to that, Socrates says only ``It doesn't seem different at all to you?"
+(287d9).\footnote{I'm unsure about Socrates' tone here.  Disbelief?
+Confusion?}
 
-Socrates does not challenge Hippias on his confusion here.  He simply says, ``Well you must know better" and continues.  My guess is that Socrates (and/or Plato) prefer to work Hippias up to the larger issue, rather than quarrel before they even get started.  However, it's exceedingly important for the reader to see how very confused Hippias is.  See below when I discuss Alexander Nehamas' interpretation of the first definition.
+Socrates does not challenge Hippias on his confusion here.  He simply says,
+``Well you must know better" and continues.  My guess is that Socrates (and/or
+Plato) prefer to work Hippias up to the larger issue, rather than quarrel
+before they even get started.  However, it's exceedingly important for the
+reader to see how very confused Hippias is.  See below when I discuss Alexander
+Nehamas' interpretation of the first definition.
 
-\citet{woodruff1982} offers a very different interpretation of Hippias.  He argues that Hippias is \emph{not} stupid.  Instead, Hippias knowingly agrees with Socrates, even though he has no intention of giving Socrates the kind of answer that Socrates demands.  According to Woodruff, Hippias does this for two reasons.  First, he is remarkably agreeable.  It is part of his general strategy for pleasing everyone and being all things to all people that he never disagrees.  Even when he does disagree (at some level), he starts by agreeing and then adds qualifications in a non-confrontational manner.  Second, in Woodruff's eyes, Hippias is smart enough to know that the only way to win with Socrates is not to play his game at all.  Nobody ever holds up to Socratic questioning, if they play by Socrates' rules.  So Hippias doesn't even bother to try.  I'm not sure that I buy this interpretation, but it's certainly worth thinking about.
+\citet{woodruff1982} offers a very different interpretation of Hippias.  He
+argues that Hippias is \emph{not} stupid.  Instead, Hippias knowingly agrees
+with Socrates, even though he has no intention of giving Socrates the kind of
+answer that Socrates demands.  According to Woodruff, Hippias does this for two
+reasons.  First, he is remarkably agreeable.  It is part of his general
+strategy for pleasing everyone and being all things to all people that he never
+disagrees.  Even when he does disagree (at some level), he starts by agreeing
+and then adds qualifications in a non-confrontational manner.  Second, in
+Woodruff's eyes, Hippias is smart enough to know that the only way to win with
+Socrates is not to play his game at all.  Nobody ever holds up to Socratic
+questioning, if they play by Socrates' rules.  So Hippias doesn't even bother
+to try.  I'm not sure that I buy this interpretation, but it's certainly worth
+thinking about.
 
 % }}} Socratic metaphysics (287b4--287e1)
 
@@ -122,149 +250,407 @@ Socrates does not challenge Hippias on his confusion here.  He simply says, ``We
 Hippias offers his first definition with great confidence:
 
 \begin{quote}
-    {\g Μανθάνω, ὠγαθέ, καὶ ἀποκρινοῦμαί γε αὐτῷ ὅτι ἐστι τὸ καλόν, καὶ οὐ μή ποτε ἐλεγχθῶ. ἔστι γάρ, ὦ Σώκρατες, εὖ ἴσθι, εἰ δεῖ τὸ ἀληθὲς λέγειν, παρθένος καλὴ καλόν} (287e2--4).
 
-    I understand, friend, and I will tell him what the fine is, and I will not ever be refuted.  For, Socrates, know well, if it is necessary to say the truth, a fine maiden is a fine thing.
+    {\g Μανθάνω, ὠγαθέ, καὶ ἀποκρινοῦμαί γε αὐτῷ ὅτι ἐστι τὸ καλόν, καὶ οὐ μή
+    ποτε ἐλεγχθῶ. ἔστι γάρ, ὦ Σώκρατες, εὖ ἴσθι, εἰ δεῖ τὸ ἀληθὲς λέγειν,
+    παρθένος καλὴ καλόν} (287e2--4).
+
+    I understand, friend, and I will tell him what the fine is, and I will not
+    ever be refuted.  For, Socrates, know well, if it is necessary to say the
+    truth, a fine maiden is a fine thing.
+
 \end{quote}
 
-Socrates asked for a completely different type of answer.  Notwithstanding his strong assertions of understanding and invincibility, Hippias appears not even to understand the question.  Notice that in the first sentence he says that he will explain \phrase{the fine}, but that in his actual answer he defines---at most---\phrase{a fine thing}.  The most natural reading of this passage, I believe, is that it demonstrates Hippias' complete ignorance of Socratic definition.  Such ignorance should not surprise us.  In both \book{Euthyprho} and \book{Laches}, for example, the interlocutors' first answers are also completely inadequate.  One reasonable view is that the early Socratic dialogues often teach their readers how to answer Socratic questions, even if they don't provide concrete results.  We learn what sort of thing would qualify as a proper answer, even if we don't ever get truly satisfactory answers.
+Socrates asked for a completely different type of answer.  Notwithstanding his
+strong assertions of understanding and invincibility, Hippias appears not even
+to understand the question.  Notice that in the first sentence he says that he
+will explain \phrase{the fine}, but that in his actual answer he defines---at
+most---\phrase{a fine thing}.  The most natural reading of this passage,
+I believe, is that it demonstrates Hippias' complete ignorance of Socratic
+definition.  Such ignorance should not surprise us.  In both \book{Euthyprho}
+and \book{Laches}, for example, the interlocutors' first answers are also
+completely inadequate.  One reasonable view is that the early Socratic
+dialogues often teach their readers how to answer Socratic questions, even if
+they don't provide concrete results.  We learn what sort of thing would qualify
+as a proper answer, even if we don't ever get truly satisfactory answers.
 
-Before I look at how Socrates responds to Hippias, I want to consider two alternative interpretations of Hippias' definition.
+Before I look at how Socrates responds to Hippias, I want to consider two
+alternative interpretations of Hippias' definition.
 
-\citet{nehamas1975a} argues that Hippias means \phrase{Being a beautiful maiden is (what it is to be) beautiful} or \phrase{To be a beautiful maiden is (to be) beautiful} (168).  At first, this sounds impossible as a rendering of the Greek.  But given Nehamas' other examples, he seems to mean the following:
+\citet{nehamas1975a} argues that Hippias means \phrase{Being a beautiful maiden
+is (what it is to be) beautiful} or \phrase{To be a beautiful maiden is (to be)
+beautiful} (168).  At first, this sounds impossible as a rendering of the
+Greek.  But given Nehamas' other examples, he seems to mean the following:
 
 \begin{enumerate}
-    \item No particular girl is at issue.  Hippias is not offering a concrete particular where Socrates asks about a universal (see page 168 and 169).  Hippias is offering ``beautiful girl" as a class, not as a specific individual.
-    \item In the sentence {\g παρθένος καλὴ καλόν}, \word{beautiful} is not a bona fide general term. Instead it has a peculiar, strong sense, close to what we would mean by the expression ``is to be beautiful".
-    \item Hippias does not reduce questions like ``What is the beautiful?" to ``What is beautiful?"  Instead, he does just the opposite: He interprets any statement such as ``x is beautiful" as really meaning ``To be x is to be beautiful" (see page 168, 169, 170).
+
+    \item No particular girl is at issue.  Hippias is not offering a concrete
+        particular where Socrates asks about a universal (see page 168 and
+        169).  Hippias is offering ``beautiful girl" as a class, not as
+        a specific individual.
+
+    \item In the sentence {\g παρθένος καλὴ καλόν}, \word{beautiful} is not
+        a bona fide general term. Instead it has a peculiar, strong sense,
+        close to what we would mean by the expression ``is to be beautiful".
+
+    \item Hippias does not reduce questions like ``What is the beautiful?" to
+        ``What is beautiful?"  Instead, he does just the opposite: He
+        interprets any statement such as ``x is beautiful" as really meaning
+        ``To be x is to be beautiful" (see page 168, 169, 170).
+
 \end{enumerate}
 
-I understand the first point and agree.  Hippias has no particular girl in mind; he uses ``a beautiful girl" to stand for a class, not a specific person. I do not really understand what Nehamas intends by his second or third point, nor how he thinks the Greek supports him.  \citet{woodruff1982} takes Nehamas as meaning something like ``One way to be beautiful is to be a beautiful girl" (50).  If so, that's an interesting idea, but I'm not sure how he gets it from the Greek.\footnote{\citet{woodruff1982} 50 says ``a possible reading of the Greek", but he doesn't elaborate.}
+I understand the first point and agree.  Hippias has no particular girl in
+mind; he uses ``a beautiful girl" to stand for a class, not a specific person.
+I do not really understand what Nehamas intends by his second or third point,
+nor how he thinks the Greek supports him.  \citet{woodruff1982} takes Nehamas
+as meaning something like ``One way to be beautiful is to be a beautiful girl"
+(50).  If so, that's an interesting idea, but I'm not sure how he gets it from
+the Greek.\footnote{\citet{woodruff1982} 50 says ``a possible reading of the
+Greek", but he doesn't elaborate.}
 
-\citet{woodruff1982} argues that Hippias understands Socrates perfectly well, but that he knowingly disregards what Socrates wants from a definition.  As he puts it ``he means to trivialize the question.  He does so by mentioning something he believes to be irrefutably fine, and something, besides, that was probably supposed to provoke nudges and titters from his audience" (50).  In Woodruff's mind, Hippias is trying to defuse the situation using humor.  He knows that he cannot win at Socrates' game, so he attempts not to play by Socrates' rules.  Unfortunately, Socrates doesn't laugh and let Hippias off the hook.  If anything, he only gets more abusive, though we'll see that later.
+\citet{woodruff1982} argues that Hippias understands Socrates perfectly well,
+but that he knowingly disregards what Socrates wants from a definition.  As he
+puts it ``he means to trivialize the question.  He does so by mentioning
+something he believes to be irrefutably fine, and something, besides, that was
+probably supposed to provoke nudges and titters from his audience" (50).  In
+Woodruff's mind, Hippias is trying to defuse the situation using humor.  He
+knows that he cannot win at Socrates' game, so he attempts not to play by
+Socrates' rules.  Unfortunately, Socrates doesn't laugh and let Hippias off the
+hook.  If anything, he only gets more abusive, though we'll see that later.
 
-I believe that Hippias does not understand Socrates' requirements, but that this may not make him a complete idiot.  As I said above, we also see interlocutors who have trouble understanding what Socrates wants from them in other early Socratic dialogues.  This doesn't make any of these people stupid, however, since Socrates has very stringent demands that were probably unfamiliar to his interlocutors.  Hippias may be unusual in how insistent he is that he understands and how many times he gets things wrong, but he's not a fool because he doesn't immediately understand the rules of Socratic definitions.
+I believe that Hippias does not understand Socrates' requirements, but that
+this may not make him a complete idiot.  As I said above, we also see
+interlocutors who have trouble understanding what Socrates wants from them in
+other early Socratic dialogues.  This doesn't make any of these people stupid,
+however, since Socrates has very stringent demands that were probably
+unfamiliar to his interlocutors.  Hippias may be unusual in how insistent he is
+that he understands and how many times he gets things wrong, but he's not
+a fool because he doesn't immediately understand the rules of Socratic
+definitions.
 
-Initially it looks as though Socrates will attack Hippias' first definition for not having sufficient explanatory power.  He asks Hippias whether a fine girl is what explains all the other fine things (288a7--11).\footnote{The text is corrupt at 288a10, but the overall intent of the passage seems clear enough.}  Hippias, however, misunderstands.  In response, Hippias asks whether the alter-ego will dare to try to refute this definition.  He believes that nobody would try since they would look laughable.
+Initially it looks as though Socrates will attack Hippias' first definition for
+not having sufficient explanatory power.  He asks Hippias whether a fine girl
+is what explains all the other fine things (288a7--11).\footnote{The text is
+corrupt at 288a10, but the overall intent of the passage seems clear enough.}
+Hippias, however, misunderstands.  In response, Hippias asks whether the
+alter-ego will dare to try to refute this definition.  He believes that nobody
+would try since they would look laughable.
 
-Perhaps because Hippias is so confused (?), Socrates changes tack at this point.\footnote{The argument that a fine girl cannot explain why \emph{all} other things are fine is left unfinished.  Readers who are familiar with other Socratic dialogues can see where Socrates would have gone, but Socrates moves on without complaint.  As he says in \book{Euthyprho}, he has to follow where the respondent leads him.}  He asks whether a fine horse is a fine thing, and Hippias agrees (288b8--c5).  Then Socrates asks about a fine lyre. Again Hippias agrees (288c6--8).  Next Socrates asks about a fine cooking pot.  Hippias becomes very annoyed at this, and it takes a moment for Socrates to bring him around.  But finally Hippias concedes that a fine cooking pot is also a fine thing (288c9--e9).
+Perhaps because Hippias is so confused (?), Socrates changes tack at this
+point.\footnote{The argument that a fine girl cannot explain why \emph{all}
+other things are fine is left unfinished.  Readers who are familiar with other
+Socratic dialogues can see where Socrates would have gone, but Socrates moves
+on without complaint.  As he says in \book{Euthyprho}, he has to follow where
+the respondent leads him.}  He asks whether a fine horse is a fine thing, and
+Hippias agrees (288b8--c5).  Then Socrates asks about a fine lyre. Again
+Hippias agrees (288c6--8).  Next Socrates asks about a fine cooking pot.
+Hippias becomes very annoyed at this, and it takes a moment for Socrates to
+bring him around.  But finally Hippias concedes that a fine cooking pot is also
+a fine thing (288c9--e9).
 
-Although he agrees that a well-crafted cooking pot can be a fine thing, Hippias still insists that a cooking pot cannot compare to a fine horse or girl.  Socrates seizes on this in order to demand another definition.  He argues, referring to Heraclitus, that a fine girl cannot compare with a fine goddess, and that a wise human is no better than a monkey compared with a god in wisdom and beauty (289a1--b7).  Hippias agrees, and Socrates presses this point.  Socrates now makes the familiar complaint that Hippias' proposed \foreign{definiens} is ``no more" ({\g οὐδὲν μᾶλλον}) fine than foul (289c1--d5).  But as Socrates reminds Hippias, he didn't ask for what is fine and foul; he asked for a definition of the fine---something that needs to explain why all other things are fine.  Therefore, this definition isn't acceptable, and Hippias needs to propose something else.
+Although he agrees that a well-crafted cooking pot can be a fine thing, Hippias
+still insists that a cooking pot cannot compare to a fine horse or girl.
+Socrates seizes on this in order to demand another definition.  He argues,
+referring to Heraclitus, that a fine girl cannot compare with a fine goddess,
+and that a wise human is no better than a monkey compared with a god in wisdom
+and beauty (289a1--b7).  Hippias agrees, and Socrates presses this point.
+Socrates now makes the familiar complaint that Hippias' proposed
+\foreign{definiens} is ``no more" ({\g οὐδὲν μᾶλλον}) fine than foul
+(289c1--d5).  But as Socrates reminds Hippias, he didn't ask for what is fine
+and foul; he asked for a definition of the fine---something that needs to
+explain why all other things are fine.  Therefore, this definition isn't
+acceptable, and Hippias needs to propose something else.
 
 % }}} First definition (287e2-289d5)
 
 % {{{ Second definition (289d6--291c9)
 \subsection{Second definition (289d6--291c9)}
 
-Hippias next offers gold as his second definition of the fine.  Again, this answer will obviously not satisfy Socrates.  But again Hippias is responding to something that Socrates wants.  In the first definition, Hippias was trying to give something irrefutably fine to Socrates.  That way, Socrates could not possibly be challenged by his alter-ego---or so Hippias hoped.  In this second definition, Hippias responds to language that Socrates uses when challenging the first definition. At the end of the last section, Socrates uses language reminiscent of language in \book{Phaedo} about forms:
+Hippias next offers gold as his second definition of the fine.  Again, this
+answer will obviously not satisfy Socrates.  But again Hippias is responding to
+something that Socrates wants.  In the first definition, Hippias was trying to
+give something irrefutably fine to Socrates.  That way, Socrates could not
+possibly be challenged by his alter-ego---or so Hippias hoped.  In this second
+definition, Hippias responds to language that Socrates uses when challenging
+the first definition. At the end of the last section, Socrates uses language
+reminiscent of language in \book{Phaedo} about forms:
 
 \begin{quote}
-    {\g ἔτι δὲ καὶ δοκεῖ σοι αὐτὸ τὸ καλόν, ᾧ καὶ τἆλλα πάντα κοσμεῖται καὶ καλὰ φαίνεται, ἐπειδὰν προσγένηται ἐκεῖνο τὸ εἶδος, τοῦτ᾽εἶναι παρθένος ἢ ἵππος ἢ λύρα;} (289d2--5)
 
-    And does this in fact still seem to you to be the fine itself, by means of which all the other things are adorned and seem fine whenever that form is present [in them]---this, a girl or horse or lyre?
+    {\g ἔτι δὲ καὶ δοκεῖ σοι αὐτὸ τὸ καλόν, ᾧ καὶ τἆλλα πάντα κοσμεῖται καὶ
+    καλὰ φαίνεται, ἐπειδὰν προσγένηται ἐκεῖνο τὸ εἶδος, τοῦτ᾽εἶναι παρθένος
+    ἢ ἵππος ἢ λύρα;} (289d2--5)
+
+    And does this in fact still seem to you to be the fine itself, by means of
+    which all the other things are adorned and seem fine whenever that form is
+    present [in them]---this, a girl or horse or lyre?
+
 \end{quote}
 
-Hippias appears to take note only of the language of adornment and presence.  Astoundingly, to people who know Socratic and Platonic metaphysics better than Hippias does, he interprets this language in a physical and very literal manner.  ``You want a good looking item to pretty up anything when it's present?  Gold!"  It's as if he's imagining that the topic is fashion.  This answer is arguably grist for Woodruff's mill: Rather than believe that Hippias is \emph{this} clueless, he would argue that Hippias is deliberately yanking Socrates' chain, partly in an effort to force Socrates to let him off the hook.\footnote{Part of Woodruff's larger argument is that Hippias doesn't want to have this conversation, but he's too agreeable to simply say so.  Instead, he gives joke answers, hoping that Socrates will take a hint and change subjects.}  At the moment though, I prefer to say that Hippias isn't stupid, but he does listen to or notice only parts of what Socrates says.
+Hippias appears to take note only of the language of adornment and presence.
+Astoundingly, to people who know Socratic and Platonic metaphysics better than
+Hippias does, he interprets this language in a physical and very literal
+manner.  ``You want a good looking item to pretty up anything when it's
+present?  Gold!"  It's as if he's imagining that the topic is fashion.  This
+answer is arguably grist for Woodruff's mill: Rather than believe that Hippias
+is \emph{this} clueless, he would argue that Hippias is deliberately yanking
+Socrates' chain, partly in an effort to force Socrates to let him off the
+hook.\footnote{Part of Woodruff's larger argument is that Hippias doesn't want
+to have this conversation, but he's too agreeable to simply say so.  Instead,
+he gives joke answers, hoping that Socrates will take a hint and change
+subjects.}  At the moment though, I prefer to say that Hippias isn't stupid,
+but he does listen to or notice only parts of what Socrates says.
 
-Socrates attacks this second definition in a roundabout way.  His first argument is that gold is not \emph{required} for something to be fine.  As an example, he offers Pheidias' statue of Athena, which used ivory rather than gold as an adornment.
+Socrates attacks this second definition in a roundabout way.  His first
+argument is that gold is not \emph{required} for something to be fine.  As an
+example, he offers Pheidias' statue of Athena, which used ivory rather than
+gold as an adornment.
 
-Hippias, of course, is not bothered by this at all.  His response is that ivory is fine \emph{too}.  After Socrates prods him further, Hippias adds that stone is also fine, and that all of these things (gold, ivory and stone) are fine \emph{when} they are appropriate.  Thus Hippias has now weakened his position quite a lot.
+Hippias, of course, is not bothered by this at all.  His response is that ivory
+is fine \emph{too}.  After Socrates prods him further, Hippias adds that stone
+is also fine, and that all of these things (gold, ivory and stone) are fine
+\emph{when} they are appropriate.  Thus Hippias has now weakened his position
+quite a lot.
 
-Socrates presses the point about \word{appropriate} and returns to the cooking pot.  He asks Hippias whether it is appropriate to use a golden ladle or a fig-wood ladle when cooking pea soup in the pot.  Hippias again objects to the inclusion of such low topics, but Hippias agrees that the fig-wood ladle is more appropriate for cooking soup.  Socrates claims that, by this account, fig-wood would be more fine than gold.  Hippias doesn't bother to argue the point.  Instead, he moves blithely onto his next definition.
+Socrates presses the point about \word{appropriate} and returns to the cooking
+pot.  He asks Hippias whether it is appropriate to use a golden ladle or
+a fig-wood ladle when cooking pea soup in the pot.  Hippias again objects to
+the inclusion of such low topics, but Hippias agrees that the fig-wood ladle is
+more appropriate for cooking soup.  Socrates claims that, by this account,
+fig-wood would be more fine than gold.  Hippias doesn't bother to argue the
+point.  Instead, he moves blithely onto his next definition.
 
 % }}} Second definition (289d6--291c9)
 
 % {{{ Third definition (291d1--293c8)
 \subsection{Third definition (291d1--293c8)}
 
-Hippias' third, and last, definition has echoes of Herodotus' story of Solon and Croesus.  Hippias says that it is ``most fine" ({\g κάλλιστον}) to be wealthy, healthy and honored by the Greeks, to bury your parents well and to be buried well in turn by your children (291d9--e1).  In other words, what is most fine is to live a traditionally good life, all the way to its conclusion.
+Hippias' third, and last, definition has echoes of Herodotus' story of Solon
+and Croesus.  Hippias says that it is ``most fine" ({\g κάλλιστον}) to be
+wealthy, healthy and honored by the Greeks, to bury your parents well and to be
+buried well in turn by your children (291d9--e1).  In other words, what is most
+fine is to live a traditionally good life, all the way to its conclusion.
 
-Initially Socrates blows off steam rather than responds directly to the proposed definition.  He explains that if he gives this answer to his alter-ego, he will get an earful and a beating.  And he goes on to tell Hippias that he thinks he would deserve them both.  The alter-ego would justifiably complain that he has been very clear in his question. He wants a definition for \phrase{the fine}, something that, if it is present in anything, then that thing is fine, whether strone or wood or person or god or action or instruction (292c9--d3).  But, according to Socrates, all of the proposed answers so far ignore \emph{this} question.
+Initially Socrates blows off steam rather than responds directly to the
+proposed definition.  He explains that if he gives this answer to his
+alter-ego, he will get an earful and a beating.  And he goes on to tell Hippias
+that he thinks he would deserve them both.  The alter-ego would justifiably
+complain that he has been very clear in his question. He wants a definition for
+\phrase{the fine}, something that, if it is present in anything, then that
+thing is fine, whether strone or wood or person or god or action or instruction
+(292c9--d3).  But, according to Socrates, all of the proposed answers so far
+ignore \emph{this} question.
 
-Hippias insists that his definition does meet these demands, and so Socrates picks it apart in earnest.  He points out that the definition doesn't apply to Achilles or many heroes.  It also doesn't apply to the gods or to demi-gods---anyone who can't die or who can't bury their parents.  This of course leads Socrates to remind Hippias that his third definition falls into the same problems as the first two: It is sometimes and for some people valid, but at other times or for other people not valid.  Therefore it does not meet the Socratic demands for a definition.
+Hippias insists that his definition does meet these demands, and so Socrates
+picks it apart in earnest.  He points out that the definition doesn't apply to
+Achilles or many heroes.  It also doesn't apply to the gods or to
+demi-gods---anyone who can't die or who can't bury their parents.  This of
+course leads Socrates to remind Hippias that his third definition falls into
+the same problems as the first two: It is sometimes and for some people valid,
+but at other times or for other people not valid.  Therefore it does not meet
+the Socratic demands for a definition.
 
 % }}} Third definition (291d1--293c8)
 
 % {{{ Fourth definition (293c8--294e10)
 \subsection{Fourth definition (293c8--294e10)}
 
-Socrates now informs Hippias (and us) that the alter-ego has a softer side.  Although he generally goes after Socrates, sometimes he takes pity and helps Socrates instead (293c8--d4).  When he helps, he offers Socrates definitions to investigate.  In this case, the alter-ego proposes ``the appropriate" (τὸ πρέπον) as a possible definition of the fine. Hippias and Socrates agree to investigate whether or not this definition works.
+Socrates now informs Hippias (and us) that the alter-ego has a softer side.
+Although he generally goes after Socrates, sometimes he takes pity and helps
+Socrates instead (293c8--d4).  When he helps, he offers Socrates definitions to
+investigate.  In this case, the alter-ego proposes ``the appropriate" (τὸ
+πρέπον) as a possible definition of the fine. Hippias and Socrates agree to
+investigate whether or not this definition works.
 
-Socrates asks Hippias whether the appropriate makes things \emph{appear} or \emph{be} fine.  Hippias initially goes with \word{appear}, and it is clear that his primary understanding of appropriate here is aesthetic.  He talks, for example, about an appropriate piece of clothing or shoes making someone (otherwise) ridiculous appear more fine.
+Socrates asks Hippias whether the appropriate makes things \emph{appear} or
+\emph{be} fine.  Hippias initially goes with \word{appear}, and it is clear
+that his primary understanding of appropriate here is aesthetic.  He talks, for
+example, about an appropriate piece of clothing or shoes making someone
+(otherwise) ridiculous appear more fine.
 
-Socrates, however, immediately turns this against the proposal.  He argues that if the appropriate causes things to appear more fine than they really are, then it cannot be what they want.  What they seek causes things to be a certain way, whether or not they appear that way.  As an example, he says that surpassing magnitude causes one thing to be bigger than another, regardless of how it looks.  This is the kind of thing they seek but for the fine instead of size.
+Socrates, however, immediately turns this against the proposal.  He argues that
+if the appropriate causes things to appear more fine than they really are, then
+it cannot be what they want.  What they seek causes things to be a certain way,
+whether or not they appear that way.  As an example, he says that surpassing
+magnitude causes one thing to be bigger than another, regardless of how it
+looks.  This is the kind of thing they seek but for the fine instead of size.
 
-In response, Hippias says that the appropriate makes things both be and appear fine.  Unfortunately, Socrates has an answer for this too.  If Hippias is right, then it is impossible for something truly fine not to appear fine.  But if this is right, then it is impossible for people to argue over the fineness of laws, practices or anything else.  Everything which \emph{is} fine must \emph{appear} fine as well, and so people cannot argue or be ignorant of what truly is fine.  However, as Hippias readily admits, people are ignorant of what is fine.
+In response, Hippias says that the appropriate makes things both be and appear
+fine.  Unfortunately, Socrates has an answer for this too.  If Hippias is
+right, then it is impossible for something truly fine not to appear fine.  But
+if this is right, then it is impossible for people to argue over the fineness
+of laws, practices or anything else.  Everything which \emph{is} fine must
+\emph{appear} fine as well, and so people cannot argue or be ignorant of what
+truly is fine.  However, as Hippias readily admits, people are ignorant of what
+is fine.
 
-As such, Socrates tells Hippias that he must choose: Does the appropriate make things truly be fine or only seem fine?  Hippias says \phrase{seem fine}, and they agree that the appropriate cannot be what they are looking for.
+As such, Socrates tells Hippias that he must choose: Does the appropriate make
+things truly be fine or only seem fine?  Hippias says \phrase{seem fine}, and
+they agree that the appropriate cannot be what they are looking for.
 
 % }}} Fourth definition (293c8--294e10)
 
 % {{{ Fifth definition (295a1--296d3)
 \subsection{Fifth definition (295a1--296d3)}
 
-Hippias is sure that he could figure out the fine, if only he had some time to himself, but Socrates urges him to continue their common search (295a3--c1).  As a next definition, Socrates proposes that the fine is what is ``useful" ({\g χρήσιμον} 295c3).  He goes on to explain his reasoning by way of an example:
+Hippias is sure that he could figure out the fine, if only he had some time to
+himself, but Socrates urges him to continue their common search (295a3--c1).
+As a next definition, Socrates proposes that the fine is what is ``useful" ({\g
+χρήσιμον} 295c3).  He goes on to explain his reasoning by way of an example:
 
 \begin{quote}
-    {\g καλοί, φαμέν, οἱ ὀφθαλμοί εἰσιν, οὐχ οἳ ἂν δοκῶσι τοιοῦτοι εἶναι οἷοι μὴ δυνατοὶ ὁρᾶν, ἀλλ᾽οἳ ἂν δυνατοί τε καὶ χρήσιμοι πρὸς τὸ ἰδεῖν} (295c4--6).
 
-    We say that the eyes are fine, not [those] which seem to be unable to see, but [those] which are able and useful with respect to sight.
+    {\g καλοί, φαμέν, οἱ ὀφθαλμοί εἰσιν, οὐχ οἳ ἂν δοκῶσι τοιοῦτοι εἶναι οἷοι
+    μὴ δυνατοὶ ὁρᾶν, ἀλλ᾽οἳ ἂν δυνατοί τε καὶ χρήσιμοι πρὸς τὸ ἰδεῖν}
+    (295c4--6).
+
+    We say that the eyes are fine, not [those] which seem to be unable to see,
+    but [those] which are able and useful with respect to sight.
+
 \end{quote}
 
-Socrates offers numerous other examples, and he surprisingly says that all cases of fine are univocal.  According to Socrates not just (human) eyes, but also the whole human body is fine in the same way.  In addition, all living creatures---Socrates specifies horses, roosters and quails---and all equipment and transportation---he specifies on land or on sea, as well as all instruments in music and other arts and also practices and laws: all of these many different kinds of things are fine ``in the same manner" ({\g τῷ αὐτῷ τρόπῳ} 295d6).  In every case, we look at the thing's nature and disposition and we consider it fine insofar as it is useful and foul insofar as it is useless (295d6--e2).
+Socrates offers numerous other examples, and he surprisingly says that all
+cases of fine are univocal.  According to Socrates not just (human) eyes, but
+also the whole human body is fine in the same way.  In addition, all living
+creatures---Socrates specifies horses, roosters and quails---and all equipment
+and transportation---he specifies on land or on sea, as well as all instruments
+in music and other arts and also practices and laws: all of these many
+different kinds of things are fine ``in the same manner" ({\g τῷ αὐτῷ τρόπῳ}
+295d6).  In every case, we look at the thing's nature and disposition and we
+consider it fine insofar as it is useful and foul insofar as it is useless
+(295d6--e2).
 
-It should bother people more that Socrates says all of these cases are univocal.  If they are fine in the same manner for Socrates, then that rules out immediately any account of fine which demands knowledge or wisdom or mental states of any kind at all.  Obviously an instrument or boat cannot meet such a demand, and neither can a rooster or quail (I would think).  The account Socrates gives here seems much more functional than I would have expected from our intellectualist hero Socrates.
+It should bother people more that Socrates says all of these cases are
+univocal.  If they are fine in the same manner for Socrates, then that rules
+out immediately any account of fine which demands knowledge or wisdom or mental
+states of any kind at all.  Obviously an instrument or boat cannot meet such
+a demand, and neither can a rooster or quail (I would think).  The account
+Socrates gives here seems much more functional than I would have expected from
+our intellectualist hero Socrates.
 
-Socrates develops his account by saying that the fine is a ``power" or ``capability" ({\g δύναμις} 295e9) and ``inability" or ``powerlessness" ({\g ἀδυναμία} 295e10) is foul.  Hippias agrees, and says that another example is politics: He believes that most fine is ability in politics, and Socrates agrees.  Socrates asks if this is why wisdom is the finest of all things and unitelligence the most shameful, and Hippias agrees via the rhetorical question ``What do you think?" (296a4--7).
+Socrates develops his account by saying that the fine is a ``power" or
+``capability" ({\g δύναμις} 295e9) and ``inability" or ``powerlessness" ({\g
+ἀδυναμία} 295e10) is foul.  Hippias agrees, and says that another example is
+politics: He believes that most fine is ability in politics, and Socrates
+agrees.  Socrates asks if this is why wisdom is the finest of all things and
+unitelligence the most shameful, and Hippias agrees via the rhetorical question
+``What do you think?" (296a4--7).
 
-At this moment of apparent great triumph, however, Socrates has doubts---of course.  He argues as follows:
+At this moment of apparent great triumph, however, Socrates has doubts---of
+course.  He argues as follows:
 
 \begin{enumerate}
-    \item Someone cannot do something that he neither knows nor is capable of doing (296b3--5)
-    \item People who err and do evil unwillingly are able to do the things that they do (296b5--8).
-    \item Those who are capable are capable by capability not inability (296b8--c2).
+
+    \item Someone cannot do something that he neither knows nor is capable of
+        doing (296b3--5)
+
+    \item People who err and do evil unwillingly are able to do the things that
+        they do (296b5--8).
+
+    \item Those who are capable are capable by capability not inability
+        (296b8--c2).
+
     \item Everyone is able to do the things that they do (296c2--3).
-    \item All people do bad things far more often than they do good, from childhood on, and they unwillingly make mistakes (296c3--5).
-    \item Therefore, either these capabilities---the capabilities that lead to error and evil---are also useful and thus fine, or capability and usefulness are not the fine (296c5--d3).
+
+    \item All people do bad things far more often than they do good, from
+        childhood on, and they unwillingly make mistakes (296c3--5).
+
+    \item Therefore, either these capabilities---the capabilities that lead to
+        error and evil---are also useful and thus fine, or capability and
+        usefulness are not the fine (296c5--d3).
+
 \end{enumerate}
 
-Hippias agrees at each step, but at the end, he believes he can save the definition by adding a qualification.  This leads to our next definition.
+Hippias agrees at each step, but at the end, he believes he can save the
+definition by adding a qualification.  This leads to our next definition.
 
 % }}} Fifth definition (295a1--296d3)
 
 % {{{ Sixth definition (296d4--297d9)
 \subsection{Sixth definition (296d4--297d9)}
 
-Instead of abandon the previous definition, Hippias tries to emend it: What if the fine is defined as capable of producing the good and useful for such things (i.e. the good)?  Since Socrates will not tolerate a \foreign{definiens} that leads to or contains anything bad, why not just stipulate that as part of the definition?  Socrates accepts the emendment as a starting point, even going so far as to say that the corrected definition is what their souls meant all along when they gave the previous definition.  Socrates also quickly labels Hippias' new definition as ``beneficial" ({\g ὠφέλιμον} 296e1).  Hippias agrees to that term, and Socrates begins to test the new definition.
+Instead of abandon the previous definition, Hippias tries to emend it: What if
+the fine is defined as capable of producing the good and useful for such things
+(i.e. the good)?  Since Socrates will not tolerate a \foreign{definiens} that
+leads to or contains anything bad, why not just stipulate that as part of the
+definition?  Socrates accepts the emendment as a starting point, even going so
+far as to say that the corrected definition is what their souls meant all along
+when they gave the previous definition.  Socrates also quickly labels Hippias'
+new definition as ``beneficial" ({\g ὠφέλιμον} 296e1).  Hippias agrees to that
+term, and Socrates begins to test the new definition.
 
 Socrates argues against this definition in the following manner:
 
 \begin{enumerate}
+
     \item The fine is the beneficial (by hypothesis) 296e5--6.
+
     \item The beneficial is the cause of good (by agreement) 296e7--8.
-    \item A cause and its effect are distinct things (by agreement) 296e8--297b2.
-    \item If the fine is the cause of the good, then the good is the effect of the fine (by agreement and by spelling out of meanings) 297b2--3.
-    \item We desire intelligence and all fine things because they are productive of the good.  The fine is analogous to a parent of the good. (This appears to be a sidenote 297b3--8).
-    \item A father is not (his own?) son nor a son (his own?) father. (This is by agreement, but it seems to me to restate the more formal point about cause and effect from above.  Socrates probably restates in order to bring it in line with the analogy he just made.  In addition, he immediately restates the earlier point in the formal manner again: cause and effect are not the same thing) 297b9--c3.
-    \item Therefore, the fine is not the good (by 1, 2 and 3 -- everything else appears to be color or expansion, not formally part of the argument) 297c3--6.
+
+    \item A cause and its effect are distinct things (by agreement)
+        296e8--297b2.
+
+    \item If the fine is the cause of the good, then the good is the effect of
+        the fine (by agreement and by spelling out of meanings) 297b2--3.
+
+    \item We desire intelligence and all fine things because they are
+        productive of the good.  The fine is analogous to a parent of the good.
+        (This appears to be a sidenote 297b3--8).
+
+    \item A father is not (his own?) son nor a son (his own?) father. (This is
+        by agreement, but it seems to me to restate the more formal point about
+        cause and effect from above.  Socrates probably restates in order to
+        bring it in line with the analogy he just made.  In addition, he
+        immediately restates the earlier point in the formal manner again:
+        cause and effect are not the same thing) 297b9--c3.
+
+    \item Therefore, the fine is not the good (by 1, 2 and 3 -- everything else
+        appears to be color or expansion, not formally part of the argument)
+        297c3--6.
+
 \end{enumerate}
 
-Whether or not this argument is valid depends on whether or not you think that Socrates equivocates on ideas of cause and effect in the argument.  I'm inclined to think not, but it is rather tricky.  Note that \citet{woodruff1982} gives a different and much more complicated construal of parts of the argument.  See 71--74 and Essay {6} in his edition for details.
+Whether or not this argument is valid depends on whether or not you think that
+Socrates equivocates on ideas of cause and effect in the argument.  I'm
+inclined to think not, but it is rather tricky.  Note that \citet{woodruff1982}
+gives a different and much more complicated construal of parts of the argument.
+See 71--74 and Essay {6} in his edition for details.
 
 % }}} Sixth definition (296d4--297d9)
 
 % {{{ Seventh definition (297d10--303d10)
 \subsection{Seventh definition (297d10--303d10)}
 
-The seventh, and last, definition is that the fine is what is pleasant through sight and hearing.  Oddly, the definition is disproven long before it's abandoned.  Early on in the discussion, Socrates points out that being pleasant through sight or hearing cannot explain the fineness of laws or practices.  Therefore, this definition must fail according to Socrates' normal demand that a defintion of X cover all cases of things being X.  For whatever reason, Socrates doesn't say that here.  Instead, he decides to wave these cases and press on.\footnote{Presumably Socrates or Plato believes that there is something independently interesting about the rest of the discussion.}
+The seventh, and last, definition is that the fine is what is pleasant through
+sight and hearing.  Oddly, the definition is disproven long before it's
+abandoned.  Early on in the discussion, Socrates points out that being pleasant
+through sight or hearing cannot explain the fineness of laws or practices.
+Therefore, this definition must fail according to Socrates' normal demand that
+a defintion of X cover all cases of things being X.  For whatever reason,
+Socrates doesn't say that here.  Instead, he decides to wave these cases and
+press on.\footnote{Presumably Socrates or Plato believes that there is
+something independently interesting about the rest of the discussion.}
 
-The argument that follows is painfully intricate.  I'm not sure I follow it correctly.  In a nutshell, the problem seems to be this:
+The argument that follows is painfully intricate.  I'm not sure I follow it
+correctly.  In a nutshell, the problem seems to be this:
 
 \begin{enumerate}
-    \item By hypothesis, pleasure through sight and pleasure through hearing are fine.  These are a pair of items.
-    \item Where fineness is concerned, if both of a pair are fine, then each must also be fine.
-    \item But pleasure through sight and hearing must both, but not each, have some shared quality that makes them both fine (as opposed to the other pleasures which are not fine but are still perfectly pleasurable).
-    \item Therefore (?!?), both but not each of the pair are properly related to the fine.  Since both and each must be properly related, the definition fails.
+
+    \item By hypothesis, pleasure through sight and pleasure through hearing
+        are fine.  These are a pair of items.
+
+    \item Where fineness is concerned, if both of a pair are fine, then each
+        must also be fine.
+
+    \item But pleasure through sight and hearing must both, but not each, have
+        some shared quality that makes them both fine (as opposed to the other
+        pleasures which are not fine but are still perfectly pleasurable).
+
+    \item Therefore (?!?), both but not each of the pair are properly related
+        to the fine.  Since both and each must be properly related, the
+        definition fails.
+
 \end{enumerate}
 
 % }}} Seventh definition (297d10--303d10)
@@ -272,32 +658,73 @@ The argument that follows is painfully intricate.  I'm not sure I follow it corr
 % {{{ Digression on both versus each (300b4--302b6)
 \subsubsection{Digression on both versus each (300b4--302b6)}
 
-The seventh definition contains a long digression on both versus each.  It begins when Socrates asks whether ``both pleasures experience something, but each does not" (300b4--5).  Hippias objects vehemently that this is imposible.  How, he asks, could neither of the two experience something, but both do?
+The seventh definition contains a long digression on both versus each.  It
+begins when Socrates asks whether ``both pleasures experience something, but
+each does not" (300b4--5).  Hippias objects vehemently that this is imposible.
+How, he asks, could neither of the two experience something, but both do?
 
-As \citet{woodruff1982} 82--83 points out, Hippias digs in his heels in this digression, more so than anywhere else in the dialogue.  Unfortunately, he ends up looking like a complete fool.
+As \citet{woodruff1982} 82--83 points out, Hippias digs in his heels in this
+digression, more so than anywhere else in the dialogue.  Unfortunately, he ends
+up looking like a complete fool.
 
-What becomes clear is that Hippias has only a limited range of cases in mind.  If each person is just or sick or brave, then both are.  And in such cases, if both are, then each is.  However, if each of two is one, as Socrates points out, then both are not one.  Even further, if each is one, then each is odd.  But as a pair, they are neither one nor odd.  When Socrates offers examples like this, Hippias can only answer that he didn't have such cases in mind.
+What becomes clear is that Hippias has only a limited range of cases in mind.
+If each person is just or sick or brave, then both are.  And in such cases, if
+both are, then each is.  However, if each of two is one, as Socrates points
+out, then both are not one.  Even further, if each is one, then each is odd.
+But as a pair, they are neither one nor odd.  When Socrates offers examples
+like this, Hippias can only answer that he didn't have such cases in mind.
 
 % }}} Digression on both versus each (300b4--302b6)
 
 % {{{ Conclusion (303e11--304e9)
 \section{Conclusion (303e11--304e9)}
 
-In this final section, Socrates argues that their definition has gone around in a circle.  Beneficial pleasure is the fine, but this brings them back to the problem of callign the fine the beneficial, and so they will have to abandon this claim.
+In this final section, Socrates argues that their definition has gone around in
+a circle.  Beneficial pleasure is the fine, but this brings them back to the
+problem of callign the fine the beneficial, and so they will have to abandon
+this claim.
 
-Hippias returns to his complaint that Socrates is not seeing the bigger picture.  He accuses Socrates of treating only shavings and snippets of argument, and he urges Socrates to turn his attention to larger and more traditional rhetorical exercises, letting go of all his nitpicky searches for definitions.
+Hippias returns to his complaint that Socrates is not seeing the bigger
+picture.  He accuses Socrates of treating only shavings and snippets of
+argument, and he urges Socrates to turn his attention to larger and more
+traditional rhetorical exercises, letting go of all his nitpicky searches for
+definitions.
 
-Socrates in turn ends the dialogue with a long complaint.  Socrates wishes that he could be like Hippias and others, many of whom recommend to Socrates the same approach as Hippias.  However, when he tries to do this, he is assailed by his alter-ego: Isn't he ashamed to talk thus about the fine when he has no idea what the fine is?  Socrates also complains that he is criticized from both directions.  People like Hippias criticize him for being small-minded and nitpicky, and his alter-ego criticizes him for his ignorance of the definitions that matter most to a good life.  He cannot win.
+Socrates in turn ends the dialogue with a long complaint.  Socrates wishes that
+he could be like Hippias and others, many of whom recommend to Socrates the
+same approach as Hippias.  However, when he tries to do this, he is assailed by
+his alter-ego: Isn't he ashamed to talk thus about the fine when he has no idea
+what the fine is?  Socrates also complains that he is criticized from both
+directions.  People like Hippias criticize him for being small-minded and
+nitpicky, and his alter-ego criticizes him for his ignorance of the definitions
+that matter most to a good life.  He cannot win.
 
-By way of conclusion, I want to consider more closely one part of Socrates' complaint.  After the alter-ego reminds Socrates that he cannot judge fine practices or fine speeches or fine anything, the alter-ego says:
+By way of conclusion, I want to consider more closely one part of Socrates'
+complaint.  After the alter-ego reminds Socrates that he cannot judge fine
+practices or fine speeches or fine anything, the alter-ego says:
 
 \begin{quote}
-    {\g καὶ ὁπότε οὕτω διάκεισαι, οἴει σοι κρεῖττον εἶναι ζῆν μᾶλλον ἢ τεθνάναι;} (304e2--3)
 
-    And since you are like this, do you think that it is better for you to live than to die?
+    {\g καὶ ὁπότε οὕτω διάκεισαι, οἴει σοι κρεῖττον εἶναι ζῆν μᾶλλον
+    ἢ τεθνάναι;} (304e2--3)
+
+    And since you are like this, do you think that it is better for you to live
+    than to die?
+
 \end{quote}
 
-What makes this passage stand out to me is that it makes it very difficult to accept the happier stories of some scholars about Socrates' pursuit of definitions.  According to many, he believes that knowledge is almost certainly out of reach for humans.  However, he is extremely confident in the beliefs he has.  He thinks that he has very good evidence (of one kind or another) for them, and so he believes quite firmly that he is a good person and that he lives a good life.  He continues to pursue true knowledge (or maybe not, depends on the scholar), but he is not bereft without it.  This passage makes such a rosy story hard to swallow.  Socrates says here as clearly as possible that a life without his knowledge of definitions (or at least the definition of the fine) is not worth living, that is is scarely better than death.  Perhaps we should dismiss this as exaggeration, but I'm not so sure.
+What makes this passage stand out to me is that it makes it very difficult to
+accept the happier stories of some scholars about Socrates' pursuit of
+definitions.  According to many, he believes that knowledge is almost certainly
+out of reach for humans.  However, he is extremely confident in the beliefs he
+has.  He thinks that he has very good evidence (of one kind or another) for
+them, and so he believes quite firmly that he is a good person and that he
+lives a good life.  He continues to pursue true knowledge (or maybe not,
+depends on the scholar), but he is not bereft without it.  This passage makes
+such a rosy story hard to swallow.  Socrates says here as clearly as possible
+that a life without his knowledge of definitions (or at least the definition of
+the fine) is not worth living, that is is scarely better than death.  Perhaps
+we should dismiss this as exaggeration, but I'm not so sure.
 
 % }}} Conclusion (303e11--304e9)
 
