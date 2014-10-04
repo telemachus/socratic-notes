@@ -11,4 +11,4 @@ However, if you don't have LaTeX installed or you just want to read the
 pdfs and don't care about the LaTeX source, please see the [pdfs
 branch][p].
 
-[p]: https://github.com/telemachus/socratica/tree/pdfs
+[p]: https://bitbucket.org/telemachus/socratica/src/?at=pdfs
