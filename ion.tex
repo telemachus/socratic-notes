@@ -1,38 +1,55 @@
-% {{{ LaTeX prelude
-\documentclass[11pt]{article}
-\usepackage{fontspec}
+% [[- Prelude
+\documentclass[11pt,letterpaper]{article}
+\usepackage[no-math]{fontspec}
 \setmainfont[Ligatures={Common,TeX}]{Baskerville}
-\newfontfamily\g[Ligatures={Common,TeX}]{Times New Roman}
-\usepackage{url}
-\usepackage{parskip}
-\usepackage{natbib}
-\bibpunct{(}{)}{;}{a}{,}{,}
-\usepackage{titles}
+\newfontfamily\greekfont{Times New Roman}
+
+% Define two languages using Polyglossia
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage[variant=ancient]{greek}
+\usepackage{csquotes}
+
+% Tighten up lists: don't double space them.
 \usepackage{enumitem}
 \setlist{noitemsep}
-\hyphenation{ἐκ-μανθάν-ειν}
-% }}}
 
-% {{{ LaTeX document
+% Simplify how section headings look
+\usepackage[explicit,pagestyles]{titlesec}
+\titleformat{\section}{\bf}{}{0em}{{#1}}
+
+\usepackage{parskip}
+
+\usepackage[style=philosophy-classic, backend=biber]{biblatex}
+\addbibresource{plato.bib}
+
+\usepackage{titling}
+\usepackage{mytitle}
+\title{Notes on Plato's \textit{Ion}}
+\author{Peter Aronoff}
+\date{\today}
+
+% Do not indent footnotes.
+% Taken from TeX Stackexchange: http://tex.stackexchange.com/a/41010/29387
+\makeatletter
+\renewcommand{\@makefntext}[1]{%
+    \parindent 1em%
+    \noindent\normalfont\@thefnmark~#1
+}
+\makeatother
+% -]] Prelude
+
+% [[- Document
 \begin{document}
 
-% {{{ Title page
-\begin{titlepage}
-\title{Notes on Plato's \book{Ion}}
-\author{Peter Aronoff}
-\date{August 2013}
 \maketitle
-\thispagestyle{empty}
-\end{titlepage}
-% }}}
 
-% {{{ Characters and setting
-\section{Characters and setting}
+% [[- Characters and setting
 
-% {{{ Characters
-\subsection{Characters}
+% [[- Characters
+\section{Characters}
 
-We know nothing about Ion outside of what \book{Ion} tells us.  He is from
+We know nothing about Ion outside of what \textit{Ion} tells us.  He is from
 Ephesus, and he has just been at Epidaurus.  He won a rhapsodic competition
 there at a festival for Asclepius (530a).  He may also be something of
 a fancy dresser (530b6, 535d2).
@@ -41,337 +58,157 @@ Rhapsodes were professional reciters of poetry, especially Homer's epics.
 They traveled around the Greek world and competed at religious festivals.
 In some ways, they must have struck Plato as similiar to the sophists: the
 traveling, the fame, the reputation for wisdom among ordinary people, the
-vanity.  \citet{murray1996} describes Ion's performance style as
+vanity.  \textcite{murray1996} describes Ion's performance style as
 ``histrionic" (97), and she believes that rhapsodes would have not only
 recited the epics but also commented on them.  This fits with Ion's
 assertions, near the end of the dialogue, that even if he is inspired as
 a performer, he speaks about Homer in a normal, unpossessed state of mind.
 
-% }}} Characters
+% -]] Characters
 
-% {{{ Setting
-\subsection{Setting}
+% [[- Setting
+\section{Setting}
 
-The dialogue does nearly no scene-setting.  We're obviously in Athens, but
-nothing either man says indicates where.  In addition, there doesn't seem
-to be any other audience that might help us place the dialogue.
+The dialogue does nearly no scene-setting.  We're obviously in Athens, but nothing either man says indicates where.  In addition, there doesn't seem to be any other audience that might help us place the dialogue.
 
-\citet{murray1996} suggests a dramatic date ``sometime before 412" (96) on
-the basis of 541c3--4.  In that passage, Ion refers to Athenian control of
-Ephesus.  As a member of the Delian league, Ephesus was under Athenian
-control, but in 412 there was a larger Ionian revolt that ended this
-control.  So presumably the dialogue takes place sometime before
-that.\footnote{See \citet{moore1974}.}
+\textcite{murray1996} suggests a dramatic date ``sometime before 412" (96) on the basis of 541c3--4.  In that passage, Ion refers to Athenian control of Ephesus.  As a member of the Delian League, Ephesus was under Athenian rule, but in 412 there was a larger Ionian revolt that ended this control.  So presumably the dialogue takes place sometime before that.\footcites[See][]{moore1974}[and also][28--31, 163--4]{canto2001}
 
-% }}} Setting
+% -]] Setting
 
-% }}} Characters and setting
+% -]] Characters and setting
 
-% {{{ Introductory material (530a--530d8)
-\section{Introductory material (530a--530d8)}
+% [[- Introduction (530a--530d8)
+\section{Introduction (530a--530d8)}
 
-The two men meet and briefly exchange small talk before Socrates begins to
-grill Ion.  Ion tells Socrates that he has just come from a competition at
-Epidaurus and that he won first prize there.  Socrates congratulates him
-and says that he has often envied rhapsodes:
+The two men meet and briefly exchange small talk before Socrates begins to grill Ion. Ion tells Socrates that he has just come from a rhapsodic competition at Epidaurus and that he won first prize there. Socrates congratulates him and says that he has often envied rhapsodes: 
 
 \begin{quote}
-    {\g
-    Καὶ μὴν πολλάκις γε ἐζήλωσα ὑμᾶς τοὺς ῥαψῳδούς, ὦ Ἴων, τῆς τέχνης· τὸ
-    γὰρ ἅμα μὲν τὸ σῶμα κεκοσμῆσθαι ἀεὶ πρέπον ὑμῶν εἶναι τῇ τέχνῃ καὶ ὡς
-    καλλίστοις φαίνεσθαι, ἅμα δὲ ἀναγκαῖον εἶναι ἔν τε ἄλλοις ποιηταῖς
-    διατρίβειν πολλοῖς καὶ ἀγαθοῖς καὶ δὴ καὶ μάλιστα ἐν Ὁμήρῳ, τῷ ἀρίστῳ
-    καὶ θειοτάτῳ τῶν ποιητῶν, καὶ τὴν τούτου διάνοιαν ἐκμανθάνειν, μὴ μόνον
-    τὰ ἔπη, ζηλωτόν ἐστιν. οὐ γὰρ ἂν γένοιτό ποτε ἀγαθὸς ῥαψῳδός, εἰ μὴ
-    συνείη τὰ λεγόμενα ὑπὸ τοῦ ποιητοῦ. τὸν γὰρ ῥαψῳδὸν ἑρμηνέα δεῖ τοῦ
-    ποιητοῦ τῆς διανοίας γίγνεσθαι τοῖς ἀκούουσι· τοῦτο δὲ καλῶς ποιεῖν μὴ
-    γιγνώσκοντα ὅτι λέγει ὁ ποιητὴς ἀδύνατον. ταῦτα οὖν πάντα ἄξια
-    ζηλοῦσθαι
-    } (530b5--c6).
+    \begin{greek}[variant=ancient]
+    Καὶ μὴν πολλάκις γε ἐζήλωσα ὑμᾶς τοὺς ῥαψῳδούς, ὦ Ἴων, τῆς τέχνης· τὸ γὰρ ἅμα μὲν τὸ σῶμα κεκοσμῆσθαι ἀεὶ πρέπον ὑμῶν εἶναι τῇ τέχνῃ καὶ ὡς καλλίστοις φαίνεσθαι, ἅμα δὲ ἀναγκαῖον εἶναι ἔν τε ἄλλοις ποιηταῖς διατρίβειν πολλοῖς καὶ ἀγαθοῖς καὶ δὴ καὶ μάλιστα ἐν Ὁμήρῳ, τῷ ἀρίστῳ καὶ θειοτάτῳ τῶν ποιητῶν, καὶ τὴν τούτου διάνοιαν ἐκμανθάνειν, μὴ μόνον τὰ ἔπη, ζηλωτόν ἐστιν. οὐ γὰρ ἂν γένοιτό ποτε ἀγαθὸς ῥαψῳδός, εἰ μὴ συνείη τὰ λεγόμενα ὑπὸ τοῦ ποιητοῦ. τὸν γὰρ ῥαψῳδὸν ἑρμηνέα δεῖ τοῦ ποιητοῦ τῆς διανοίας γίγνεσθαι τοῖς ἀκούουσι· τοῦτο δὲ καλῶς ποιεῖν μὴ γιγνώσκοντα ὅτι λέγει ὁ ποιητὴς ἀδύνατον. ταῦτα οὖν πάντα ἄξια ζηλοῦσθαι
+    \end{greek} (530b5--c6).
 
-    Indeed, I often envied you rhapsodes, Ion, for your skill. For it
-    deserves envy that your skill makes it appropriate for you to always be
-    dressed up and appear as beautiful as possible and at the same time
-    that it is necessary to spend time among the many excellent poets, and
-    in particular with Homer, the best and most divine of the poets and to
-    thoroughly learn his thought, not only his words. For someone could not
-    become a good rhapsode unless he understood the things said by the
-    poet. For a rhapsode must be an interpreter of the poet's thought for
-    his audience. And it is impossible to do this well unless you know what
-    the poet means. All of these things, therefore, deserve to be envied.
+    Indeed, Ion, I (have) often envied you rhapsodes for your skill. For it deserves envy that your skill makes it appropriate for you to always be dressed up and appear as beautiful as possible and at the same time that it is necessary to spend time among the many excellent poets, and in particular with Homer---the best and most divine of the poets---and to thoroughly learn his thought, not only his words. For someone could not become a good rhapsode unless he understood the things said by the poet. For a rhapsode must be an interpreter of the poet's thought for his audience. And it is impossible to do this well unless you know what the poet means. All of these things, therefore, deserve to be envied.
 \end{quote}
 
-I quoted this at length because it is a classic Socratic set up.  How are
-we to read Socrates' professed envy here?  The obvious answer is that he's
-being ironic.  But what would \word{ironic} mean here?  I submit that it
-cannot mean the most common contemporary thing, namely something like
-\phrase{using words to convey the opposite of their literal meaning}.  It
-can't mean that because in the normal contemporary case, the source of such
-irony \emph{wants} the target to pick up on the intended opposite meaning.
-Socrates is very unlikely to want Ion to pick up on any such opposed
-meaning.  That would only antagonize Ion, but Socrates wants to engage him
-in conversation.
+I quoted this at length because it is a classic Socratic set up. How are we to read Socrates' professed envy here? The obvious answer is that he's being ironic. (In particular, Socrates was infamous for his lack of interest in his clothing and appearance.) But what would `ironic' mean here? I submit that it cannot mean the most common contemporary thing, namely something like `using words to convey the opposite of their literal meaning'. It can't mean that because in the normal contemporary case, a person who speaks ironically \emph{wants} people to pick up on the intended opposite meaning. But Socrates is very unlikely to want Ion to pick up on any such opposed meaning. That would only antagonize Ion, and Socrates wants to engage him in conversation. Socrates wants to deceive Ion, insofar as he wants to keep his real feelings about Ion's clothing and skill a secret.
 
-I think we can make the best sense of this by distinguishing two levels of
-speaker and audience.  Internally, the speaker is Socrates and the audience
-is Ion.  Externally, the author is Plato and the reader is the audience.
-In order to make the terms uniform, I'll speak of \word{source} and
-\word{target}.  Socrates and Plato are both sources; Ion and the readers of
-the dialogue are targets.
+I think we can make the best sense of this by distinguishing two levels of speaker and audience. Internally, the speaker is Socrates and the audience is Ion. Externally, the author is Plato and the reader is the audience. In order to make the terms uniform, I'll speak of `source' and `target'. Socrates and Plato are both sources; Ion and the readers of the dialogue are all targets.
 
-With this distinction in place, we can understand this passage---and others
-like it---better and more easily.  Socrates is being ironic in the ancient
-Greek sense of {\g εἴρων}: he is falsely humble in praise of another.  But
-he is trying to deceive Ion, as I said above.  So Socrates is not ironic in
-the contemporary sense.  If he were, his irony would lack a target, and he
-would be speaking to himself.  Plato, on the other hand, is being ironic in
-more like our sense: he very much wants his readers to see that it is
-Socrates and not Ion who is more likely to have the better of the following
-discussion.
+With this distinction in place, we can understand this passage---and others like it---better and more easily. Socrates is being ironic in the ancient Greek sense of \textgreek{εἴρων}: he is falsely humble in praise of another. But he is trying to deceive Ion, as I said above. So Socrates is not ironic in the contemporary sense. If he were, his irony would lack a target, and he would be speaking to himself. Plato, on the other hand, is being ironic in more like our sense: he very much wants his readers to see that it is Socrates and not Ion who is more likely to have the better of the following discussion.
 
-\citet{ferrari2008} offers a very different view of all of this.  He
-understands all irony as primarily pretence, and he is not troubled that
-Socratic irony often lacks a target.  He describes this as ``solipsistic
-irony", and compares a mother being ironic to a baby or someone being
-ironic with a pet.  Neither the baby nor the pet can understand the irony,
-but it is there nonetheless.  I'm not sure what I think of this yet, to be
-honest.
+\textcite{ferrari2008} offers a very different view of all of this. He understands all irony as primarily pretence, and he is not troubled that Socratic irony often lacks a target. He describes this as ``solipsistic irony", and compares a mother being ironic to a baby or someone being ironic with a pet. Neither the baby nor the pet can understand the irony, but it is there nonetheless. Ferrari uses this as a means of characterizing the isolation and oddity of Socrates.
 
-% }}} Introductory material (530a--530d8)
+However we interpret the tone of his opening remarks, Socrates explicitly introduces the dialogue's main topic: the rhapsode's knowledge. From the very start, Socrates declares that someone could not become (or `prove to be'?) a good rhapsode unless they understood what the poet said (530c1--3).\footnote{Note that \textcite{canto2001}, in agreement with \textcite{meridier1931}, makes this claim even stronger by following the manuscripts that omit \textgreek{ἀγαθός}. If this is right, Socrates claims not only that being a \emph{good} rhapsode requires understanding, but being a rhapsode at all. However, when Socrates repeats his point in the next sentence he says ``It is impossible for someone to do this (i.e. be an interpreter of the poet's thought) \emph{well} unless he knows what the poet means'' (530c4--5). So I agree with \textcite{burnet1903} that we should accept the addition of \textgreek{ἀγαθός} from F.} He justifies this by saying that a rhapsode must be an interpreter of the poet's thought for their audience and that it is impossible to do this well unless someone knows what the poet means (530c3--5).
 
-% {{{ Why does Ion understand only Homer? (530d9--533c3)
+Ion readily agrees with Socrates, and many readers are likely to agree as well. Socrates makes an apparently intuitive and perhaps even obvious point. It does seems reasonable to insist that only someone who understands a poet's thought could be a good performer and interpreter of that poet's work. Note that Socrates does not say that this understanding is \emph{sufficient}, but only that it is necessary. Initially at least, this does not seem like an unreasonable demand, though as we will see, whether we continue to agree with Socrates will depend on how much he requires of understanding.
+% -]] Introduction (530a--530d8)
+
+% [[- Why does Ion understand only Homer? (530d9--533c3)
 \section{Why does Ion understand only Homer? (530d9--533c3)}
 
-Socrates asks Ion whether he is a gifted speaker about only Homer or also
-about Hesiod and Archilochus.  This question may seem odd or unexpected at
-first, but it quickly becomes clear why it matters to Socrates.  Socrates
-believes that if you possess a skill ({\g τέχνη}), then your ability is general
-not specific to one case.  So what he is leading up to here is a challenge
-to Ion's belief that he excels in some skill concerning Homer.
+Socrates asks Ion whether he is a gifted speaker about only Homer or also about Hesiod and Archilochus. This question may seem odd or unexpected at first, but it quickly becomes clear why it matters to Socrates. Socrates believes that if you possess a skill (\textgreek{τέχνη}), then your ability is general not specific to one case. So what he is leading up to here is a challenge to Ion's belief that he excels in some skill concerning Homer.
 
-However that may be, Ion readily admits that he is only gifted concerning
-Homer (531a3--4).  In fact, as he says later, when any other poet comes up,
-Ion ``nods off to sleep" (533c2).
+However that may be, Ion readily admits that he is only gifted concerning Homer (531a3--4). In fact, as he says later, when any other poet comes up, Ion ``nods off to sleep" (533c2).
 
-Socrates presses Ion by reminding him that Homer and other poets sometimes
-talk about the same subjects.  When this happens, they sometimes agree and
-they sometimes disagree.  According to Socrates, it would take a specific
-expert in any given case to determine who speaks well and who doesn't,
-whether they agree or disagree.  He uses the example of prophecy, and Ion
-agrees that a prophet would be better able than him to determine the value
-of what Homer and Hesiod say about prophecy (531b1--10).
+Socrates presses Ion by reminding him that Homer and other poets sometimes talk about the same subjects. When this happens, they sometimes agree and they sometimes disagree. According to Socrates, it would take a specific expert in any given case to determine who speaks well and who doesn't, whether they agree or disagree. He uses the example of prophecy, and Ion agrees that a prophet would be better able than him to determine the value of what Homer and Hesiod say about prophecy (531b1--10).
 
-Socrates also gets Ion to agree that all the poets, including Homer speak
-about the same general variety of subjects.  As examples, he mentions war,
-the gatherings of men and gods, the heavens and Hades and the origins of
-gods and heroes.  Ion insists that Homer speaks \emph{better} about these
-things, but he grants that they all cover the same subjects (531c1--d11).
+Socrates also gets Ion to agree that all the poets, including Homer speak about the same general variety of subjects. As examples, he mentions war, the gatherings of men and gods, the heavens and Hades and the origins of gods and heroes. Ion insists that Homer speaks \emph{better} about these things, but he grants that they all cover the same subjects (531c1--d11).
 
-Socrates returns to his understanding of skill, this time with more
-extended examples.  He argues as follows:
+Socrates returns to his understanding of skill, this time with more extended examples. He argues as follows:
 
 \begin{enumerate}
 
-    \item When many people are talking about math and one person speaks the
-        best, someone will be able to recognize the good speaker.  Ion
-        agrees.(531d13--e1)
+    \item When many people are talking about math and one person speaks the best, someone will be able to recognize the good speaker. Ion agrees.(531d13--e1)
 
-    \item The same person who can recognize a good speaker will also be
-        able to recognize a bad speaker.  Again, Ion agrees. (531e1--3)
+    \item The same person who can recognize a good speaker will also be able to recognize a bad speaker. Again, Ion agrees. (531e1--3)
 
-    \item The person who can recognize good and bad speakers about math is
-        someone who possesses mathematical skill ({\g τέχνη}).  Ion agrees
-        again. (531e3--4)
+    \item The person who can recognize good and bad speakers about math is someone who possesses mathematical skill (\textgreek{τέχνη}). Ion agrees again. (531e3--4)
 
-    \item Similarly when people talk about healthy foods, the same person
-        can recognize good and bad speakers and that person is a doctor.
-        Ion agrees. (531e4--9)
+    \item Similarly when people talk about healthy foods, the same person can recognize good and bad speakers and that person is a doctor. Ion agrees. (531e4--9)
 
-    \item Therefore, says Socrates, they can draw the general conclusion
-        that the same person will recognize good and bad speakers about one
-        subject.  The same person is gifted concerning both people who
-        speak well and people who speak poorly.  Ion agrees. (531e9--532a4)
+    \item Therefore, says Socrates, they can draw the general conclusion that the same person will recognize good and bad speakers about one subject. The same person is gifted concerning both people who speak well and people who speak poorly. Ion agrees. (531e9--532a4)
 
-    \item But Ion says that the poets talk about the same things sometimes,
-        that he recognizes that Homer speaks better than the others.
-        Therefore, by parity of reasoning with the other cases, Ion should
-        be able to recognize those who speak worse as well as the one who
-        speaks well.  Ion agrees that this seems right, presumably based on
-        the argument this far, but he balks at the final inference.
-        (532a4--c4)
+    \item But Ion says that the poets talk about the same things sometimes, that he recognizes that Homer speaks better than the others. Therefore, by parity of reasoning with the other cases, Ion should be able to recognize those who speak worse as well as the one who speaks well. Ion agrees that this seems right, presumably based on the argument this far, but he balks at the final inference. (532a4--c4)
 
 \end{enumerate}
 
-Ion's position is simple and not uncommon in the Socratic dialogues.  He
-agrees with each step in the argument, and he agrees with the logical
-connection of steps.  However, he is convinced that the conclusion is
-untrue.  He seems to recognize that he should grant the conclusion since he
-agrees to all the individual steps and to the logic of the argument.  But
-he resists because of his certainty that the conclusion doesn't follow.
+Ion's position is simple and not uncommon in the Socratic dialogues. He agrees with each step in the argument, and he agrees with the logical connection of steps. However, he is convinced that the conclusion is untrue. He seems to recognize that he should grant the conclusion since he agrees to all the individual steps and to the logic of the argument. But he resists because of his certainty that the conclusion doesn't follow.
 
-In this case, unlike many dialogues, Ion does not become angry or
-reluctant.  He simply asks socrates, sincerely I think, how it's possible
-that the he's in the state he's in, given their previous agreements.  In
-response, Socrates explains that Ion doesn't speak about Homer by means of
-skill ({\g τέχνη}) and knowledge ({\g ἐπιστήμη}) (532c5--9).  Socrates
-insists that this is ``not difficult to infer" and that the answer is
-``clear to everyone" (532c5--6).  Given the way Socrates understands skill
-and knowledge, Socrates absolutely cannot attribute what Ion does to either
-of them.
+In this case, unlike many dialogues, Ion does not become angry or reluctant. He simply asks socrates, sincerely I think, how it's possible that the he's in the state he's in, given their previous agreements. In response, Socrates explains that Ion doesn't speak about Homer by means of skill (\textgreek{τέχνη}) and knowledge (\textgreek{ἐπιστήμη}) (532c5--9). Socrates insists that this is ``not difficult to infer" and that the answer is ``clear to everyone" (532c5--6). Given the way Socrates understands skill and knowledge, Socrates absolutely cannot attribute what Ion does to either of them.
 
-To hammer the point home, Socrates quickly runs through three more
-examples.  He covers painting, sculpture and music.  And in each case, he
-argues---and Ion agrees---that you can't know the work of one great artist
-in the field but not all the others.  In each case, Ion agrees readily.
+To hammer the point home, Socrates quickly runs through three more examples.  He covers painting, sculpture and music. And in each case, he argues---and Ion agrees---that you can't know the work of one great artist in the field but not all the others. In each case, Ion agrees readily.
 
-% }}} Why does Ion understand only Homer? (530d9--533c3)
+% -]] Why does Ion understand only Homer? (530d9--533c3)
 
-% {{{ Not by skill but by divine inspiration (533c4--536d3)
+% [[- Not by skill but by divine inspiration (533c4--536d3)
 \section{Not by skill but by divine inspiration (533c4--536d3)}
 
-Although Ion agrees with each of the cases that Socrates argues for, he
-still cannot understand his own situation.  He is sure that he can speak
-well about Homer but not any other poet. Given what Socrates has argued,
-how can this be so?
+Although Ion agrees with each of the cases that Socrates argues for, he still cannot understand his own situation. He is sure that he can speak well about Homer but not any other poet. Given what Socrates has argued, how can this be so?
 
 \begin{quote}
-    {\g
-    οὐκ ἔχω σοι περὶ τούτου ἀντιλέγειν, ὦ Σώκρατες: ἀλλ᾽ ἐκεῖνο ἐμαυτῷ
-    σύνοιδα, ὅτι περὶ Ὁμήρου κάλλιστ᾽ ἀνθρώπων λέγω καὶ εὐπορῶ καὶ οἱ ἄλλοι
-    πάντες μέ φασιν εὖ λέγειν, περὶ δὲ τῶν ἄλλων οὔ. καίτοι ὅρα τοῦτο τί
-    ἔστιν.
-    } (533c4--8)
+    \begin{greek}[variant=ancient]
+    οὐκ ἔχω σοι περὶ τούτου ἀντιλέγειν, ὦ Σώκρατες: ἀλλ᾽ ἐκεῖνο ἐμαυτῷ σύνοιδα, ὅτι περὶ Ὁμήρου κάλλιστ᾽ ἀνθρώπων λέγω καὶ εὐπορῶ καὶ οἱ ἄλλοι πάντες μέ φασιν εὖ λέγειν, περὶ δὲ τῶν ἄλλων οὔ. καίτοι ὅρα τοῦτο τί ἔστιν.
+    \end{greek} (533c4--8)
 
-    I'm not able to argue against you about this, Socrates, But I know in
-    my own mind the following: that I speak best of all men about Homer,
-    I have an easy time of it and all the others say that I speak well, but
-    about the others [this is] not [the case].  Therefore, see what that
-    is.
+    I'm not able to argue against you about this, Socrates, But I know in my own mind the following: that I speak best of all men about Homer, I have an easy time of it and all the others say that I speak well, but about [all] other [poets this is] not [the case]. Therefore, see what that is.
 \end{quote}
 
-Socrates explains this with his famous magnet analogy of poetic
-inspiration.  According to Socrates, poets and rhapsodes do not work by
-skill.  Instead, they are inspired by the gods.  The magnet analogy
-explains how this inspiration spreads.  A god inspires the poet.  After
-that, the words of the poet inspire others: rhapsodes, readers, listeners
-and so forth.  Each new connection is like another ring connected in
-a chain by a magnet's force (533c9--d4).
+Socrates explains this with his famous magnet analogy of poetic inspiration. According to Socrates, poets and rhapsodes do not work by skill. Instead, they are inspired by the gods. The magnet analogy explains how this inspiration spreads. A god inspires the poet. After that, the words of the poet inspire others: rhapsodes, readers, listeners and so forth. Each new connection is like another ring connected in a chain by a magnet's force (533c9--d4).
 
-Socrates offers three additional arguments that divine inspiration is the
-cause of Ion's abilities.  First, Socrates argues that one-hit wonders show
-that poets do not work by skill.  The poet merely interprets the
-inspiration of the god for people (534d4--535a1).  Second, Socrates refers
-to Ion's lived experience of performance.  When he is performing, Socrates
-asks, doesn't he seem to be ``outside of himself" (535b7--c1), feeling as
-though he were in the situations he narrates?  Ion agrees wholeheartedly,
-explaining that when he narrates something pitiful, he weeps himself. When
-he narrates something frightening, his own hair stands on end.\footnote{See
-Horace's injunction in \book{Ars Poetica}, ``si vis me flere, dolendum
-est/primum ipsi tibi: tum tua me infortunia laedent" (102--103).}  Third,
-Socrates points to the experience of the audience: they too are carried
-away by the power of the poet's words and Ion's narration of them.  The
-audience is the last link in the chain of divine inspiration
-(535d8--536a8).
+Socrates offers three additional arguments that divine inspiration is the cause of Ion's abilities. First, Socrates argues that one-hit wonders show that poets do not work by skill. The poet merely interprets the inspiration of the god for people (534d4--535a1). Second, Socrates refers to Ion's lived experience of performance. When he is performing, Socrates asks, doesn't he seem to be ``outside of himself" (535b7--c1), feeling as though he were in the situations he narrates? Ion agrees wholeheartedly, explaining that when he narrates something pitiful, he weeps himself. When he narrates something frightening, his own hair stands on end.\footnote{See Horace's injunction in \textit{Ars Poetica}, ``si vis me flere, dolendum est/primum ipsi tibi: tum tua me infortunia laedent" (102--103).}  Third, Socrates points to the experience of the audience: they too are carried away by the power of the poet's words and Ion's narration of them. The audience is the last link in the chain of divine inspiration (535d8--536a8).
 
-% }}} Not by skill but by divine inspiration (533c4--536d3)
+% -]] Not by skill but by divine inspiration (533c4--536d3)
 
-% {{{ Ion's knowledge about Homer (536d4--541e1)
+% [[- Ion's knowledge about Homer (536d4--541e1)
 \section{Ion's knowledge about Homer (536d4--541e1)}
 
 Again Ion agrees with all of Socrates' arguments concerning poetic
 inspiration, but he raises one point of disagreement: Socrates would not
 easily persuade Ion that he speaks about Homer possessed and raving
-(536d4--6).  His point, I take it, is as follows. Grant that while
+(536d4--6). His point, I take it, is as follows. Grant that while
 performing, Ion is in a state of poetic inspiration and even that, at that
-time, he is out of his mind and possessed.  Even so, when he talks
+time, he is out of his mind and possessed. Even so, when he talks
 \emph{about} Homer, which he does often and very well, he is perfectly
-lucid.  How will Socrates explain this ability of Ion's?  (Also, though Ion
+lucid. How will Socrates explain this ability of Ion's? (Also, though Ion
 doesn't state it here, how will Socrates explain that this ability applies
 \emph{only} to Homer?)
 
-Socrates chooses to deny the claim rather than explaining it.  He
-challenges Ion to show him an area where he, Ion, speaks more wisely about
-something in Homer than experts in that field.  He mentions the specific
-example of chariot-driving.  He follows this example up by arguing that in
-cases where we know something by a skill, we don't know those same things
-by another skill.  What we know by the skill of being a helmsman, we don't
-know by medicine.  What we know by medicine, we don't know by housebuilding
-(537d1--e8).  Socrates presses this point, and Ion agrees that
-a chariot-driver or doctor will know better about certain parts of the
-Homeric epics than a rhapsode will (538a1--c6).  And likewise for
-a fisherman or a prophet (538c7--539d4).
+Socrates chooses to deny the claim rather than explaining it. He challenges Ion to show him an area where he, Ion, speaks more wisely about something in Homer than experts in that field. He mentions the specific example of chariot-driving. He follows this example up by arguing that in cases where we know something by a skill, we don't know those same things by another skill. What we know by the skill of being a helmsman, we don't know by medicine. What we know by medicine, we don't know by housebuilding (537d1--e8). Socrates presses this point, and Ion agrees that a chariot-driver or doctor will know better about certain parts of the Homeric epics than a rhapsode will (538a1--c6). And likewise for a fisherman or a prophet (538c7--539d4).
 
-At this point, the dialogue hits a sticking point.  Socrates asks again,
-``Ok, Ion, what is your area of expertise?  About what domain will you
-speak better than anyone else concerning Homer?"  Ion, suprisingly, repeats
-the answer ``Everything" (539d5--e6).  Socrates is stunned, and he accuses
-Ion of being far more forgetful than a rhapsode should be.  He has
-forgotten what he just agreed to, namely that other people are more
-knowledgeable about various parts of the epics.
+At this point, the dialogue hits a sticking point. Socrates asks again, ``Ok, Ion, what is your area of expertise? About what domain will you speak better than anyone else concerning Homer?" Ion, suprisingly, repeats the answer ``Everything" (539d5--e6). Socrates is stunned, and he accuses Ion of being far more forgetful than a rhapsode should be. He has forgotten what he just agreed to, namely that other people are more knowledgeable about various parts of the epics.
 
-Ion has an argument open to him at this point that he does not take
-advantage of.  He could argue, I think, that the rhapsode's expertise is to
-speak about \emph{all} of Homer qua poetry.  That is, he cannot say more
-than a chariot-driver about the chariot-driving content of the epics, but
-he can say more about how and why Homer uses those scenes of
-chariot-driving.  Ion, however, never chooses to use such an argument, and
-the dialogue does not pursue this line of thought at all.  I'm not sure
-what Socrates would have made of it, to be honest.
+Ion has an argument open to him at this point that he does not take advantage of. He could argue, I think, that the rhapsode's expertise is to speak about \emph{all} of Homer qua poetry. That is, he cannot say more than a chariot-driver about the chariot-driving content of the epics, but he can say more about how and why Homer uses those scenes of chariot-driving. Ion, however, never chooses to use such an argument, and the dialogue does not pursue this line of thought at all. I'm not sure what Socrates would have made of it, to be honest.
 
 In any case, Socrates returns to pressing Ion about specific areas of
-expertise until they reach a final impasse.  What starts this off is that
-Ion wants to minimize what he's admitted to.  He says in effect, well
+expertise until they reach a final impasse. What starts this off is that
+Ion wants to minimize what he's admitted to. He says in effect, well
 ``those things" experts might know better about, but I know better about
-all the rest (540a6--7).  In order to show Ion how little is left for ``all
-the rest", Socrates returns to examples.  He runs through captain of
-a ship, doctor, cowherd and wool-spinner.  In each of those cases, Ion
-readily agrees that an expert would know more than him (540b6--d1).  But
-then they reach the example of a general.  For no apparent reason, Ion
-doesn't agree here.  He claims that he would know everything appropriate to
+all the rest (540a6--7). In order to show Ion how little is left for ``all
+the rest", Socrates returns to examples. He runs through captain of
+a ship, doctor, cowherd and wool-spinner. In each of those cases, Ion
+readily agrees that an expert would know more than him (540b6--d1). But
+then they reach the example of a general. For no apparent reason, Ion
+doesn't agree here. He claims that he would know everything appropriate to
 the art of being a general (540d1--3).
 
-Socrates is boggled, and he tries to show Ion that even if this is true, it
-must be because he possesses two skills: that of a rhapsode and that of
-a general.  But Ion digs in his heels. He insists that he sees no
-difference between being a general and being a rhapsode (540e8--9).  It's
-honestly difficult to know what to make of this.  Is he being stubborn?  Is
-he angry?  Is he very, very confused? \citet{murray1996} says simply ``He
-chooses this particular expertise because of the prominence of warfare in
-Homer's poetry" (130).  To be honest, I don't think that explanation goes
-very far.  Nor does it acknowledge how strange Ion's claim is.  He insists
-that if anyone is a good rhapsode, then that same person is \foreign{eo
-ipso} a good general (541a3--5).
+Socrates is boggled, and he tries to show Ion that even if this is true, it must be because he possesses two skills: that of a rhapsode and that of a general. But Ion digs in his heels. He insists that he sees no difference between being a general and being a rhapsode (540e8--9). It's honestly difficult to know what to make of this. Is he being stubborn? Is he angry?  Is he very, very confused? \textcite{murray1996} says simply ``He chooses this particular expertise because of the prominence of warfare in Homer's poetry" (130). To be honest, I don't think that explanation goes very far. Nor does it acknowledge how strange Ion's claim is. He insists that if anyone is a good rhapsode, then that same person is \textit{eo ipso} a good general (541a3--5).
 
-Socrates briefly tries to push Ion to yield on this claim, but he fails.
-He tries arguing that as the best Greek rhapsode he must also be the best
-Greek general.  But he does not act as a general anywhere.  Why not?  Nor
-has any city made him a general.  Why not? (541b6--e1)  But none of this
-moves Ion at all.  He holds fast to his position and comes up with
-\foreign{ad hoc} responses for each of Socrates' arguments.  Defeated---in
-a manner of speaking---Socrates ends the discussion.
+Socrates briefly tries to push Ion to yield on this claim, but he fails. He tries arguing that as the best Greek rhapsode he must also be the best Greek general. But he does not act as a general anywhere. Why not?  Nor has any city made him a general. Why not? (541b6--e1) But none of this moves Ion at all. He holds fast to his position and comes up with \textit{ad hoc} responses for each of Socrates' arguments. Defeated---in a manner of speaking---Socrates ends the discussion.
 
-% }}} Ion's knowledge about Homer (536d4--541e1)
+% -]] Ion's knowledge about Homer (536d4--541e1)
 
-% {{{ Conclusion (541e1--542b4)
+% [[- Conclusion (541e1--542b4)
 \section{Conclusion (541e1--542b4)}
 
-The dialogue ends in a familiar fashion.  Socrates complains that Ion has
-not kept his promise.  Ion ``wrongs" Socrates ({\g ἀκικεῖς} 541e3 and
-\foreign{passim}) by not making good on his promise to demonstrate the many
-fine things he knows about Homer.  Compare, for example, the endings of
-\book{Hippias Major} and \book{Euthyphro}.
+The dialogue ends in a familiar fashion. Socrates complains that Ion has not kept his promise. Ion ``wrongs" Socrates (\textgreek{ἀδικεῖς} 541e3 and \textit{passim}) by not making good on his promise to demonstrate the many fine things he knows about Homer. Compare, for example, the endings of \textit{Hippias Major} and \textit{Euthyphro}.
 
-Socrates asks Ion if he wants to be known as a criminal or a divinely
-inspired agent.  Ion says that it is far better to be thought of as divine,
-and they break off there.  Socrates insists, however, at the end that Ion's
-choice means that he is ``a divine but not skilled praiser of Homer"
-(542b3--4).
+Socrates asks Ion if he wants to be known as a criminal or a divinely inspired agent. Ion says that it is far better to be thought of as divine, and they break off there. Socrates insists, however, at the end that Ion's choice means that he is ``a divine but not skilled praiser of Homer" (542b3--4).
 
-% }}} Conclusion (541e1--542b4)
+% -]] Conclusion (541e1--542b4)
 
 \newpage
-\bibliographystyle{apa}
-\bibliography{plato}
+\section{References}
+\printbibliography[heading=none]
 
 \end{document}
-% }}}
+% -]] Document
