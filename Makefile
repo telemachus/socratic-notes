@@ -29,6 +29,6 @@ meno: meno.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
 
 clean:
-	- $(RM) *.aux *.log *.pdf *.bbl *.blg *.fls *.fdb_latexmk *.bcf *.xml
+	- $(RM) *.aux *.log *.pdf *.bbl *.blg *.fls *.fdb_latexmk *.bcf *.xml *.xdv
 
 .PHONY : clean
