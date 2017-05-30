@@ -1,0 +1,115 @@
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=ancient]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek]{Times New Roman}
+
+\usepackage{csquotes}
+\usepackage[style=authoryear,backend=biber,dashed=false,%	
+	abbreviate=false,maxnames=4]{biblatex}
+\addbibresource{plato.bib}
+% See the following resources:
+%   https://orthostat.wordpress.com/2013/02/16/moving-to-biblatex-1/
+%%
+% Remove pp. in citations.
+\DeclareFieldFormat{postnote}{#1}
+% Remove pp. from bibliography.
+\DeclareFieldFormat%
+    [article,inbook,incollection,inproceedings,thesis,patent,unpublished]%
+    {pages}{{\nopp#1}}
+% Use single quotes around titles of chapters and articles, not double.
+% \DeclareFieldFormat%
+%     [article,inbook,incollection,inproceedings,thesis,patent,unpublished]%
+%     {title}{`#1'}
+% Use commas rather than periods to separate units in the bibliography.
+% \renewcommand*{\newunitpunct}{\addcomma\space}
+% Place a space rather than a comma between name and year in citations.
+% \renewcommand{\nameyeardelim}{~}
+% Place a colon+narrow space before page numbers in citations.
+\renewcommand{\postnotedelim}{:\,}
+% No "in:" for articles at all. For all else, remove the colon.
+\renewbibmacro{in:}{%
+	\ifentrytype{article}{}{\printtext{\bibstring{in}}}
+}
+% Remove parentheses around date in bibliography.
+% See http://tex.stackexchange.com/a/40710/29387
+\usepackage{xpatch}
+\xpatchbibmacro{date+extrayear}{%
+	\printtext[parens]%
+}{%
+	\setunit{\addperiod\space}%
+	\printtext%
+}{}{}
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage[super]{nth}
+
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{ἐκ-μανθάν-ειν}
+\end{hyphenrules}
+
+%\pagestyle{plain}
+% -]] Latex prelude
+
+% [[- LaTeX document
+\begin{document}
+
+% [[- Title page
+\begin{titlepage}
+\title{Notes on Plato's \textit{Phaedo}}
+\author{Peter Aronoff}
+\date{May 2017}
+\maketitle
+\thispagestyle{empty}
+\end{titlepage}
+% -]]
+
+% [[- Characters and setting
+\section{Characters and setting}
+
+% [[- Characters
+\subsection{Characters}
+
+\subsubsection{Frame}
+
+The frame narrative contains two speakers, Echecrates and Phaedo. Echecrates is from Phlius in the Pelopponesus; he is also a Pythagorean although the dialogue never explicitly mentions this. We don't learn much about him, but he is clearly interested in Socrates even if he isn't a formal follower of his. Phaedo is a Socratic. He is from Elis, and apparently was a prisoner of war at Athens during the Pelopponesian war, but he was freed with the help of Socrates.\footcite[7]{rowe1993} \textcite[231]{nails2002} argues that Phaedo should be about 20 at the dramatic time of the dialogue. He appears to be making his way home to Elis from Athens when he meets Echecrates in Phlius.
+
+\subsubsection{Death scene}
+
+We briefly see Xanthippe, Socrates's wife, and Crito, his good friend, but the main characters are Socrates, Simmias and Cebes. Simmias and Cebes, both originally from Thebes, are somehow associated with (\textgreek{συγγίγνεσθαι} 61d) Philolaus, a Pythogorean, but Rowe argues that the two men themselves are not necessarily Pythagoreans \parencite[7]{rowe1993}. He says ``associate with'' is vague, and he also argues that Simmias advances a theory that conflicts with Pythagoreanism, namely the harmony theory of the soul. However, Rowe also admits that Echecrates, who certainly was a Pythagorean, is all in favor of the theory. So I'm not sure what support of that theory shows. (Also note that \textcite[138]{nails2002} considers Echecrates as also a ``student of Philolaus.'') Both Simmias and Cebes are relatively young (\textgreek{νεανίσκος} 89a) at the time of Socrates's death, but otherwise, we don't know anything about when they lived.
+
+% -]] Characters
+
+% [[- Setting
+\subsection{Setting}
+
+\subsubsection{Frame}
+
+There's no precise place, but the speakers are in Phlius, and Phaedo appears to be heading from Athens to Elis after the death of Socrates.
+
+\subsubsection{Death scene}
+
+It is the day of Socrates's death in 399, and the speakers meet at the jail where Socrates was held after his trial.
+
+% -]] Setting
+
+% -]] Characters and setting
+
+
+\newpage
+\printbibliography
+
+\end{document}
+% -]]

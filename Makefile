@@ -28,6 +28,9 @@ ion: ion.tex plato.bib
 meno: meno.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
 
+phaedo: phaedo.tex plato.bib
+	$(LATEXMK) $(FLAGS) $@
+
 clean:
 	- $(RM) *.aux *.log *.pdf *.bbl *.blg *.fls *.fdb_latexmk *.bcf *.xml *.xdv
 
