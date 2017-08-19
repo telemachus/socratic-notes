@@ -2,7 +2,7 @@ SHELL = /bin/sh
 LATEXMK = latexmk
 FLAGS = -xelatex -bibtex
 
-all: euthyphro apology crito lysis laches hippias-major ion meno
+all: euthyphro apology crito lysis laches hippias-major ion meno phaedo
 
 euthyphro: euthyphro.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
