@@ -4,4 +4,4 @@ set -e
 
 # TODO: accept a parameter; accept multiple parameters too?
 # See https://stackoverflow.com/a/38558776/26702
-fswatch -0 meno.tex plato.bib | xargs -0 -I {} make meno
+fswatch -0 "${@/%/.tex}" plato.bib | xargs -0 -I {} make "$@"

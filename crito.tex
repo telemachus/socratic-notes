@@ -1,563 +1,378 @@
-% {{{ LaTeX prelude
-\documentclass[11pt]{article}
-\usepackage{fontspec}
-\setmainfont[Ligatures={Common,TeX}]{Baskerville}
-\newfontfamily\g[Ligatures={Common,TeX}]{Times New Roman}
-\usepackage{url}
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=ancient]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek,Scale=MatchLowercase]{GFS Neohellenic}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+
 \usepackage{parskip}
-\usepackage{natbib}
-\bibpunct{(}{)}{;}{a}{,}{,}
-\usepackage{titles}
+\usepackage{csquotes}
+\usepackage[style=oxyear,backend=biber]{biblatex}
+\addbibresource{plato.bib}
+
 \usepackage{enumitem}
 \setlist{noitemsep}
-% }}}
+\usepackage[super]{nth}
 
-% {{{ LaTeX document
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{}
+\end{hyphenrules}
+
+\usepackage{fancyhdr}
+\fancypagestyle{notes}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{Notes on Plato's \textit{Meno}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+\fancypagestyle{references}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{References}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+% -]] Latex prelude
+
+% [[- LaTeX document
 \begin{document}
 
-% {{{ Title page
+% [[- Title page
 \begin{titlepage}
-\title{Notes on Plato's \book{Crito}}
+\title{Notes on Plato's \textit{Crito}}
 \author{Peter Aronoff}
 \date{June 2013}
 \maketitle
 \thispagestyle{empty}
 \end{titlepage}
-% }}}
+% -]]
 
-% {{{ Characters and setting
-\section{Characters and setting}
+% [[- Characters and setting
+\section*{Characters and setting}
 
-% {{{ Characters
-\subsection{Characters}
+% [[- Characters
+\subsection*{Characters}
 
-Crito was a close friend of Socrates.  They were similar in age and
-belonged to the same deme.  In \book{Phaedo} Crito leads away Socrates'
-wife and children early in the dialogue (60a7--8), he alone accompanies
-Socrates for his final bath (116a2--3) and Socrates gives his final
-instructions to him (118a7--8).  All of these actions suggest a very close
-relationship.  Crito makes clear early in \book{Crito} that he visited
-Socrates often while he was in jail (48a7--8).  The familiar and intimate
-tone of their conversation in this dialogue also indicates how well they
-knew one another.
+Crito was a close friend of Socrates. They were similar in age and belonged to the same deme. In \textit{Phaedo}, we can see how close the two men are. Early in the dialogue, Crito leads away Socrates's wife and children (60a7--8), and later only Crito accompanies Socrates for his final bath (116a2--3). At the very end of the dialogue, Socrates gives his final instructions to Crito (118a7--8). All of these moments suggest a very close relationship. In \textit{Crito}, Crito makes clear that he visited Socrates often while he was in jail (48a7--8). The familiar and intimate tone of their conversation in this dialogue also indicates how well they knew one another.
 
-We have evidence that Crito was reasonably wealthy.  In \book{Apology}, he
-is one of the men who guarantees the large fine that Socrates finally
-proposes as a counter-penalty (38b8), and in \book{Crito} says that he has
-sufficient money to help Socrates escape and live abroad comfortably
-(45b1).  Xenophon mentions a farm (\book{Memorabilia} 2.9), but otherwise
-I'm not aware of any particular source for his money.
+Crito was wealthy. In \textit{Apology}, he is one of the men who guarantees a large fine for Socrates (38b8), and in \textit{Crito}, he says that he has sufficient money to help Socrates escape and live abroad comfortably (45b1). Debrah Nails notes that ``Crito's considerable affluence was derived from agriculture.''\footcite[][115. She cites \textit{Euthydemus} 291e, Xenophon's \textit{Memorabilia} 2.9.4, and Diogenes Laertius 2.31.]{nails2002-people-of-plato} Nails argues that Crito's farm was ``probably in Alopece'' because Alopece was near the protective walls of the city, and this protection would explain why Crito didn't lose more money during the Peloponnesian war.\footcite[][115]{nails2002-people-of-plato} In fact, as she says, Crito remained wealthy enough that his sons were ``among the richest men in Athens.''\footcite[][115]{nails2002-people-of-plato}
 
-Although Crito was a constant companion of Socrates, he doesn't appear
-especially philosophical.  In \book{Crito} he argues from exceedingly
-un-Socratic and commonplace premises.  Although he says that he agrees with
-core Socratic principles,\footnote{See for example 47a--b.} his arguments
-run against those ideals and it's unclear how well he understood what he
-was agreeing to.  \citet{brickhouse2004} 196 also note that Crito takes no
-part in the philosophical conversation in \book{Phaedo}, though they argue
-that he is philosophicaly more adept than I'm claiming.
+Although Crito was a constant companion of Socrates, he doesn't appear especially philosophical. In \textit{Crito}, he argues from exceedingly un-Socratic and commonplace premises. Although he says that he agrees with core Socratic principles,\footnote{See for example 47a--b.} his arguments run against those ideals and it's unclear how well he understood what he was agreeing to. \cite{brickhouse-smith2004-plato-trial-of-socrates} 196 also note that Crito takes no part in the philosophical conversation in \textit{Phaedo}, though they argue that he is philosophicaly more adept than I'm claiming.
 
-% }}} Characters
+% -]] Characters
 
-% {{{ Setting
-\subsection{Setting}
+% [[- Setting
+\subsection*{Setting}
 
-The conversation between Socrates and Crito takes place in Socrates' jail
-cell.  \citet{brickhouse2004} 197 argue that the jail would have been close
-to the court where the trial was held.  They place it somewhere near the
-agora on the southern side.  \book{Crito} itself doesn't do much with the
-scenery or location, except perhaps hint that Crito bribed a guard.  (See
-below for more on this.)
+The conversation between Socrates and Crito takes place in Socrates' jail cell. Brickhouse and Smith argue that the jail would have been close to the court where the trial was held.\smartcite[][197]{brickhouse-smith2004-plato-trial-of-socrates} They place it somewhere near the agora on the southern side. \textit{Crito} itself doesn't do much with the scenery or location, except perhaps hint that Crito bribed a guard. (See below for more on this.)
 
-% }}} Setting
+% -]] Setting
 
-% }}} Characters and setting
+% -]] Characters and setting
 
-% {{{ Introductory material (43a1--50a5)
-\section{Introductory material (43a1--50a5)}
+% [[- Introductory material (43a1--50a5)
+\section*{Introductory material (43a1--50a5)}
 
-% {{{ Introduction (43a1--44b5)
-\subsection{Introduction (43a1--44b5)}
+% [[- Introduction (43a1--44b5)
+\subsection*{Introduction (43a1--44b5)}
 
-The dialogue begins with Socrates waking up in his cell and finding Crito
-already there.  Socrates is surprised to find Crito there so early and that
-the guard let Crito in at all.  They talk, and Crito tells Socrates that he
-will be put to death tomorrow.  Socrates' execution was delayed by
-a religious ceremony, and the return of a boat from Delos will mark the end
-of that ceremony.  Socrates says that he has had a dream hinting at the
-same thing, but that he thinks it will be two days before he is executed.
+The dialogue begins with Socrates waking up in his cell and finding Crito already there. Socrates is surprised to find Crito there so early and that the guard let Crito in at all. They talk, and Crito tells Socrates that he will be put to death tomorrow. Socrates' execution was delayed by a religious ceremony, and the return of a boat from Delos will mark the end of that ceremony. Socrates says that he has had a dream hinting at the same thing, but that he thinks it will be two days before he is executed.
 
-The opening conversation between Crito and Socrates may seem like small
-talk, but as is often the case in Socratic dialogues, it plants two
-important seeds in the readers minds.
+The opening conversation between Crito and Socrates may seem like small talk, but as is often the case in Socratic dialogues, it plants two important seeds in the readers minds.
 
 \begin{enumerate}
 
-    \item There is a strong hint in 43a8 that Crito has bribed (or
-        \word{tipped}, if you insist) a guard.\footnote{\citet{burnet1924}
-        255 and \citet{brickhouse2004} 249 deny the clear implication
-        of the Greek, namely that Crito gave the guard money.  Instead
-        they believe that Crito simply did the guard a favor of some
-        kind.  Burnet's only argument seems to be that the implication
-        is ``vulgar", which is no proof that it isn't true.
-        \citet{brickhouse2004} simply cite Burnet; they provide no
-        independent argument or evidence.  Both \citet{adam1988} 22-23 and
-        \citet{rose1983} believe that Crito gave the guard money.}  This
-        suggests immediately that Crito is someone who solves problems with
-        money.
+    \item There is a strong hint in 43a8 that Crito has bribed (or \emph{tipped}, if you insist) a guard.\footnote{\cite{burnet1924-euthyphro-apology-crito} 254 and \cite{brickhouse-smith2004-plato-trial-of-socrates} 249 deny the clear implication of the Greek, namely that Crito gave the guard money. Instead they believe that Crito simply did the guard a favor of some kind. Burnet's only argument seems to be that the implication is ``vulgar", which is no proof that it isn't true. \citeauthor{brickhouse-smith2004-plato-trial-of-socrates} simply cite Burnet; they provide no independent argument or evidence. Both \cite{adam1988-crito} 22-23 and \cite{rose1983} believe that Crito gave the guard money.} This suggests immediately that Crito is someone who solves problems with money.
 
-    \item Socrates says that it would be foolish for him to be upset about
-        dying, given how old he is.  Crito replies that many people do it
-        just the same when they fall into bad luck.  Socrates lets this
-        pass, but it foreshadows Crito's use of common opinion later as
-        well as Socrates lack of interest in what most people believe.
-
+    \item Socrates says that it would be foolish for him to be upset about dying, given how old he is. Crito replies that many people do it just the same when they fall into bad luck. Socrates lets this pass, but it foreshadows Crito's use of common opinion later as well as Socrates lack of interest in what most people believe.
 \end{enumerate}
 
-% }}} Introduction (43a1--44b5)
+% -]] Introduction (43a1--44b5)
 
-% {{{ Crito urges Socrates to escape (44b5--46a9)
-\subsection{Crito urges Socrates to escape (44b5--46a9)}
+% [[- Crito urges Socrates to escape (44b5--46a9)
+\subsection*{Crito urges Socrates to escape (44b5--46a9)}
 
-Crito encourages Socrates to flee.  His opening language suggests that he
-has been encouraging Socrates to do so for some time, but that Socrates
-won't listen.  Initially, he makes two arguments:
+Crito encourages Socrates to flee. His opening language suggests that he has been encouraging Socrates to do so for some time, but that Socrates won't listen. Initially, he makes two arguments:
 
 \begin{enumerate}
 
     \item If Socrates dies, Crito will lose an irreplaceable friend
         (44b8--9).
 
-    \item If Socrates dies, many people who don't know Socrates and Crito
-        will think that Crito was cheap and let Socrates die when he might
-        have saved him (44b9--c5).
+    \item If Socrates dies, many people who don't know Socrates and Crito will think that Crito was cheap and let Socrates die when he might have saved him (44b9--c5).
 
 \end{enumerate}
 
-Socrates ignores the first point and dismisses the second quickly.  He says
-that they should not care what {\g οἱ πολλοί} think. Only the opinion of
-the most reasonable people matters, and they will not think Crito was cheap
-(44b6--9).
+Socrates ignores the first point and dismisses the second quickly. He says that they should not care what \textgreek{οἱ πολλοί} think. Only the opinion of the most reasonable people matters, and they will not think Crito was cheap (44b6--9).
 
-Crito counters by arguing that the many have great power:  Socrates'
-situation proves that they can do very great harm to someone.  To this
-Socrates offers a surprising reply: He wishes that they \emph{could} do
-great harm.  The background thought here appears to be the following:
+Crito counters by arguing that the many have great power: Socrates' situation proves that they can do very great harm to someone. To this Socrates offers a surprising reply: He wishes that they \emph{could} do great harm. The background thought here appears to be the following:
 
 \begin{enumerate}
 
-    \item The greatest good for someone is an improvement of their soul,
-        and the greatest harm is the degradation of their soul.
+    \item The greatest good for someone is an improvement of their soul, and the greatest harm is the degradation of their soul.
 
-    \item Someone who can harm someone's soul could also improve it.  (This
-        relies on the thought that knowledge of such a matter is holistic:
-        a doctor, in Socrates' opinion, can produce sickness as much as
-        health.\footnote{\citet{adam1988} 31 refers to \book{Hippias Minor}
-        366bff, and \citet{brickhouse2004} 200 cite \book{Republic}
-        333e3ff.  \citet{burnet1924} 259--260 also compares \book{Antigone}
-        334ff.})
+    \item Someone who can harm someone's soul could also improve it. (This relies on the thought that knowledge of such a matter is holistic: a doctor, in Socrates' opinion, can produce sickness as much as health.\footnote{\cite{adam1988-crito} 31 refers to \textit{Hippias Minor} 366bff, and \cite{brickhouse-smith2004-plato-trial-of-socrates} 200 cite \textit{Republic} 333e3ff. \cite{burnet1924-euthyphro-apology-crito} 259--260 also compares \textit{Antigone} 334ff.})
 
-    \item Socrates therefore wishes that they were capable of harming
-        someone greatly since that would imply that they were capable of
-        benefitting someone equally greatly.
+    \item Socrates therefore wishes that they were capable of harming someone greatly since that would imply that they were capable of benefitting someone equally greatly.
 
 \end{enumerate}
 
-Following this initial skirmish, Crito again asks if Socrates is worried
-about what may happen to his friends if they help him escape.  Socrates
-says that is is concerned about this---though he also hints that he has
-``many other" concerns (45a1--2).  Crito focuses only on the first part,
-however, and he launches into an impassioned speech.  In this second
-speech, he makes a number of arguments.
-
+Following this initial skirmish, Crito again asks if Socrates is worried about what may happen to his friends if they help him escape. Socrates says that is is concerned about this---though he also hints that he has ``many other" concerns (45a1--2). Crito focuses only on the first part, however, and he launches into an impassioned speech. In this second speech, he makes a number of arguments.
 \begin{enumerate}
 
     \item It won't even cost very much to free Socrates (45a6--8).
 
-    \item Socrates shouldn't worry about someone bringing his friends to
-        trial for helping him escape.  They can easily (and cheaply) bribe
-        any potential prosecutors (45a8--b1).
+    \item Socrates shouldn't worry about someone bringing his friends to trial for helping him escape. They can easily (and cheaply) bribe any potential prosecutors (45a8--b1).
 
-    \item Socrates has Crito's money to use as he wishes.  If Socrates
-        doesn't want to ask his Athenian friends for money, there are
-        others who can provide the money.  He mentions Simmias and Cebes by
-        name (45b1--6).
+    \item Socrates has Crito's money to use as he wishes. If Socrates doesn't want to ask his Athenian friends for money, there are others who can provide the money. He mentions Simmias and Cebes by name (45b1--6).
 
-    \item Socrates shouldn't worry about what he said at trial, namely that
-        he has nowhere to go.  There are many places he might go.  Crito
-        mentions Thessaly in particular (45b6--c5).
+    \item Socrates shouldn't worry about what he said at trial, namely that he has nowhere to go. There are many places he might go. Crito mentions Thessaly in particular (45b6--c5).
 
-    \item What Socrates is doing is unjust.  He is betraying himself when
-        it's possible for him to live.  He is hurrying to do to himself
-        what his enemies want to do to him (45c6--9).
+    \item What Socrates is doing is unjust. He is betraying himself when it's possible for him to live. He is hurrying to do to himself what his enemies want to do to him (45c6--9).
 
-    \item Socrates is also betraying his children.  As a parent, Socrates
-        has an obligation to raise and educate his children (45c10--d6).
+    \item Socrates is also betraying his children. As a parent, Socrates has an obligation to raise and educate his children (45c10--d6).
 
-    \item Socrates is behaving like a coward.  This is especially glaring
-        since he has spent his life sayin that he cares so much about {\g
-        ἀρετή} (45d6--e4).
+    \item Socrates is behaving like a coward. This is especially glaring since he has spent his life sayin that he cares so much about \textgreek{ἀρετή} (45d6--e4).
 
-    \item Socrates makes his friends look bad because it appears that they
-        did not do the little it would require to save him (45e5--46a3).
+    \item Socrates makes his friends look bad because it appears that they did not do the little it would require to save him (45e5--46a3).
 
 \end{enumerate}
 
-These arguments come tumbling out of Crito one after the other.  He doesn't
-spend especially long on any of them.  Since he is so emotional, I wouldn't
-necessarily draw any conclusions about Crito's dialectical skills from this
-passage.  The overall impression is that he terribly wants Socrates to
-agree, he half knows that Socrates won't and so he dumps every possible
-argument in an effort to somehow move Socrates.
+These arguments come tumbling out of Crito one after the other. He doesn't spend especially long on any of them. Since he is so emotional, I wouldn't necessarily draw any conclusions about Crito's dialectical skills from this passage. The overall impression is that he terribly wants Socrates to agree, he half knows that Socrates won't and so he dumps every possible argument in an effort to somehow move Socrates.
 
-% }}} Crito urges Socrates to escape (44b5--46a9)
+% -]] Crito urges Socrates to escape (44b5--46a9)
 
-% {{{ Socrates initial response (46b1--c6)
-\subsection{Socrates initial response (46b1--c6)}
+% [[- Socrates initial response (46b1--c6)
+\subsection*{Socrates initial response (46b1--c6)}
 
-Socrates response is measured. He says that Crito's enthusiasm does him
-credit---provided that Crito is enthusiastic about something right.
-Otherwise, the vehemence of Crito's encouragment only makes things worse.
-Socrates then states a very basic principle:
+Socrates response is measured. He says that Crito's enthusiasm does him credit---provided that Crito is enthusiastic about something right. Otherwise, the vehemence of Crito's encouragment only makes things worse. Socrates then states a very basic principle:
 
 \begin{quote}
-    {\g
-    ἐγὼ οὐ νῦν πρῶτον ἀλλὰ καὶ ἀεὶ τοιοῦτος οἷος τῶν ἐμῶν μηδενὶ ἄλλῳ
-    πείθεσθαι ἢ τῷ λόγῳ ὃς ἄν μοι λογιζομένῳ βέλτιστος φαίνηται
-    } (46b4--6).
+    \textgreek{ἐγὼ οὐ νῦν πρῶτον ἀλλὰ καὶ ἀεὶ τοιοῦτος οἷος τῶν ἐμῶν μηδενὶ ἄλλῳ πείθεσθαι ἢ τῷ λόγῳ ὃς ἄν μοι λογιζομένῳ βέλτιστος φαίνηται} (46b4--6).
 
-    I am not now for the first time but always [have been] the type to obey
-    nothing of mine other than the argument which seems best to me as
-    I reason.
+    I am not now for the first time but always [have been] the type to obey nothing of mine other than the argument which seems best to me as I reason.
 \end{quote}
 
-Socrates continues by saying that he can't dump his previous arguments just
-because he has suffered this bad luck --- provided that they still seem
-correct to him.
+Socrates continues by saying that he can't dump his previous arguments just because he has suffered this bad luck---provided that they still seem correct to him.
 
-The focus throughout this section is on reason.  Socrates emphatically
-states that he won't obey a anything other than whatever argument seems
-best to him.  Nor will he throw an argument overboard if it has a bad
-outcome for him or if he has had back luck and really wants a different
-answer.  Reason is in the driver's seat.
+The focus throughout this section is on reason. Socrates emphatically states that he won't obey a anything other than whatever argument seems best to him. Nor will he throw an argument overboard if it has a bad outcome for him or if he has had back luck and really wants a different answer. Reason is in the driver's seat.
 
-The phrase {\g τῶν ἐμῶν μηδενὶ ἄλλῳ πείθεσθαι ἢ τῷ λόγῳ} is ambiguous.  On
-the one hand, we're likely to take {\g τῶν ἐμῶν} to be people: Socrates
-won't be persuaded by any of his friends or relatives over the dicates of
-reason.  On the other hand, the phrase could also be used if Socrates meant
-parts of himself, so to speak. That is, ``I obey nothing in me other than
-reason."  If we read it that way, he is distancing himself from emotion and
-desire.
+The phrase \textgreek{τῶν ἐμῶν μηδενὶ ἄλλῳ πείθεσθαι ἢ τῷ λόγῳ} is ambiguous. On the one hand, we're likely to take \textgreek{τῶν ἐμῶν} to be people: Socrates won't be persuaded by any of his friends or relatives over the dicates of reason. On the other hand, the phrase could also be used if Socrates meant parts of himself, so to speak. That is, ``I obey nothing in me other than reason." If we read it that way, he is distancing himself from emotion and desire.
 
-Arguments can be made for either reading of {\g τῶν ἐμῶν}. Both
-\citet{burnet1924} 268 and \citet{rose1983} 27 take the phrase to be neuter
-and indicate parts of Socrates himself.  Burnet cites 47c5 and 47e8, both
-of which are excellent parallels for Socrates uses a plural neuter to talk
-about ``parts" of a person.\footnote{In those passages, Socrates has in
-mind a distinction between body and soul, so there is no danger of
-importing a Platonic division of the soul into this dialogue.}  A second
-reason to take {\g τῶν ἐμῶν} as neuter and referring to emotions is that at
-46c3ff. Socrates specifically says that he will not yield to fear no matter
-what the many threaten him with.  On the other hand, \citet{adam1988} 40
-takes {\g τῶν ἐμῶν} as Socrates' reply to Crito's {\g πείθου μοι} at 46a.
-As Adam says, ``{\g τῶν ἐμῶν} includes Socrates' friends as well as
-everything else that could be called his" (40).\footnote{The argument is
-not really over whether {\g τῶν ἐμῶν} is neuter or masculine.  I think
-that everyone takes it to be neuter.  The question is how much the phrase
-encompasses.}
+Arguments can be made for either reading of \textgreek{τῶν ἐμῶν}. Both \cite{burnet1924-euthyphro-apology-crito} 268 and \cite{rose1983} 27 take the phrase to be neuter and indicate parts of Socrates himself. Burnet cites 47c5 and 47e8, both of which are excellent parallels for Socrates uses a plural neuter to talk about ``parts" of a person.\footnote{In those passages, Socrates has in mind a distinction between body and soul, so there is no danger of importing a Platonic division of the soul into this dialogue.} A second reason to take \textgreek{τῶν ἐμῶν} as neuter and referring to emotions is that at 46c3ff. Socrates specifically says that he will not yield to fear no matter what the many threaten him with. On the other hand, \cite{adam1988-crito} 40 takes \textgreek{τῶν ἐμῶν} as Socrates' reply to Crito's \textgreek{πείθου μοι} at 46a.
 
-% }}} Socrates initial response (46b1--c6)
+As Adam says, ``\textgreek{τῶν ἐμῶν} includes Socrates' friends as well as everything else that could be called his" (40).\footnote{The argument is not really over whether \textgreek{τῶν ἐμῶν} is neuter or masculine. I think that everyone takes it to be neuter. The question is how much the phrase encompasses.}
 
-% {{{ Whose opinions matter? (46c7--48a10)
-\subsection{Whose opinions matter? (46c7--48a10)}
+% -]] Socrates initial response (46b1--c6)
 
-Socrates begins by responding to Crito's appeals to the many.  In this
-section, Socrates does not care so much \emph{what} Crito argued but
-\emph{how} he argued for it.  By appealing to the many, Crito has violated
-an important principle of Socratic method.  As Socrates explains, they have
-often said that some opinions are worth listening to and others are not.
-Socrates then walks Crito through a short elenchus as follows.
+% [[- Whose opinions matter? (46c7--48a10)
+\subsection*{Whose opinions matter? (46c7--48a10)}
+
+Socrates begins by responding to Crito's appeals to the many. In this section, Socrates does not care so much \emph{what} Crito argued but \emph{how} he argued for it. By appealing to the many, Crito has violated an important principle of Socratic method. As Socrates explains, they have often said that some opinions are worth listening to and others are not. Socrates then walks Crito through a short elenchus as follows.
 
 \begin{enumerate}
 
-    \item Some opinions are worth listening to and others are not
-        (46c8--47a6).
+    \item Some opinions are worth listening to and others are not (46c8--47a6).
 
-    \item The opinions worth listening to are good and the others bad.
-        Good opinions belong to wise people, and bad ones belong to
-        unintelligent people (47a7--11).
+    \item The opinions worth listening to are good and the others bad. Good opinions belong to wise people, and bad ones belong to unintelligent people (47a7--11).
 
-    \item If someone takes the exercise advice of the many rather than
-        a doctor or a trainer, he is likely to suffer physical harm
-        (47a12--47c8).
+    \item If someone takes the exercise advice of the many rather than a doctor or a trainer, he is likely to suffer physical harm (47a12--47c8).
 
-    \item Likewise, if you follow the advice of the many in regards to
-        justice and injustice, you are likely to suffer harm in whatever
-        part of a person benefits from justice and suffers under injustice
-        (47c8--d7).
+    \item Likewise, if you follow the advice of the many in regards to justice and injustice, you are likely to suffer harm in whatever part of a person benefits from justice and suffers under injustice (47c8--d7).
 
-    \item If the body is terribly damaged, then life is intolerable
-        (47d8--47e6).
+    \item If the body is terribly damaged, then life is intolerable (47d8--47e6).
 
-    \item The part of us benefitted and harmed by justice and injustice is
-        more important than the body.  Thus all the more should we avoid
-        harming it.  Thus we should not care about the opinions of the many
-        but only about the opinions of the one who knows what he is talking
-        about (47e7--48a7).
+    \item The part of us benefitted and harmed by justice and injustice is more important than the body. Thus all the more should we avoid harming it. Thus we should not care about the opinions of the many but only about the opinions of the one who knows what he is talking about (47e7--48a7).
 
-    \item Thus Crito was wrong to begin by appealing to the opinion of the
-        many (47a7--48a10).
+    \item Thus Crito was wrong to begin by appealing to the opinion of the many (47a7--48a10).
 
 \end{enumerate}
 
-% }}} Whose opinions matter? (46c7--48a10)
+% -]] Whose opinions matter? (46c7--48a10)
 
-% {{{ The power of the many (48a10--48b9)
-\subsection{The power of the many (48a10--48b9)}
+% [[- The power of the many (48a10--48b9)
+\subsection*{The power of the many (48a10--48b9)}
 
 Socrates anticipates an objection: ``But the many are able to kill us."
 Crito agrees emphatically, and now Socrates gets his smug on. Yes, the many
 can kill us, but what we should care about is living well, not simply
-living.  This too is a previous subject of conversation, and when Socrates
-reminds Crito of this principle, Crito agrees to it as well.  This
+living. This too is a previous subject of conversation, and when Socrates
+reminds Crito of this principle, Crito agrees to it as well. This
 effectively cuts off the only objection to the previous points that
 Socrates considers worth mentioning.
 
-% }}} The power of the many (48a10--48b9)
+% -]] The power of the many (48a10--48b9)
 
-% {{{ Summary on method (48b10--49a3)
-\subsection{Summary on method (48b10--49a3)}
+% [[- Summary on method (48b10--49a3)
+\subsection*{Summary on method (48b10--49a3)}
 
 Relying on these agreements, Socrates restates their problem as a question
 about justice:
 
 \begin{quote}
 
-    {\g
-    πότερον δίκαιον ἐμὲ ἐνθένδε πειρᾶσθαι ἐξιέναι μὴ ἀφιέντων Ἀθηναίων ἢ οὐ
-    δίκαιον· καὶ ἐὰν μὲν φαίνηται δίκαιον, πειρώμεθα, εἰ δὲ μή, ἐῶμεν
-    } (48b11--c2).
+    \textgreek{πότερον δίκαιον ἐμὲ ἐνθένδε πειρᾶσθαι ἐξιέναι μὴ ἀφιέντων Ἀθηναίων ἢ οὐ δίκαιον· καὶ ἐὰν μὲν φαίνηται δίκαιον, πειρώμεθα, εἰ δὲ μή, ἐῶμεν} (48b11--c2).
 
-    Is it just for me to try to go away from here without the Athenians
-    allowing it or is it not just? And if it appears to be just, let's try,
-    but if no, let's leave it.
+    Is it just for me to try to go away from here without the Athenians allowing it or is it not just? And if it appears to be just, let's try, but if no, let's leave it.
 
 \end{quote}
 
-Socrates follows up by pointedly saying that they should ignore
-considerations of money, the opinion of other people, Socrates' children
-and the rest of Crito's arguments.  They will focus \emph{only} on whether
-the proposed actions would be just or not.
+Socrates follows up by pointedly saying that they should ignore considerations of money, the opinion of other people, Socrates' children and the rest of Crito's arguments. They will focus \emph{only} on whether the proposed actions would be just or not.
 
-I'm not sure that this is quite fair to Crito or his earlier arguments.
-Socrates can certainly argue that he cares most of all about being just,
-but can't Crito respond that it's unjust to abandon your children when you
-don't have to?  Also, what about the possibility that Socrates will do
-something unjust, no matter which course of action he chooses?  Would
-Socrates have some notion then of choosing the lesser evil?
+I'm not sure that this is quite fair to Crito or his earlier arguments. Socrates can certainly argue that he cares most of all about being just, but can't Crito respond that it's unjust to abandon your children when you don't have to? Also, what about the possibility that Socrates will do something unjust, no matter which course of action he chooses? Would Socrates have some notion then of choosing the lesser evil?
 
-% }}} Summary on method (48b10--49a3)
+% -]] Summary on method (48b10--49a3)
 
-% {{{ Basic moral principles (49a4--e4)
-\subsection{Basic moral principles (49a4--e4)}
+% [[- Basic moral principles (49a4--e4)
+\subsection*{Basic moral principles (49a4--e4)}
 
-Socrates reminds Crito that they have often said that they should never
-commit injustice willingly.  He adds that it is neither good nor fine to do
-so (ever).  Crito agrees to this rule once again, and Socrates continues
-with a number of variations in order to make sure that he and Crito agree
-on these basic principles.  Here are the principles they agree to:
+Socrates reminds Crito that they have often said that they should never commit injustice willingly. He adds that it is neither good nor fine to do so (ever). Crito agrees to this rule once again, and Socrates continues with a number of variations in order to make sure that he and Crito agree on these basic principles. Here are the principles they agree to:
 
 \begin{enumerate}
 
-    \item One must never do injustice (49a4--b8).  Not even in return for
-        injustice should one do injustice (49b9--c1).
+    \item One must never do injustice (49a4--b8). Not even in return for injustice should one do injustice (49b9--c1).
 
-    \item One should not harm (49c2--3).  Not even in return for wrong
-        should one do wrong (49c4--6).  To do someone harm is no different
-        than to do injustice (49c7--9).
+    \item One should not harm (49c2--3). Not even in return for wrong should one do wrong (49c4--6). To do someone harm is no different than to do injustice (49c7--9).
 
 \end{enumerate}
 
-Socrates goes out of his way to stress the following.  First, Crito must
-explicitly agree to these principles.  To that end, Socrates repeats them
-again and and again, each time asking if Crito agrees.  After even all
-that, Socrates restates the principles again, and he explicitly says that
-Crito must decide if he really agrees to these things (49c10--e3).  Second,
-as \citet{kraut1984} explains, (25--27), Socrates also makes clear to Crito
-(and Plato makes clear to his readers) that he will use a number of terms
-interchangeably.  For his purposes the following are the same: {\g
-ἀδικεῖν}, {\g κακουργεῖν}, {\g κακῶς ποιεῖν τινα}.  Not everyone would have
-treated these as identical, but Socrates will at present.
+Socrates goes out of his way to stress the following. First, Crito must explicitly agree to these principles. To that end, Socrates repeats them again and and again, each time asking if Crito agrees. After even all that, Socrates restates the principles again, and he explicitly says that Crito must decide if he really agrees to these things (49c10--e3). Second, as \cite{kraut1984} explains, (25--27), Socrates also makes clear to Crito (and Plato makes clear to his readers) that he will use a number of terms interchangeably. For his purposes the following are the same: \textgreek{ ἀδικεῖν}, \textgreek{κακουργεῖν}, \textgreek{κακῶς ποιεῖν τινα}. Not everyone would have treated these as identical, but Socrates will at present.
 
-\citet{kraut1984} makes two additional good points about this stretch of
-the dialogue.  First, Plato hints here at the direction that the argument
+\cite{kraut1984} makes two additional good points about this stretch of
+the dialogue. First, Plato hints here at the direction that the argument
 will take. Socrates will likely concede that the decision to put him to
 death was unjust, but nevertheless argue that he must not answer injustice
-with injustice.  Second, this passage only lays the groundwork for Socrates
-later arguments.  It is not itself yet a direct argument that Socrates
-should not escape.  That argument will come later, though it will rely on
+with injustice. Second, this passage only lays the groundwork for Socrates
+later arguments. It is not itself yet a direct argument that Socrates
+should not escape. That argument will come later, though it will rely on
 the principles that Crito agrees to here.
 
-% }}} Basic moral principles (49a4--e4)
+% -]] Basic moral principles (49a4--e4)
 
-% {{{ The principle of just agreements (49e5--8)
-\subsection{The principle of just agreements (49e5--8)}
+% [[- The principle of just agreements (49e5--8)
+\subsection*{The principle of just agreements (49e5--8)}
 
-Before moving on, Socrates briefly extracts another principle from Crito:
-just agreements must be kept.  As \citet{kraut1984} and
-\citet{brickhouse2004} note, the restriction \emph{just} is essential.
-Socrates does not say simply that one must do whatever one agrees to.  He
-seems aware that someone might accidently agree to do something unjust, and
-in that case, the basic principle that one should never do injustice
-presumably takes precedence.
+Before moving on, Socrates briefly extracts another principle from Crito: just agreements must be kept. As \cite{kraut1984} and \cite{brickhouse-smith2004-plato-trial-of-socrates} note, the restriction \emph{just} is essential. Socrates does not say simply that one must do whatever one agrees to. He seems aware that someone might accidently agree to do something unjust, and in that case, the basic principle that one should never do injustice presumably takes precedence.
 
-\citet{kraut1984} 32 argues that we should read this section together with
-things that the Laws say later.  The Laws say that Socrates made his
-agreements with them in a just manner.  A \phrase{just manner} meaning that
-he was not compelled, he was not lied to, he was not rushed and he
-understood what he was agreeing to.  Thus, agreements can be just in two
-ways: they cover just actions and they are justly made.  Agreements to
-unjust action are never binding, since injustice must never be done.
-Agreements to just things made unjustly are not necessarily binding.
+\cite{kraut1984} 32 argues that we should read this section together with things that the Laws say later. The Laws say that Socrates made his agreements with them in a just manner. A \emph{just manner} meaning that he was not compelled, he was not lied to, he was not rushed and he understood what he was agreeing to. Thus, agreements can be just in two ways: they cover just actions and they are justly made. Agreements to unjust action are never binding, since injustice must never be done. Agreements to just things made unjustly are not necessarily binding.
+% -]] The principle of just agreements (49e5--8)
 
-% }}} The principle of just agreements (49e5--8)
-
-% {{{ Crito can't quite see the upshot (49e9--50a5)
-\subsection{Crito can't quite see the upshot (49e9--50a5)}
+% [[- Crito can't quite see the upshot (49e9--50a5)
+\subsection*{Crito can't quite see the upshot (49e9--50a5)}
 
 Drawing out the implications of what they have agreed to so far, Socrates
 asks Crito whether (1) it would be just for him to escape without
 persuading the city and (2) whether he would be violating a just agreement
-if he did so.  Crito is unable to answer since he does not follow.  He says
+if he did so. Crito is unable to answer since he does not follow. He says
 bluntly ``I do not understand" (50a5).
 
-I'm inclined to agree with \citet{brickhouse2004} 211--212 that this does
-not suggest that Crito is insincere or unintelligent.  I also don't see any
+I'm inclined to agree with \cite{brickhouse-smith2004-plato-trial-of-socrates} 211--212 that this does
+not suggest that Crito is insincere or unintelligent. I also don't see any
 reason to think that Crito has been inattentive to the argument up to this
-point.  Socrates hints at two points here that require further elaboration.
-Either one of them would merit Crito holding things up.  First, Socrates
+point. Socrates hints at two points here that require further elaboration.
+Either one of them would merit Crito holding things up. First, Socrates
 says that they might do injustice to ``those who least deserve it". Who are
 these who least deserve it, and why do they least deserve injustice?
 Second, what agreements does Socrates have in mind?
 
-Dramatically and logically, Crito's confusion makes perfect sense.  It
-provides Plato a reason for Socrates to introduce the Laws.  We readers are
+Dramatically and logically, Crito's confusion makes perfect sense. It
+provides Plato a reason for Socrates to introduce the Laws. We readers are
 likely to be pretty much where Crito is, so the speech of the Laws will
-help us understand things better.  And in terms of the argument, many
+help us understand things better. And in terms of the argument, many
 people are likely to have agreed with Socrates up until now on basic
-principles.  But now Socrates must make more substantive arguments to show
+principles. But now Socrates must make more substantive arguments to show
 how escape would harm the state, and why citizens owe the state particular
 loyalty.
 
-% }}} Crito can't quite see the upshot (49e9--50a5)
+% -]] Crito can't quite see the upshot (49e9--50a5)
 
-% }}} Introductory material (43a1--50a5)
+% -]] Introductory material (43a1--50a5)
 
-% {{{ The Laws (50a6--54d2)
-\section{The Laws (50a6--54d2)}
+% [[- The Laws (50a6--54d2)
+\section*{The Laws (50a6--54d2)}
 
-% {{{ The Laws enter (50a6--50c1)
-\subsection{The Laws enter (50a6--50c1)}
+% [[- The Laws enter (50a6--50c1)
+\subsection*{The Laws enter (50a6--50c1)}
 
-Socrates imagines the Laws of Athens addressing him if he tries to flee.
-In their initial argument, the Laws claim that Socrates is trying to
-destroy them ``for his part".  They justify this by saying that a state
-cannot exist in which individuals can ignore legal decisions at their whim.
+Socrates imagines the Laws of Athens addressing him if he tries to flee. In their initial argument, the Laws claim that Socrates is trying to destroy them ``for his part". They justify this by saying that a state cannot exist in which individuals can ignore legal decisions at their whim.
 
-\citet{kraut1984} 42 describes this as a very early generalization
-argument, perhaps the first in Western philosophy.  He spells this out in
-a somewhat Kantian manner (though he doesn't mention Kant).  If everyone
-should behave like Socrates and invalidate legal rulings that they don't
-like, then the state would not survive.  This gives point to the Laws
-saying that Socrates is trying to destroy them ``for his part".
+\cite{kraut1984} 42 describes this as a very early generalization argument, perhaps the first in Western philosophy. He spells this out in a somewhat Kantian manner (though he doesn't mention Kant). If everyone should behave like Socrates and invalidate legal rulings that they don't like, then the state would not survive. This gives point to the Laws saying that Socrates is trying to destroy them ``for his part".
+% -]] The Laws enter (50a6--50c1)
 
-% }}} The Laws enter (50a6--50c1)
+% [[- Why we owe the Laws so much (50c1--51c5)
+\subsection*{Why we owe the Laws so much (50c1--51c5)}
 
-% {{{ Why we owe the Laws so much (50c1--51c5)
-\subsection{Why we owe the Laws so much (50c1--51c5)}
-
-The next section helps to explain why Socrates says that by running away he
-would be harming those ``whom he least ought to" (50a2).  Socrates imagines
-that he might reply to the Laws first statement by saying that the city
-does him an injustice since his case was wrongly decided (50c1--2).  Crito
-emphatically agrees, and this gives Socrates an opening to make an argument
-that he and the city are not on even terms.
+The next section helps to explain why Socrates says that by running away he would be harming those ``whom he least ought to" (50a2). Socrates imagines that he might reply to the Laws first statement by saying that the city does him an injustice since his case was wrongly decided (50c1--2). Crito emphatically agrees, and this gives Socrates an opening to make an argument that he and the city are not on even terms.
 
 The Laws explain that some things are allowed to them which are not allowed
-to citizens.  Socrates owes them nearly everything.  They are responsible
+to citizens. Socrates owes them nearly everything. They are responsible
 for his birth, insofar as they joined his father and mother together in
-marriage.  They are responsible for his care and education, since they set
-the standards for such matters.  Thus Socrates is like a child or a slave
+marriage. They are responsible for his care and education, since they set
+the standards for such matters. Thus Socrates is like a child or a slave
 while the Laws are like parents or owners. They are not equals: Socrates
-may not do everything that the Laws may do.  The argument here relies on an
+may not do everything that the Laws may do. The argument here relies on an
 Athenian norm: a parent might strike or yell at a child, but a child would
 have no right to return this in kind.
 
-% {{{ Kraut's reconstruction of this argument
-\subsubsection{Kraut's reconstruction of this argument}
+% [[- Kraut's reconstruction of this argument
+\subsubsection*{Kraut's reconstruction of this argument}
 
-Richard Kraut, in \citet{kraut1984}, reconstructs this argument in the
-following way:
+Richard Kraut, in \cite{kraut1984}, reconstructs this argument in the following way:
 
 \begin{enumerate}
 
     \item One must never treat any city or person unjustly. (49b8)
 
-    \item By escaping, Socrates would be destroying Athens, for his part
-        (50d1--51c1)
+    \item By escaping, Socrates would be destroying Athens, for his part (50d1--51c1)
 
-    \item Athens is responsible for the birth and education of Socrates.
-        (50a8--b5)
+    \item Athens is responsible for the birth and education of Socrates. (50a8--b5)
 
-    \item If some person or city X is responsible for the birth or
-        education of Y, then Y treats X unjustly if Y uses violence against
-        X. (51c2--3)
+    \item If some person or city X is responsible for the birth or education of Y, then Y treats X unjustly if Y uses violence against X. (51c2--3)
 
-    \item Whoever destorys a city, for his part, uses violence against that
-        city (supplied)
+    \item Whoever destorys a city, for his part, uses violence against that city (supplied)
 
     \item If Socrates escapes, he will be treating Athens unjustly.
 
 \end{enumerate}
 
-There are two things to notice about Kraut's reconstruction of the
-argument.  First, Kraut distinguishes this argument from the argument to
-``persuade or obey" that is buried inside the section on cities as parents.
-Second, Kraut insists that Socrates does \emph{not} argue that political
-violence is always wrong.  In particular, Kraut argues (cf. 47, 50) that
-without the analogy of cities and parents, Socrates' argument would be
-incomplete.  The second step above in Kraut's reconstruction is not enough
-to draw the conclusion that Socrates does Athens injustice by trying to
-escape, on Kraut's view.
+There are two things to notice about Kraut's reconstruction of the argument. First, Kraut distinguishes this argument from the argument to ``persuade or obey" that is buried inside the section on cities as parents. Second, Kraut insists that Socrates does \emph{not} argue that political violence is always wrong. In particular, Kraut argues (cf. 47, 50) that without the analogy of cities and parents, Socrates' argument would be incomplete. The second step above in Kraut's reconstruction is not enough to draw the conclusion that Socrates does Athens injustice by trying to escape, on Kraut's view.
 
-Kraut has to do a fair amount of work to massage the argument into this
-shape since the text is far from clear.  \citet{brickhouse2004} 212--220
-understand this stretch of \book{Crito} differently, for
-example.\footnote{I can't actually follow their reconstruction.  They seem
-to just pull out strands they like without worrying too much about how the
-strands form an argument.}  Having said that, the Laws are especially
-scattershot in their presentation, so I don't necessarily hold that against
-Kraut (or anyone else) particularly.
+Kraut has to do a fair amount of work to massage the argument into this shape since the text is far from clear. \cite{brickhouse-smith2004-plato-trial-of-socrates} 212--220 understand this stretch of \textit{Crito} differently, for example.\footnote{I can't actually follow their reconstruction. They seem to just pull out strands they like without worrying too much about how the strands form an argument.}  Having said that, the Laws are especially scattershot in their presentation, so I don't necessarily hold that against Kraut (or anyone else) particularly.
 
-% }}} Kraut's reconstruction of this argument
+% -]] Kraut's reconstruction of this argument
 
-% {{{ Obey or persuade
-\subsubsection{Obey or persuade}
+% [[- Obey or persuade
+\subsubsection*{Obey or persuade}
 
-The Laws present say that citizens have an obligation to ``obey or
-persuade", although this argument is somewhat buried within their larger
-claims for special status.  The two alternatives first appear at 51b4:
+The Laws present say that citizens have an obligation to ``obey or persuade", although this argument is somewhat buried within their larger claims for special status. The two alternatives first appear at 51b4:
 
 \begin{quote}
 
-    {\g
-    καὶ σέβεσθαι δεῖ καὶ μᾶλλον ὑπείκειν καὶ θωπεύειν πατρίδα χαλεπαίνουσαν
-    ἢ πατέρα, καὶ ἢ πείθειν ἢ ποιεῖν ἃ ἂν κελεύῃ
-    } (51b2--4).
+    \textgreek{καὶ σέβεσθαι δεῖ καὶ μᾶλλον ὑπείκειν καὶ θωπεύειν πατρίδα χαλεπαίνουσαν ἢ πατέρα, καὶ ἢ πείθειν ἢ ποιεῖν ἃ ἂν κελεύῃ} (51b2--4).
 
-    And it is necessary to revere and to yield to and to serve one's
-    country, even when it gives one trouble, more than one's father; and
-    [it is necessary] either to persuade or to do whatever it orders.
+    And it is necessary to revere and to yield to and to serve one's country, even when it gives one trouble, more than one's father; and [it is necessary] either to persuade or to do whatever it orders.
 
 \end{quote}
 
@@ -565,125 +380,79 @@ The same idea is restated and slightly expanded immediately below at 51c1:
 
 \begin{quote}
 
-    {\g
-    ἀλλὰ καὶ ἐν πολέμῳ καὶ ἐν δικαστηρίῳ καὶ πανταχοῦ ποιητέον ἃ ἂν κελεύῃ
-    ἡ πόλις καὶ ἡ πατρίς, ἢ πείθειν αὐτὴν ᾗ τὸ δίκαιον πέφυκε
-    } (51b9--c1).
+    \textgreek{ἀλλὰ καὶ ἐν πολέμῳ καὶ ἐν δικαστηρίῳ καὶ πανταχοῦ ποιητέον ἃ ἂν κελεύῃ ἡ πόλις καὶ ἡ πατρίς, ἢ πείθειν αὐτὴν ᾗ τὸ δίκαιον πέφυκε} (51b9--c1).
 
-    But in war and in court and everywhere one must do whatever the city
-    and fatherland order or persuade it what the nature of justice is.
+    But in war and in court and everywhere one must do whatever the city and fatherland order or persuade it what the nature of justice is.
 
 \end{quote}
 
-The expansion suggests that the options are (1) obey or (2) persuade the
-city that its orders are unjust. Socrates would be wrong to escape his
-sentence since he chooses neither available option.
+The expansion suggests that the options are (1) obey or (2) persuade the city that its orders are unjust. Socrates would be wrong to escape his sentence since he chooses neither available option.
 
-% }}} Obey or persuade
+% -]] Obey or persuade
 
-% }}} Why we owe the Laws so much (50c1--51c5)
+% -]] Why we owe the Laws so much (50c1--51c5)
 
-% {{{ The argument from just agreements (51c6--53a)
-\subsection{The argument from just agreements (51c6--53a)}
+% [[- The argument from just agreements (51c6--53a)
+\subsection*{The argument from just agreements (51c6--53a)}
 
-The Laws next remind Socrates that he has made an agreement with them.
-Anyone who does not like how the Laws do things (i.e. how Athens is run?)
-may leave:
+The Laws next remind Socrates that he has made an agreement with them. Anyone who does not like how the Laws do things (i.e. how Athens is run?) may leave:
 
 \begin{quote}
 
-    {\g
-    προαγορεύομεν τῷ ἐξουσίαν πεποιηκέναι Ἀθηναίων τῷ βουλομένῳ, ἐπειδὰν
-    δοκιμασθῇ καὶ ἴδῃ τὰ ἐν τῇ πόλει πράγματα καὶ ἡμᾶς τοὺς νόμους, ᾧ ἂν μὴ
-    ἀρέσκωμεν ἡμεῖς ἐξεῖναι λαβόντα τὰ αὑτοῦ ἀπιέναι ὅποι ἂν βούληται
-    } (51d2--5).
+    \textgreek{προαγορεύομεν τῷ ἐξουσίαν πεποιηκέναι Ἀθηναίων τῷ βουλομένῳ, ἐπειδὰν δοκιμασθῇ καὶ ἴδῃ τὰ ἐν τῇ πόλει πράγματα καὶ ἡμᾶς τοὺς νόμους, ᾧ ἂν μὴ ἀρέσκωμεν ἡμεῖς ἐξεῖναι λαβόντα τὰ αὑτοῦ ἀπιέναι ὅποι ἂν βούληται} (51d2--5).
 
-    We announce in advance by having made a possibility for anyone of the
-    Athenians who wants when he comes of age and see the affairs of the
-    city and us Laws, to whomever we are not pleasant, that it is possible
-    to take his things and go wherever he wishes.
+    We announce in advance by having made a possibility for anyone of the Athenians who wants when he comes of age and see the affairs of the city and us Laws, to whomever we are not pleasant, that it is possible to take his things and go wherever he wishes.
 
 \end{quote}
 
-Any Athenian may leave, but the Laws argue that those who stay have ``made
-an agreement in deed" (51e4) to \phrase{obey or persuade}.  The Laws also
-add (at 52e) that the agreements are not forced, deceptive or rushed.  This
-brings out how the agreements are \word{just}.  Neither Socrates nor the
-Laws dwell on the point, but it's important.  An agreement made under
-duress, deceptively or in a very brief time is intuitively not as binding
-as one made freely, with full information and after due deliberation.
+Any Athenian may leave, but the Laws argue that those who stay have ``made an agreement in deed" (51e4) to \emph{obey or persuade}. The Laws also add (at 52e) that the agreements are not forced, deceptive or rushed. This brings out how the agreements are \emph{just}. Neither Socrates nor the Laws dwell on the point, but it's important. An agreement made under duress, deceptively or in a very brief time is intuitively not as binding as one made freely, with full information and after due deliberation.
 
-% }}} The argument from just agreements (51c6--53a)
+% -]] The argument from just agreements (51c6--53a)
 
-% {{{ ad hominem regarding Socrates (52a3--52d8)
-\subsubsection{ad hominem regarding Socrates (52a3--52d8)}
+% [[- ad hominem regarding Socrates (52a3--52d8)
+\subsubsection*{ad hominem regarding Socrates (52a3--52d8)}
 
-The Laws briefly focus on Socrates and they claim that he especially has
-made such an implicit agreement.  Their reasoning is that insofar as
-Socrates left Athens almost never (only for military service, apparently),
-he has especially made the \foreign{de facto} agreement that he approves of
-Athens and her laws.
+The Laws briefly focus on Socrates and they claim that he especially has made such an implicit agreement. Their reasoning is that insofar as Socrates left Athens almost never (only for military service, apparently), he has especially made the \textit{de facto} agreement that he approves of Athens and her laws.
 
-% }}} ad hominem regarding Socrates (52a3--52d8)
+% -]] ad hominem regarding Socrates (52a3--52d8)
 
-% {{{ Will Socrates benefit anyone by escaping? (53a9--54b2)
-\subsection{Will Socrates benefit anyone by escaping? (53a9--54b2)}
+% [[- Will Socrates benefit anyone by escaping? (53a9--54b2)
+\subsection*{Will Socrates benefit anyone by escaping? (53a9--54b2)}
 
-The Laws next turn to a more pragmatic question: Will Socrates do himself
-or his friends and relatives any good if he escapes?  The Laws argue that
-he will not.  His friends are likely to be tried, lose their money and go
-into exile themselves.  And wherever Socrates goes, he will be viewed as an
-enemy of the state by anyone who cares about their state's wellbeing.
-Furthermore, if Socrates goes on as he did before---talking about virtue
-and justice---he will be ridiculous.  The topics he discusses and his
-behavior will be completely out of sync.  Alternatively, he could go
-somewhere where the living is easy and just party all the time.  But then
-again he will look ridiculous, and his life will be out of sync with his
-earlier words.  Finally, the Laws say that if he stays alive for the sake
-of his children, he should think about the consequences for them.  On the
-one hand, he could make them exiles too, but then they would face the same
-problems abroad that he will.  On the other hand, he could count on friends
-at home to care for them.  But those friends would have done the same if
-Socrates had died.  So that gives him no extra reason to stay alive.
+The Laws next turn to a more pragmatic question: Will Socrates do himself or his friends and relatives any good if he escapes?  The Laws argue that he will not. His friends are likely to be tried, lose their money and go into exile themselves. And wherever Socrates goes, he will be viewed as an enemy of the state by anyone who cares about their state's wellbeing. Furthermore, if Socrates goes on as he did before---talking about virtue and justice---he will be ridiculous. The topics he discusses and his behavior will be completely out of sync. Alternatively, he could go somewhere where the living is easy and just party all the time. But then again he will look ridiculous, and his life will be out of sync with his earlier words. Finally, the Laws say that if he stays alive for the sake of his children, he should think about the consequences for them. On the one hand, he could make them exiles too, but then they would face the same problems abroad that he will. On the other hand, he could count on friends at home to care for them. But those friends would have done the same if Socrates had died. So that gives him no extra reason to stay alive.
+% -]] Will Socrates benefit anyone by escaping? (53a9--54b2)
 
-% }}} Will Socrates benefit anyone by escaping? (53a9--54b2)
+% [[- The Laws of Hades (54b3--d2)
+\subsection*{The Laws of Hades (54b3--d2)}
 
-% {{{ The Laws of Hades (54b3--d2)
-\subsection{The Laws of Hades (54b3--d2)}
+The Laws conclude with a threat of future punishment. Even if he escapes them and does wrong in return for wrong, Socrates will still have to face the Laws in Hades. They will avenge their earthly fellow laws if Socrates runs off into exile. Thus, for prudential reasons too, Socrates should not break the law.
+% -]] The Laws of Hades (54b3--d2)
 
-The Laws conclude with a threat of future punishment.  Even if he escapes
-them and does wrong in return for wrong, Socrates will still have to face
-the Laws in Hades.  They will avenge their earthly fellow laws if Socrates
-runs off into exile.  Thus, for prudential reasons too, Socrates should not
-break the law.
+% -]] The Laws (50a6--54d2)
 
-% }}} The Laws of Hades (54b3--d2)
+% [[- Conclusion 54d3--e2
+\section*{Conclusion 54d3--e2}
 
-% }}} The Laws (50a6--54d2)
+Socrates closes the dialogue as a whole in an odd way. He tells Crito that he is ready to hear any objection that Crito has, but at the same time he says that the arguments of the Laws ring in his ears just as ``Corybantes seem to hear the pipes" (54d4--5). The Corybantes were the priests of Cybele, and they were famous for their frenzy and irrationality (see Catullus 63, for example). So it's disconcerting for Socrates to say all at once ``Do you have any other argument?" and ``I'm carried away by the irrational love of the previous arguments." \cite{rose1983} 40 says, ``[W]e can at least say here that Plato wishes to suggest that \textgreek{λόγοι}, reasoned arguments, create for Socrates the ecstasy for which others turn to orgiastic and irrational rites."
 
-% {{{ Conclusion 54d3--e2
-\section{Conclusion 54d3--e2}
+Nevertheless it bothers me. Just as Socrates asks Crito for further argument, he seems to say that he's not open to any such persuasion.
+% -]] Conclusion 54d3--e2
 
-Socrates closes the dialogue as a whole in an odd way.  He tells Crito that
-he is ready to hear any objection that Crito has, but at the same time he
-says that the arguments of the Laws ring in his ears just as ``Corybantes
-seem to hear the pipes" (54d4--5).  The Corybantes were the priests of
-Cybele, and they were famous for their frenzy and irrationality (see
-Catullus 63, for example).  So it's disconcerting for Socrates to say all
-at once ``Do you have any other argument?" and ``I'm carried away by the
-irrational love of the previous arguments."  \citet{rose1983} 40 says,
-``[W]e can at least say here that Plato wishes to suggest that {\g λόγοι},
-reasoned arguments, create for Socrates the ecstasy for which others turn
-to orgiastic and irrational rites."
-
-Nevertheless it bothers me.  Just as Socrates asks Crito for further
-argument, he seems to say that he's not open to any such persuasion.
-
-% }}} Conclusion 54d3--e2
-
+% [[- Bibliography
 \newpage
-\bibliographystyle{apa}
-\bibliography{plato}
+\pagestyle{references}
+\nocite{burnet1903}
+\defbibfilter{sources}{%
+    ( keyword=edition or keyword=translation or keyword=commentary )
+    and
+    keyword=crito
+}
+\defbibfilter{secondary}{%
+    keyword=secondary and ( keyword=crito or keyword=all )
+}
+\printbibliography[filter=sources,title={Ancient Sources: Editions, Translations, Commentaries}]
+\printbibliography[filter=secondary,title=Secondary Literature]
+% -]] Bibliography
 
 \end{document}
-% }}}
+% -]]
