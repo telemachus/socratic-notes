@@ -1,0 +1,15 @@
+// https://medium.com/@aoc/simple-watchman-setup-ab006e97fb1d
+[
+  "trigger",
+  "./",
+  {
+    "name": "redo",
+    "expression": [
+      "anyof",
+      ["match", "src/**/*.js", "wholename"],
+      ["match", "src/**/*.jsx", "wholename"]
+    ],
+    "command": ["node", "./babel.js"],
+    "append_files": true
+  }
+]
