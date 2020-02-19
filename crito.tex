@@ -17,13 +17,12 @@
 
 \usepackage{parskip}
 \usepackage{csquotes}
-\usepackage[style=oxyear,backend=biber]{biblatex}
+\usepackage[style=windycity,backend=biber]{biblatex}
 \addbibresource{plato.bib}
 
 \usepackage{enumitem}
 \setlist{noitemsep}
 \usepackage[super]{nth}
-
 
 \begin{hyphenrules}{latin}
     \hyphenation{}
@@ -54,6 +53,22 @@
     \cfoot{\thepage}
     \rfoot{}
 }
+
+\newcommand{\MONTH}{%
+  \ifcase\the\month
+  \or January% 1
+  \or February% 2
+  \or March% 3
+  \or April% 4
+  \or May% 5
+  \or June% 6
+  \or July% 7
+  \or August% 8
+  \or September% 9
+  \or October% 10
+  \or November% 11
+  \or December% 12
+  \fi}
 % -]] Latex prelude
 
 % [[- LaTeX document
@@ -63,7 +78,7 @@
 \begin{titlepage}
 \title{Notes on Plato's \textit{Crito}}
 \author{Peter Aronoff}
-\date{June 2013}
+\date{June 2013--\MONTH\ \the\year}
 \maketitle
 \thispagestyle{empty}
 \end{titlepage}
@@ -75,17 +90,17 @@
 % [[- Characters
 \subsection*{Characters}
 
-Crito was a close friend of Socrates. They were similar in age and belonged to the same deme. In \textit{Phaedo}, we can see how close the two men are. Early in the dialogue, Crito leads away Socrates's wife and children (60a7--8), and later only Crito accompanies Socrates for his final bath (116a2--3). At the very end of the dialogue, Socrates gives his final instructions to Crito (118a7--8). All of these moments suggest a very close relationship. In \textit{Crito}, Crito makes clear that he visited Socrates often while he was in jail (48a7--8). The familiar and intimate tone of their conversation in this dialogue also indicates how well they knew one another.
+The dialogue has two characters: Socrates and Crito: they are similar in age and belong to the same deme. In \textit{Phaedo}, we can see how close the two men are. Early in the dialogue, Crito leads away Socrates's wife and children (60a7--8), and later only Crito accompanies Socrates for his final bath (116a2--3). At the very end of the dialogue, Socrates gives his final instructions to Crito (118a7--8). All of these moments suggest a very close relationship. In \textit{Crito}, Crito makes clear that he visited Socrates often while he was in jail (48a7--8). The familiar and intimate tone of their conversation in this dialogue also indicates how well they knew one another.
 
-Crito was wealthy. In \textit{Apology}, he is one of the men who guarantees a large fine for Socrates (38b8), and in \textit{Crito}, he says that he has sufficient money to help Socrates escape and live abroad comfortably (45b1). Debrah Nails notes that ``Crito's considerable affluence was derived from agriculture.''\footcite[][115. She cites \textit{Euthydemus} 291e, Xenophon's \textit{Memorabilia} 2.9.4, and Diogenes Laertius 2.31.]{nails2002-people-of-plato} Nails argues that Crito's farm was ``probably in Alopece'' because Alopece was near the protective walls of the city, and this protection would explain why Crito didn't lose more money during the Peloponnesian war. In fact, as she says, Crito remained wealthy enough that his sons were ``among the richest men in Athens'' \parencite[][115]{nails2002-people-of-plato}.
+Unlike Socrates, however, Crito is wealthy. In \textit{Apology}, he is one of the men who guarantees a large fine for Socrates (38b8), and in \textit{Crito}, he says that he has sufficient money to help Socrates escape and live abroad comfortably (45b1). Debrah Nails notes that ``Crito's considerable affluence was derived from agriculture.''\footcite[][115. She cites \textit{Euthydemus} 291e, Xenophon's \textit{Memorabilia} 2.9.4, and Diogenes Laertius 2.31.]{nails2002-people-of-plato} Nails argues that Crito's farm was ``probably in Alopece'' because Alopece was near the protective walls of the city, and this protection would explain why Crito didn't lose more money during the Peloponnesian war. In fact, as she says, Crito remained wealthy enough that his sons were ``among the richest men in Athens.''\footcite[][115]{nails2002-people-of-plato}
 
-Although Crito was a constant companion of Socrates, he doesn't appear especially philosophical. In \textit{Crito}, he argues from exceedingly un-Socratic and commonplace premises. Although he says that he agrees with core Socratic principles,\footnote{See for example 47a--b.} his arguments run against those ideals, and it's unclear how well he understood what he was agreeing to. Thomas Brickhouse and Nicholas Smith also note that Crito takes no part in the philosophical conversation in \textit{Phaedo}, though they argue that he is philosophicaly more adept than I think he is. \parencite[][196]{brickhouse-smith2004-plato-trial-of-socrates}
+Although Crito was a constant companion of Socrates, he doesn't appear especially philosophical. In \textit{Crito}, he argues from exceedingly un-Socratic and commonplace premises. Although he says that he agrees with core Socratic principles,\footnote{See for example 47a--b.} his arguments run against those ideals, and it's unclear how well he understood what he was agreeing to. Thomas Brickhouse and Nicholas Smith also note that Crito takes no part in the philosophical conversation in \textit{Phaedo}, though they argue that he is philosophicaly more adept than I think he is.\footcite[][196]{brickhouse-smith2004-plato-trial-of-socrates}
 % -]] Characters
 
 % [[- Setting
 \subsection*{Setting}
 
-The conversation between Socrates and Crito takes place in Socrates' jail cell. Brickhouse and Smith argue that the jail would have been close to the court where the trial was held \parencite[][197]{brickhouse-smith2004-plato-trial-of-socrates}. They place it somewhere near the agora on the southern side. This sounds reasonable, but also like a complete guess. Plato doesn't use the setting much except that Socrates and Crito talk about the a jailer who lets Crito in early. (See below for more on this.)
+The conversation between Socrates and Crito takes place in Socrates' jail cell. Brickhouse and Smith argue that the jail was close to the court where the trial was held.\footcite[][197]{brickhouse-smith2004-plato-trial-of-socrates} They place it somewhere near the agora on the southern side. This sounds reasonable, but also like a guess. Plato doesn't use the setting much, but Socrates and Crito talk about the jailer who lets Crito in early. (See below for more on this.)
 % -]] Setting
 
 % -]] Characters and setting
@@ -96,13 +111,13 @@ The conversation between Socrates and Crito takes place in Socrates' jail cell. 
 % [[- Introduction (43a1--44b5)
 \subsection*{Introduction (43a1--44b5)}
 
-The dialogue begins when Socrates wakes up in his cell and finds Crito already there. Socrates is surprised that Crito is there so early and that the guard let Crito in so early. They talk, and Crito explains why he came during the night: he has learned that Socrates will probably be executed soon. Normally, Athenian courts carried out death sentences quickly after a trial. However, the Athenians halted all executions during certain religious festivals, and Socrates was convicted right as such a festival began. The return of a boat from Delos marks the end of the festival. Socrates has been in jail waiting for nearly a month (TODO: check this) because the boat was delayed. However, Crito heard that the boat will arrive today, and so Socrates will die the next day. Socrates says that he has had a dream hinting at the same thing, but that he thinks it will be two days before he is executed.
+The dialogue begins when Socrates wakes up in his cell and finds Crito already there. Socrates is surprised that Crito is there so early and that the guard let Crito in so early. They talk, and Crito explains why he came during the night: he has learned that Socrates will probably be executed soon. Normally, Athenian courts carried out death sentences quickly after a trial. However, the Athenians halted all executions during certain religious festivals, and Socrates was convicted right as such a festival began. The return of a boat from Delos marks the end of the festival. Socrates has been in jail waiting for ``a long time'' (\textit{Phaedo} 58c4) because the boat was delayed.\footnote{Xenophon is more precise: he says that there was a thirty-day gap between the trial and the execution (\textit{Memorabilia} 4.8.2).} However, Crito heard that the boat will arrive today, and so Socrates will die the next day. Socrates says that he has had a dream hinting at the same thing, but that he thinks it will be two days before he is executed.
 
 The opening conversation between Crito and Socrates may seem like small talk, but it plants important seeds in the readers' minds. (I think that narrative frames and opening conversations in Plato often serve this purpose.)
 
 \begin{enumerate}
 
-    \item There is a strong hint in 43a8 that Crito has bribed (or \emph{tipped}, if you insist) a guard.\footnote{\cite{burnet1924-euthyphro-apology-crito} 254 and \cite{brickhouse-smith2004-plato-trial-of-socrates} 249 deny the clear implication of the Greek, namely that Crito gave the guard money. Instead they believe that Crito simply did the guard a favor of some kind. Burnet's only argument seems to be that the implication is ``vulgar", which is no proof that it isn't true. \citeauthor{brickhouse-smith2004-plato-trial-of-socrates} simply cite Burnet; they provide no independent argument or evidence. Both \cite{adam1988-crito} 22-23 and \cite{rose1983} believe that Crito gave the guard money.} This suggests immediately that Crito is someone who solves problems with money.
+    \item There is a strong hint in 43a8 that Crito has bribed a guard. John Burnet denies that Crito gave the guard money. He claims that the phrase \textgreek{καί τι καὶ εὐεργέτηται ὑπ᾽ ἐμοῦ} ``characterizes the kindly Crito at once. The man is under an obligation to him, which should not be vulgarized into a `tip' with some editors.''\footcite[][ad 43a8]{burnet1924-euthyphro-apology-crito} But this is no argument at all: something can be vulgar and yet true. Brickhouse and Smith cite Burnet approvingly, and they add, ``there is no reason to think that Crito has done anything more than been of assistance to the guard in some undisclosed way in the past. There is no reason to think that this is a reference to bribery.''\footcite[][249]{brickhouse-smith2004-plato-trial-of-socrates}  I believe that these scholars deny the clear implication of the Greek, though I grant that I can't prove this either. On the other side, Louis Dyer, James Adam, and Gil Rose believe that Crito gave the guard money.\footcites[][ad 43a9]{dyer-apology-crito-2007}[][ad 43a9]{adam1988-crito}[][ad 43a8]{rose1983} This suggests immediately that Crito is someone who solves problems with money.
 
     \item Socrates says that it would be foolish for him to be upset about dying, given how old he is. Crito replies that many people do it just the same when they fall into bad luck. Socrates lets this pass, but it foreshadows Crito's use of common opinion later as well as Socrates lack of interest in what most people believe.
 \end{enumerate}
