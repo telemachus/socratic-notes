@@ -1,0 +1,143 @@
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=ancient]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek,Scale=MatchLowercase]{GFS Neohellenic}
+
+\usepackage{fnpct}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage[style=windycity,citetracker=context,backend=biber]{biblatex}
+\addbibresource{plato.bib}
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage[super]{nth}
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{}
+\end{hyphenrules}
+
+\usepackage{fancyhdr}
+\fancypagestyle{notes}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{Notes on Love in Plato}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+\fancypagestyle{references}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{References}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+
+\newcommand{\MONTH}{%
+  \ifcase\the\month
+  \or January% 1
+  \or February% 2
+  \or March% 3
+  \or April% 4
+  \or May% 5
+  \or June% 6
+  \or July% 7
+  \or August% 8
+  \or September% 9
+  \or October% 10
+  \or November% 11
+  \or December% 12
+  \fi}
+% -]] Latex prelude
+
+% [[- LaTeX document
+\begin{document}
+
+% [[- Title page
+% \begin{titlepage}
+% \title{Plato on Love}
+% \author{Peter Aronoff}
+% \date{March 2020--\MONTH\ \the\year}
+% \maketitle
+% \thispagestyle{empty}
+% \end{titlepage}
+% -]]
+
+\pagestyle{notes}
+
+% [[- Eros and Philia
+\section*{Eros and Philia}
+
+Kraut begins with \textgreek{ἔρως} and \textgreek{φιλία}.%
+\footcite{kraut-plato-on-love-2019}
+We can translate both roots in English as `love.'
+How do they differ?
+Kraut says that words from the \textgreek{ἔρως} root always involve sexuality, even if they are not limited to sexuality.
+On the other hand, Kraut believes that words from the \textgreek{φιλία} root especially suit cooperative groups.
+As such, \textgreek{φίλοι} can be friends or relatives.
+Kraut also stresses that people who have \textgreek{φιλία} for each other may or may not also have erotic desire for one another.
+That is, \textgreek{φιλία} neither implies nor rules out \textgreek{ἔρως}.
+
+If Kraut is right, Aristotle and Plato pursued complementary investigations about \textgreek{ἔρως} and \textgreek{φιλία}.
+Plato discusses \textgreek{φιλία} in \textit{Lysis}, but he does not have a full theory of \textgreek{φιλία}.
+Aristotle offers a complete theory of \textgreek{φιλία}, but he does not consider \textgreek{ἔρως} in any detail.
+Plato, on the other hand, considers \textgreek{ἔρως} very important, and he investigates it in both \textit{Symposium} and \textit{Phaedrus}.
+Kraut implies that Plato does not have a \textit{theory} about \textgreek{ἔρως} either, but he doesn't discuss this in any detail.
+% -]] Eros and Philia
+
+% [[- Eros and Desire
+\section*{Eros and Desire}
+
+Kraut begins with the \textit{elenchus} between Socrates and Agathon.
+In that conversation, Socrates argues that if someone loves (\textgreek{ἐρᾷ}), then they want something or someone.
+Therefore, they need someone or something that they lack (or think they lack?).
+That is, Socrates appears to believe that want implies need.
+According to Kraut, Socrates handles counterexamples by redescribing them.
+If you say, ``I am healthy, but I also want to be healthy,'' Socrates interprets this as ``You are healthy (now), and you want to be healthy (in the future).''
+Hence, the thing that you want and the thing that you have are not the same.
+
+Kraut sidesteps a serious criticism of Plato here.
+Someone may object that ``people can want things that have nothing to do with themselves, and so desire is not the same thing as needing and wanting.''%
+\footcite[554]{kraut-plato-on-love-2019}
+Kraut grants that this may be a valid criticism of Plato.
+Nevertheless, Kraut maintains that even if \textit{some} desires are not the same as needing and wanting, Plato may still be right about \textgreek{ἔρως}.
+% -]] Eros and Desire
+
+% [[- Bibliography
+\newpage
+\pagestyle{references}
+\defbibfilter{sources}{%
+    ( keyword=edition or keyword=translation or keyword=commentary )
+}
+\defbibfilter{secondary}{%
+    keyword=secondary
+}
+\printbibliography[filter=sources,title={Ancient Sources: Editions, Translations, Commentaries}]
+\printbibliography[filter=secondary,title=Secondary Literature]
+% -]] Bibliography
+
+\end{document}
+% -]]

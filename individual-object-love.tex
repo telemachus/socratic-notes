@@ -1,0 +1,139 @@
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=ancient]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek,Scale=MatchLowercase]{GFS Neohellenic}
+
+\usepackage{fnpct}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage[style=windycity,citetracker=context,backend=biber]{biblatex}
+\addbibresource{plato.bib}
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage[super]{nth}
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{}
+\end{hyphenrules}
+
+\usepackage{fancyhdr}
+\fancypagestyle{notes}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{Notes on Love in Plato}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+\fancypagestyle{references}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{References}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+
+\newcommand{\MONTH}{%
+  \ifcase\the\month
+  \or January% 1
+  \or February% 2
+  \or March% 3
+  \or April% 4
+  \or May% 5
+  \or June% 6
+  \or July% 7
+  \or August% 8
+  \or September% 9
+  \or October% 10
+  \or November% 11
+  \or December% 12
+  \fi}
+% -]] Latex prelude
+
+% [[- LaTeX document
+\begin{document}
+
+% [[- Title page
+% \begin{titlepage}
+% \title{Notes on Love in Plato}
+% \author{Peter Aronoff}
+% \date{March 2020--\MONTH\ \the\year}
+% \maketitle
+% \thispagestyle{empty}
+% \end{titlepage}
+% -]]
+
+\pagestyle{notes}
+
+% [[- Vlastos on Aristotle
+\section*{Vlastos on Aristotle}
+
+Although he wants to discuss Plato, Vlastos begins with Aristotle. In Aristotle, we find descriptions of \textgreek{φιλία} and \textgreek{φίλος} that are roughly this: ``love is wanting (apparent) good for the beloved for the sake of the beloved.'' Nevertheless, Aristotle also believes that, in the case of ``perfect love'' (\textgreek{τελεία φιλία}), the lover enjoys profit and pleasure from such love. That is, Aristotle believes that love is better when both sides derive profit and pleasure from each other. Both sides want (apparent) good for the other, and both sides work for (apparent) good for the other, but the friendship is best if both sides profit from and enjoy the friendship in addition.
+
+Vlastos takes Aristotle as a contemporary baseline, and he will use it to compare with Plato.\footcite[][6]{vlastos-individual-object-love-plato-1969}
+% -]] Vlastos on Aristotle
+
+% [[- Plato's \textit{Lysis}
+\section*{Plato's \textit{Lysis}}
+
+For Plato, Vlastos looks at \textit{Lysis} first. Socrates clearly says (210cd) that love requires profit or usefulness, but Vlastos insists that initially, at least, the profit or usefulness need not be egoistic. That is A can love B if B is profitable or useful for C or for B themself, at least as far as 210cd goes. However, a later passage (215de) does imply what Vlastos calls ``utility love.''\footcite[][8]{vlastos-individual-object-love-plato-1969} In this passage, Socrates makes clear that people only love because of some gain they want or need.
+% -]] Plato's \textit{Lysis}
+
+% [[- Plato's \textit{Republic}
+\section*{Plato's \textit{Republic}}
+
+Next Vlastos looks at Plato's \textit{Republic}. In a nutshell, this dialogue is in line with what Vlastos saw in \textit{Lysis}, but now Plato ties usefulness to the state as a whole rather than person to person interactions. In addition, Plato seems to demand in \textit{Republic} that all citizens must not only be sympathetic to each others' pleasures and pains, but they must actually be ``pleased or pained at those (and only those) things which please or pain the other.''\footcite[][18]{vlastos-individual-object-love-plato-1969} Vlastos find this requirement bizarre and far too strong.
+% -]] Plato's \textit{Republic}
+
+% [[- What is the \textgreek{πρῶτον φίλον}
+\section*{What is the \textgreek{πρῶτον φίλον}}
+
+In short, the \textgreek{πρῶτον φίλον} or real object of love is a Platonic form.
+% -]] What is the \textgreek{πρῶτον φίλον}
+
+% [[- Conclusions
+\section*{Conclusions}
+
+On the positive side, Vlastos believes that Plato is the ``first Western man'' to see that we can love abstractions in a way that recalls erotic desire. Vlastos credits Plato with attributing these types of desires to a ``sense of beauty'' that has much in common with sexual desire.\footcite[][27]{vlastos-individual-object-love-plato-1969}
+
+On the negative side, Vlastos believes that Plato lacks any understanding of, or respect for, love of another person for themselves. According to Plato, ``What we are to love in persons is the `image' of the Idea in them.''\footcite[][31]{vlastos-individual-object-love-plato-1969} Moreover, Platonic love ``does not provide for love of whole persons, but only for love of that abstract version of persons which consists of the complex of their best qualities.''\footcite[][31]{vlastos-individual-object-love-plato-1969}
+% -]] Conclusions
+
+% [[- Bibliography
+\newpage
+\pagestyle{references}
+\defbibfilter{sources}{%
+    ( keyword=edition or keyword=translation or keyword=commentary )
+}
+\defbibfilter{secondary}{%
+    keyword=secondary
+}
+\printbibliography[filter=sources,title={Ancient Sources: Editions, Translations, Commentaries}]
+\printbibliography[filter=secondary,title=Secondary Literature]
+% -]] Bibliography
+
+\end{document}
+% -]]

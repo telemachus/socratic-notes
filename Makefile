@@ -31,6 +31,15 @@ meno: meno.tex plato.bib
 phaedo: phaedo.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
 
+socratic-irony: socratic-irony.tex plato.bib
+	$(LATEXMK) $(FLAGS) $@
+
+individual-object-love: individual-object-love.tex plato.bib
+	$(LATEXMK) $(FLAGS) $@
+
+kreuz-irony: kreuz-irony.tex plato.bib
+	$(LATEXMK) $(FLAGS) $@
+
 clean:
 	- $(RM) *.aux *.log *.pdf *.bbl *.blg *.fls *.fdb_latexmk *.bcf *.xml *.xdv
 
