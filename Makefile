@@ -40,6 +40,9 @@ individual-object-love: individual-object-love.tex plato.bib
 kreuz-irony: kreuz-irony.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
 
+test: test.tex plato.bib
+	$(LATEXMK) $(FLAGS) $@
+
 clean:
 	- $(RM) *.aux *.log *.pdf *.bbl *.blg *.fls *.fdb_latexmk *.bcf *.xml *.xdv
 

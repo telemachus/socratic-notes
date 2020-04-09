@@ -64,7 +64,17 @@ Irwin also argues that Vlastos cannot explain how Socrates proves that others la
 1. A person knows-c *x* iff they can give a definition of *x*. Thus, nobody who is unable to define bravery can know-c bravery. Thus, Laches, who is unable to define bravery does not know-c bravery.
 1. Socrates restricts “knowing anything fine and good” to knowledge-c. Thus, if Socrates lacks knowledge-c, he does not know anything fine and good. Equally, if Laches cannot demonstrate knowledge-c, then, to that extent, he appears not to know anything fine and good.
 
+Nathan suggests that I am not entitled to (1) above, but why not? I suspect the answer is that (1) is not entailed by the account Vlastos gives of knowledge-c. (Possibly (1) is even inconsistent with the account Vlastos gives of knowledge-c? I am not sure, but I doubt this.) According to Irwin, Vlastos gives the following account of knowledge-c:
+
+> A knows-c that *p* if and only if (1) *p* is true, (2) A is certain and infallible about the truth of *p*, and (3) the evidence for *p* is logically inconsistent with the falsity of *p* (248).[^1]
+
+Vlastos adds something that Irwin does not discuss, but it may help Irwin’s case. According to Vlastos, Plato and Aristotle share the conviction that knowledge-c is based on first principles that are, as Aristotle says, “known through themselves” (*Prior Analytics* 64b34-36, quoted on Vlastos 52). If this is right, then Irwin can argue that such an account leaves no room for knowledge-c via definition. These initial truths are self illuminating. (Is this right? I am confused.)
+
+I see that I am very wrong about this all. According to Vlastos, when Socrates performs an *elenchus* on someone, he is testing that person for knowledge-e rather than knowledge-c (56-58). Of course, this makes sense in one way: how could you test someone for knowledge-c using the *elenchus*. But, in another sense, I am more confused than ever. If Socrates demands definitions of other people (to show that they have knowledge-e), and Socrates himself lacks definitions, then how does Vlastos think Socrates can maintain that he has knowledge-e?
+
 ## Iakovos Vasiliou on Conditional Irony (*CQ*, vol. 49, no. 2, 1999, 456-472)
 
 + I don’t think that Vasiliou takes the “slippery slope” argument seriously on 457.
 + Vasiliou considers irony at a student “as an insult, albeit a lighter one than if [the teacher] said, ‘You are performing horribly today. We cannot continue’ (460). It is not clear to me that the irony *is* lighter. A lot would depend on further factors: how the people know each other, the details of the case, the tone of the teacher’s voice, etc. But *prima facie* I think a teacher who delivers a bad report via irony adds mockery to bad news, and I don’t see how that is lighter. (This is not to say that someone could not be equally or more cruel without irony, just that irony by itself is not in any way a diminishment of the insult.)
+
+[^1]: On 248, in footnote 8, Irwin claims to “derive” his version of the two senses of know from Vlastos, “Socrates’ Disavowal of Knowledge,” *Philosophical Quarterly*, 35 (1985), 1-31, on page 18. This essays is also collected in *Socratic Studies*, and the reference for that version is to pages 56-57. I am not sure whether I think Irwin fairly reconstructs the two senses that Vlastos gives “know.”
