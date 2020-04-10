@@ -1,0 +1,144 @@
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=classic]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek,Scale=MatchLowercase]{GFS Neohellenic}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage[style=windycity,citetracker=context,backend=biber]{biblatex}
+\addbibresource{plato.bib}
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage[super]{nth}
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{}
+\end{hyphenrules}
+
+\usepackage{fancyhdr}
+\fancypagestyle{notes}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{Arisotle on Irony}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+\fancypagestyle{references}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{References}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+% -]] Latex prelude
+
+% [[- LaTeX document
+\begin{document}
+
+% [[- Title page
+% \begin{titlepage}
+% \title{Arisotle on Irony}
+% \author{Peter Aronoff}
+% \maketitle
+% \thispagestyle{empty}
+% \end{titlepage}
+% -]]
+
+\pagestyle{notes}
+
+% [[- Introduction
+\section*{Introduction}
+
+Although Aristotle does not seem to have considered irony enormously important, we do find scattered remarks of interest in several of his works and the works of his school.
+Aristotle briefly mentions irony twice in his biological works.
+But he discusses \textgreek{εἰρωνεία} at greater length in his \textit{Nicomachean Ethics}, \textit{Eudemian Ethics}, and \textit{Rhetoric}.
+In addition, the school of Aristotle also discusses \textgreek{εἰρωνεία}.
+Both \textit{Magna Moralia} and Theophrastus, in his \textit{Characters}, consider the \textgreek{εἴρων} and \textgreek{εἰρωνεία}.
+
+Several scholars believe that Aristotle fundamentally changed the way that people view \textgreek{εἰρωνεία}.
+\footcites[See, for example, ][]{ribbeck-begriff-eiron-1876}{gooch-socratic-irony-and-arisotles-eiron-1987}{lane-reconsidering-socratic-irony-2011}
+According to these scholars, \textgreek{εἰρωνεία} refers to deception and mockery before Aristotle.
+In Aristophanes, for example, the word is clearly negative and even abusive.
+Eventually, however, \textgreek{εἰρωνεία} becomes more forgiving: the \textgreek{εἴρων} becomes an amusing or even elegant self-deprecator not a deceiver.
+If these scholars are right, Aristotle instigated or accelerated this change.
+% -]] Introduction
+
+% [[- Aristotle
+\section*{Aristotle}
+
+% [[- Biological Works
+\subsection*{Biological Works}
+
+Aristotle refers to \textgreek{εῤωνεία} or the \textgreek{εἴρων} twice in his biological writings.
+In \textit{Historia Animalium} 1.9, Aristotle says that eyebrows that curve towards the temples are a sign of a \textgreek{μωκοῦ καὶ εἴρωνος} (491b18--19).
+In \textit{Physiognomics} 3, Aristotle says that the \textgreek{εἴρων} ``is fat around the face, with wrinkles round his eyes, and he wears a drowsy expression'' (808b28--29).
+
+What can we make of these passages?
+Zoja Pavlovskis says that these descriptions are ``unemotional'' and that Aristotle ``witholds judgment'' and is ``objective'' here.%
+\footcite[][23]{pavlovskis-aristotle-horace-ironic-man-1968}
+Perhaps this is true, but I wonder about judgmental implications, especially in the \textit{Physiognomics} passage.
+That said, I agree with Pavlovskis's larger point: we probably cannot do very much with these two short mentions of the \textgreek{εἴρων}.
+% -]] Biological Works
+
+% [[- Rhetorical works
+\subsection*{Rhetorical works}
+
+Aristotle mentions \textgreek{εἰρωνεία} several times in \textit{Rhetoric}.
+In Book 2, while discussing characteristic objects of anger, Aristotle says that people who employ \textgreek{εἰρωνεία} anger serious people: ``for irony is contempt'' (\textgreek{καταφρονητικὸν γὰρ ἡ εἰρωνεία}, 1379b31).
+Also in Book 2, while discussing proper objects of fear, Aristotle says that ``the mild and \textgreek{εἴρωνες} and clever'' are more dangerous than outspoken and quick-tempered people (1382b20).
+(Why?
+Because we cannot tell what these people will do: they are opaque.)
+In Book 3, Aristotle says that certain kinds of elevated diction suit poetry, but he adds that they can also be used \textgreek{μετ᾿ εἰρωνείας, ὅπερ Γοργίας ἐποίει καὶ τὰ ἐν τῷ Φαίδρῳ} (1408b20).
+Also in Book 3, Aristotle discusses \textgreek{εἰρωνεία} as a form of comedy.
+In that context, he says that \textgreek{εἰρωνεία} is more frank, noble, fit for a free man (\textgreek{ἐλευθέριος}) than coarse or ribald humor (1409b7).
+\footnote{Aristotle says something weird about the \textgreek{εἴρων} versus the ``blue comedian'': \textgreek{ὁ μὲν γὰρ αὑτοῦ ἕνεκα ποιεῖ τὸ γελοῖον, ὁ δὲ βωμολόχος ἑτέρου}. %
+I do not understand what this means.}
+Finally, again in Book 3, Aristotle briefly mentions \textgreek{εἰρωνεία} as one way of concluding a speech (1420a1).
+
+What do texts tell us about Aristotle's attitude towards \textgreek{εἰρωνεία}?
+Aristotle recognizes two sides of \textgreek{εἰρωνεία}.
+On the one hand, Aristotle acknowledges the negative view: \textgreek{εἰρωνεία} makes people angry, and \textgreek{εἴρωνες} worry us because we cannot read them.
+On the other hand, \textgreek{εἰρωνεία} seems more elegant than straightforward deception.
+It is elevated and can be very effective when used well.
+% -]] Rhetorical works
+
+% -]] Aristotle
+
+% [[- Bibliography
+\newpage\
+\pagestyle{references}
+\defbibfilter{sources}{%
+    ( keyword=edition or keyword=translation or keyword=commentary )
+}
+\defbibfilter{secondary}{%
+    keyword=secondary
+}
+\printbibliography[filter=sources,title={Ancient Sources: Editions, Translations, Commentaries}]
+\printbibliography[filter=secondary,title=Secondary Literature]
+% -]] Bibliography
+
+\end{document}
+% -]]
