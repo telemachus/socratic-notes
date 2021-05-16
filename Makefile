@@ -22,6 +22,9 @@ laches: laches.tex plato.bib
 hippias-major: hippias-major.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
 
+hippias-minor: hippias-minor.tex plato.bib
+	$(LATEXMK) $(FLAGS) $@
+
 ion: ion.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
 
