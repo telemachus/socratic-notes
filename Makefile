@@ -31,6 +31,9 @@ meno: meno.tex plato.bib
 phaedo: phaedo.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
 
+aristotle-on-irony: aristotle-on-irony.tex plato.bib
+	$(LATEXMK) $(FLAGS) $@
+
 socratic-irony: socratic-irony.tex plato.bib
 	$(LATEXMK) $(FLAGS) $@
 
