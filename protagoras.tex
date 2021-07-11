@@ -1,0 +1,296 @@
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+% Ugh: https://tex.stackexchange.com/a/400994/29387
+% This no longer seems necessary. I’ll leave it in the file for now.
+% \usepackage[base]{babel}
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=classic]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek,Scale=MatchLowercase]{GFS Neohellenic}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage[style=windycity,citetracker=context,backend=biber]{biblatex}
+\addbibresource{plato.bib}
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage[super]{nth}
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{}
+\end{hyphenrules}
+
+\usepackage{fancyhdr}
+\fancypagestyle{notes}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{Plato's \textit{Protagoras}}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+\fancypagestyle{references}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{References}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+% -]] Latex prelude
+
+% [[- LaTeX document
+\begin{document}
+
+% [[- Title page
+% \begin{titlepage}
+% \title{Plato's \textit{Protagoras}}
+% \author{Peter Aronoff}
+% \maketitle
+% \thispagestyle{empty}
+% \end{titlepage}
+% -]]
+
+\pagestyle{notes}
+
+% [[- Pleasure and Pain, Good and Bad (351b3--351e11)
+\section*{Pleasure and Pain, Good and Bad (351b3--351e11)}
+
+Socrates changes topic: he and Protagoras had been arguing about courage and the other virtues, but now Socrates asks about the role of pleasure and pain in a good life.
+Socrates does not explicitly say that he is changing topic, and he doesn't say why he changes either.
+However, Protagoras doesn't complain, and I won't either.
+
+To begin with, Protagoras agrees to several claims about pleasure and the good life.
+
+\begin{enumerate}
+    \item Some people life well and some live badly (351b3--4).
+    \item A person who lives their life in distress and pain does not live well (351b4--6).
+    \item If someone lives a pleasant life, they have lived well (351b6-7).
+\end{enumerate}
+
+However, Protagoras does not agree that to live a pleasant life is good and to live an unpleasant life is bad (351b7--351c2).
+Protagoras objects that a pleasant life is good only if one enjoys ``fine things'' (\textgreek{τοῖς καλοῖς}, 351c1).
+Presumably, Protagoras means to say that all good lives involve pleasure, but that not all pleasures belong in or lead to a good life.
+He seems to believe that some pleasures are shameful or wrong.
+
+Socrates responds that he believes that every pleasure is good insofar as it is a pleasure.
+However, Socrates anticipates the objection that some pleasures have negative side effects, and he asks Protagoras not to consider those now (351c5).
+He presses Protagoras to say if pleasure qua pleasure is good and pain qua pain is bad, but Protagoras is not comfortable with a simple answer.
+He gives a more complex answer: (i) some pleasures are not good and some harms are not bad, (2) some pleasures are good and some harms are bad, and (3) some pleasures and pains are neither good nor bad.
+I think that by (3), Progragoras means that some pleasures and pains are neutral with regard to good and bad.
+
+Socrates again presses Protagoras for a simple answer, and Protagoras again declines.
+Instead, Protagoras proposes that they investigate the question more fully.
+Protagoras uses Socratic language here, and he explicitly points this out (\textgreek{Ὥσπερ σὺ λέγεις, ἔφη, ἑκάστοτε, ὦ Σώκρατες, σκοπώμεθα αὐτό}, 351e3--4).
+% -]] Pleasure and Pain, Good and Bad (351b3--351e11)
+
+% [[- Knowledge and Action (352a1--353b6)
+\section*{Knowledge and Action (352a1--353b6)}
+
+Socrates introduces an analogy to explain that he needs more information in order to understand what Protagoras thinks.
+Just as a doctor might ask someone to remove some clothes in order to diagnose their illness, Socrates needs to ask additional questions (about a new topic) in order to work out what Protagoras believes.
+Thus, Socrates introduces questions about knowledge and action.
+
+Socrates begins by contrasting two views of knowledge and action.
+According to Socrates, most people (literally ``the many'') believe that knowledge is often defeated by other forces.
+That is, most people believe that someone can know the pros and cons (literally ``the goods and bads'') of an action, but still be defeated by anger (\textgreek{θυμόν} 352b7---maybe better as ``passion'' or ``desire''?), pleasure, pain, lust, or fear.
+Socrates himself, however, believes that knowledge is ``strong and a leader and a ruler'' (352b4) and that pleasure, pain, and the other irrational forces cannot defeat knowledge.
+
+Socrates asks whether Protagoras agrees with most people or with him: is knowledge in charge or can it be defeated by pleasure, pain, and other irrational forces?
+Protagoras agrees with Socrates, and both Protagoras and Socrates use morally tinged language.
+They don't want knowledge to be ``servile.''
+They want it to be ``strong,'' ``commanding,'' and ``ruling.''
+Protagoras says that it would be ``shameful'' for him (of all people) to say that wisdom and knowledge were not the most powerful in human affairs.
+
+Socrates says that he and Protagoras should convince people who disagree with them about knowledge and action by explaining the phenomenon that the others call ``being overcome by pleasure.''
+That is, Socrates seems to believe that other people are pointing to something real (perhaps ``actions contrary to ones best interests''?) but that those people explain that real thing incorrectly.
+Initially Protagoras wants to ignore ``the many'' and their (in his view) wrong opinions, but Socrates insists that this digression will help them solve their earlier questions about bravery and the other virtues.
+Protagoras agrees to let Socrates lead the conversation as Socrates sees fit.
+
+Before we leave, let's consider the final version of what Socrates says that the many believe.
+
+\begin{enumerate}
+    \item Many people recognize what is best, but they do not want to do what is best---although they \textit{can} do what is best.
+        Instead, they do other things.
+    \item Such people do things other than what they think is best (despite their knowledge and ability) \textit{because} they are overcome by pleasure or pain or some other such thing.
+\end{enumerate}
+% -]] Knowledge and Action (352a1--353b6)
+
+% [[- Socrates Responds to The Many (353c1--356c3)
+\section*{Socrates Responds to The Many (353c1--356c3)}
+
+Socrates tries to convince the many that they explain \textit{akrasia} incorrectly.
+First, Socrates establishes that the many accept (some form of?) hedonism (353c1--354e2).
+Then, he argues that their hedonism is inconsistent with their explanation of \textit{akrasia} (354e3--356c3).
+I'll take these one at a time.
+
+% [[- The Many Accept (Some Form of?) Hedonism (353c1--354e2)
+\subsection*{The Many Accept (Some Form of?) Hedonism (353c1--354e2)}
+
+At the start of this section, Socrates imagines that the many ask him and Protagoras how they would explain \textit{akrasia}.
+Naturally, Socrates answers their question with a series of questions.
+Let's follow his argument.
+
+\begin{enumerate}
+    \item When you say ``being overcome by pleasure (or the like),'' do you mean, for example, when you recognize that some food, drink, or sexual behavior is harmful, but you still choose those things because they are pleasant?
+        (Answer: yes.%
+        \footnote{By the way, the many are not present.
+        Socrates imagines this entire mini-elenchus.
+        Either he gives the many their answers or he asks Protagoras to help him do so.
+        Even when he imagines someone asking him a question, Socrates answers with a question.})
+    \item Why do you think that those things are harmful?
+        Are they harmful because they provide pleasure in the moment?
+        Or are they harmful because they cause harms later (e.g., illness or poverty)?
+        (Answer: they are harmful because they lead to harms or deprive us of pleasures later.)
+    \item What about things you say are good but painful?
+        (E.g., exercise, military expeditions, and painful medical treatment.)
+        Are these things good but also painful?
+        (Answer: yes.)
+    \item Are such things good because they are painful in the moment, or are they good because they lead to benefits later?
+        (Answer: because they lead to benefits later.%
+        \footnote{Note that the benefits that Socrates lists are not obviously pleasures.
+        At least, they are not obviously \textit{only} pleasures.
+        He lists good health, salvation of cities, political positions, and wealth as future benefits.
+        Perhaps he can analyze these in such a way that we agree that they are good because pleasant---or because they lead to pleasures.
+        But this isn't obvious.})
+    \item Are these things good because they lead to pleasure or the removal of pain, or do you have some other reason to call them ``good''?
+        (Answer: because they lead to pleasure or the removal of pain.)
+    \item Therefore, do you consider pleasure (the only?) good and pain (the only?) bad?
+        (Answer: yes.)
+    \item Do you call pains ``good'' or pleasures ``bad'' only if they lead to pleasure or pain later?
+        Do you agree that you always look to pleasure and pain when you declare something good or bad?
+        (Answer: yes.)
+\end{enumerate}
+% -]] The Many Accept (Some Form of?) Hedonism (353c1--354e2)
+
+% [[- Hedonism Makes Akrasia Impossible (354e3--356c3)
+\subsection*{Hedonism Makes Akrasia Impossible (354e3--356c3)}
+
+Socrates begins this section with an apology.
+He realizes that he went on at great length in the previous section.
+But he insists that he repeated himself because it's difficult to explain \textit{akrasia} and because his explanation relies on their hedonism.
+
+If the many agree that they are hedonists, Socrates tells them that their explanation of \textit{akrasia} is ridiculous (\textgreek{γελοῖον}, 355a6).
+Why is their explanation ridiculous?
+To anticipate, Socrates will argue that it amounts to ``\textit{akrasia} is when someone does bad things, knowing that they are bad and without being forced because they are overcome by good things.''
+That is, Socrates ridicules the many by substituting ``good'' for ``pleasant'' in the explanation of \textit{akrasia}.
+He believes that this substitution is fine since the many have agreed that something is good if and only if it is pleasant.
+
+Let's look at his argument:
+
+\begin{enumerate}
+    \item Since we are talking about only two things, let's use only two terms.
+        First we will use ``good'' and ``bad.''
+        Then we will use ``pleasant'' and ``painful.''
+    \item Using the first set of terms, we get the following.
+        A person who knows that something is bad nevertheless does the bad thing because he is overcome by the good.
+    \item We can't say that the the good things here deserve to outweigh the bad because then the person wouldn't be making a mistake.
+        But the whole idea of ``being overcome by pleasure'' requires it to be a mistake.
+    \item One thing outweighs another in choice by being larger or more numerous.
+    \item Thus, an even fuller explanation of \textit{akrasia} according to the many is that someone knowingly chooses greater harms in exchange for less goods.
+    \item Using the second set of terms, we get the following.
+        A person who knows that things are painful nevertheless does the painful things because he is overcome by pleasures, even though it is clear that the pleasures don't deserve to win.
+        I.e., it is clear that the pleasures do not outweight the pains.
+    \item Again, Socrates asserts that the only way that pleasure is inferior to pain is size and number.
+        He explicitly denies that distance in time matters.
+        He explicitly insists that the only way to make choices among pleasures and pains is by counting and weighing them.
+    \item Finally, Socrates asks Protagoras whether the many could produce any other way to make choices other than counting or weighing.
+        Protagoras says that the many have to agree with Socrates.
+\end{enumerate}
+% -]] Hedonism Makes Akrasia Impossible (354e3--356c3)
+
+% -]] Socrates Responds to The Many (353c1--356c3)
+
+% [[- The Science of Measurement (356c4--357e8)
+\section*{The Science of Measurement (356c4--357e8)}
+
+At this point, Socrates seems to change topics again.
+He asks whether distance affects sight and hearing, and Protagoras agrees that the many would agree that distance affects the senses.
+In that case, asks Socrates if our wellbeing depends on getting magnitudes right, should we rely on the science of measurement (\textgreek{ἡ μετρητικὴ τέχνη} or the power of appearance (\textgreek{ἡ τοῦ φαινομένου δύναμις})?%
+\footnote{Why does our wellbeing depend on getting magnitudes right?
+Socrates says elliptically that we need to do and get great magnitudes and avoid and not do small ones.
+Presumably, he means that we should act so that we get \textit{more} pleasure and \textit{less} pain, but he could have been clearer.}
+Protagoras says that the many would choose the science of measurement.%
+\footnote{In the next section, Socrates repeats the idea with even, odd, and arithmetic, instead of large, small, and measurement.
+However, I don't think the new examples add anything important.}
+
+Next, Socrates argues that measurement is involved in wellbeing since quantity and number matter when we choose pleasure and pain.
+Furthermore, he argues that if measurement is involved, then science and knowledge are involved as well.
+However, Socrates adds that they can investigate the exact nature of this science and knowledge later.
+
+Socrates says that he and Protagoras can now answer the question that the many asked them earlier (at 353a).
+Here's the question: if the many are wrong about ``being overcome by pleasure,'' how can Socrates and Protagoras explain the same phenomenon?
+What's the answer?
+In a nutshell: ignorance.
+When people are ``overcome by pleasure,'' they lack knowledge.
+According to Socrates, the many have already agreed that when people make the wrong choices about pleasure and pain, they do so because of lack of knowlede.
+Socrates also reminds the many that mistakes are pleasure and pain are also mistakes about good and bad.
+
+Finally, Socrates tells the many that if they believed him, then they would feel differently about the sophists.
+As things stand, the many do not send their children to the sophists because they don't think that lack of knowledge is responsible for poor choices.
+Socrates concludes by saying that the many harm themselves and people in general by not paying the sophists to educate their children.
+
+Perhaps this conclusion helps us to decide whether Socrates speaks sincerely in this section.
+I find it hard to believe that Socrates sincerely believes that people should send their children to the sophists.
+I don't believe that Socrates thinks that the sophists can teach people how to choose what is good and avoid what is bad.
+Thus, perhaps we should doubt that Socrates means \textit{any} of what he says here.
+
+On the other hand, Socrates may believe part of what he says even if some of what he says is ironic.
+Socrates may believe the hedonism he advances here, but he may not believe that the sophists know what is pleasurable and painful.
+In which case, he also doesn't believe that the sophists know what is good and bad.
+Therefore, finally, he wouldn't actually believe that people should send their children to the sophists.
+% -]] The Science of Measurement (356c4--357e8)
+
+% [[- The Sophists and Hedonism (358a1--358d4)
+\section*{The Sophists and Hedonism (358a1--358d4)}
+
+Before he loops back to Protagoras on courage, Socrates makes sure that the sophists agree to several key claims.
+He addresses these questions to Hippias and Prodicus in addition to Protagoras.%
+\footnote{Actually, to be more precise, he asks Hippias and Prodicus if they agree with him and Protagoras.
+That is, Socrates assumes that Protagoras has already agreed with him.}
+First, do they agree that pleasure is good and pain bad.
+(Answer: yes.)
+Second, do they agree that all actions done for the sake of living without pain and pleasantly are fine and that fine action is good and beneficial?
+(Answer: yes.)
+Third, do they agree that if hedonism is true, then \textit{akrasia} does not happen, lack of self-control is ignorance, and self-control is knowledge?
+(Answer: yes.)
+Fourth, do they understand ignorance to be having false belief about important matters?
+(Answer: yes.)
+Fifth, and last, do they agree that people naturally avoid pain and that if people must choose one of two pains, they will choose the smaller.
+(Answer: yes.)
+% -]] The Sophists and Hedonism (358a1--358d4)
+
+% [[- Bibliography
+\newpage\
+\pagestyle{references}
+\defbibfilter{sources}{%
+    ( keyword=edition or keyword=translation or keyword=commentary )
+}
+\defbibfilter{secondary}{%
+    keyword=secondary
+}
+\printbibliography[filter=sources,title={Ancient Sources: Editions, Translations, Commentaries}]
+\printbibliography[filter=secondary,title=Secondary Literature]
+% -]] Bibliography
+
+\end{document}
+% -]]
