@@ -1,0 +1,120 @@
+% [[- LaTeX prelude
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[no-math]{fontspec}
+\setmainfont{Baskerville}
+
+% Ugh: https://tex.stackexchange.com/a/400994/29387
+% This no longer seems necessary, but I’ll leave it for a bit.
+% \usepackage[base]{babel}
+\usepackage[nolocalmarks]{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage[variant=classic]{latin}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont[Script=Greek,Scale=MatchLowercase]{GFS Neohellenic}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage[style=windycity,citetracker=context,backend=biber]{biblatex}
+\addbibresource{plato.bib}
+
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage[super]{nth}
+
+\begin{hyphenrules}{latin}
+    \hyphenation{}
+\end{hyphenrules}
+
+\begin{hyphenrules}{greek}
+    \hyphenation{}
+\end{hyphenrules}
+
+\usepackage{fancyhdr}
+\fancypagestyle{notes}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{Plato's \textit{Hippias Minor}}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+\fancypagestyle{references}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \lhead{}
+    \chead{\MakeUppercase{References}}
+    \rhead{}
+    \lfoot{}
+    \cfoot{\thepage}
+    \rfoot{}
+}
+% -]] Latex prelude
+
+% [[- LaTeX document
+\begin{document}
+
+% [[- Title page
+% \begin{titlepage}
+% \title{Arisotle on Irony}
+% \author{Peter Aronoff}
+% \maketitle
+% \thispagestyle{empty}
+% \end{titlepage}
+% -]]
+
+\pagestyle{notes}
+
+% [[- Characters, Setting, and Date
+\section{Characters, Setting, and Date}
+
+Unlike some dialogues, \textit{Hippias Minor} does not include much in the way of background or scene-setting.
+However, Plato does provide some information that we should take note of, and we can say a little about the characters and possible dramatic date of the dialogue.
+
+\subsection{Characters}
+
+Hippias of Elis, the son of Diopeithes, was a famous sophist.
+Nails puts his date of birth at around 470 BCE, and she thinks he dies after 399 BCE.%
+\footcite[][168]{nails2002-people-of-plato}
+Plato consistently portrays Hippias as full of himself.
+He was apparently a self-professed polymath, and he also made his own clothing and jewelry.
+In addition to his skill as a speaker, he also performed feats of memorization.
+
+Eudicus is mentioned in \textit{Hippias Major} (at 286c), and he is a speaking character in this dialogue.
+We learn here that his father was Apemantus, and he appears to enjoy sophistic demonstrations and debate.
+However, ancient source mentions Eudicus other than these two dialogues.
+
+\subsection{Setting and Date}
+
+\textit{Hippias Minor} contains little information about the setting or situation of the dialogue.
+Hippias says that he has been to the Olympic festival more than once, and the dialogue portrays him as well known.
+In \textit{Hippias Major}, Hippias tells Socrates about a speech Eudicus asked Hippias to perform.
+In the speech, Nestor gives Neoptolemus advice about how he should behave (\textgreek{πάμπολλα νόμιμα καὶ πάγκαλα}, 286b3--4).
+Eudicus begins \textit{Hippias Minor} by asking Socrates what he thought of a speech that Hippias just gave, and we can infer that the speech involved Homer from what Socrates says to Hippias during the dialogue.
+Thus, Waterfield infers that the two dialogues depict one time that Hippias visited Athens.
+Waterfield places the visit around 420 BCE.%
+\footcite[][213]{waterfield-hippias-minor-1987}
+% -]] Characters, Setting, and Date
+
+% [[- Bibliography
+\newpage\
+\pagestyle{references}
+\defbibfilter{sources}{%
+    ( keyword=edition or keyword=translation or keyword=commentary )
+}
+\defbibfilter{secondary}{%
+    keyword=secondary
+}
+\printbibliography[filter=sources,title={Ancient Sources: Editions, Translations, Commentaries}]
+\printbibliography[filter=secondary,title=Secondary Literature]
+% -]] Bibliography
+
+\end{document}
+% -]]
